@@ -1,0 +1,32 @@
+
+<script type="text/javascript">
+
+var flclass1;
+
+var flstr1;
+
+
+
+
+$(function(){
+for( var i =0; i < extjson.length; i ++ )
+{
+if(extjson[i].name=="treefilter")
+{ 
+flclass1= extjson[i].option.flfield;
+flstr1=extjson[i].option.flclass;
+break;
+}
+}
+
+
+
+ $("#tre").tree({
+  url: '/MainInit?hre='+ flstr1+"_gettreeresult_partview.ComboList",
+   method:'get',
+   height:'15',
+   lines:'true',
+   onClick:treecondition,
+   });
+	 });
+	
