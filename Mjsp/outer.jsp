@@ -170,3 +170,190 @@ $("#myForm").form("submit",{
  function edit() 
 	{	 
 	
+	if( statemod!="Edit" ){
+	 $('#layout').layout('expand','east') ;
+
+  statemod="Edit";
+  }
+  else
+  {
+$("#hrefstr").val( hrefstr+"-getmodsql-otheractions.FormEdit-Mouter" );
+$("#myForm").form("submit",{
+			url :"/FunTest",
+			
+			onSubmit : function(param) {
+				var isValid = $("#myForm").form('validate');
+				if (!isValid) {
+			 $.messager.progress('close');
+				}
+				return isValid;
+			},
+			success : function(result) { 
+    alert( result );
+     		$.messager.show({
+								msg : result ,
+								title : '成功'
+							}); 	 
+			 	 $('#tt').datagrid('reload'); 	
+			}
+			});
+   
+
+  }
+}
+
+function delet() {
+getSelected();
+    	if (usefield !=undefined)useflaged= selected[0][usefield];
+    	if( useflaged==1 )
+    	{alert("已生效不能删除");
+    	return;
+    	}
+    
+  idstrs= selected[0][idf] ;
+ 
+    $.ajax({ 
+     url:"/MainEdit", //提交给哪个执行 
+     data:"hre="+ hrefstr+"_Del_mainactions.Modicom&id="+ idstrs ,
+     type:"POST", 
+    success: ( function(result) {    
+   if( result.charAt(0)=="1" )
+   {
+   var sub_stri = result.substring(2);
+   
+    	var delrow= 	 $('#tt').datagrid('getRowIndex', idstrs );
+          	
+          	 $('#tt').datagrid('deleteRow', delrow );
+								
+          	$.messager.show({
+									msg : sub_stri ,
+									title : '提示'
+								});
+							        //显示操作结果
+            }
+           else
+           {
+           $.messager.show({
+									msg : "未删除成功" ,
+									title : '提示'
+								});
+           } 
+            
+            
+            })
+       });
+ }
+ 
+ function chiocepuin (nntn) 
+	{	 
+	searchstr=nntn;
+	 if(useflaged!=1)
+	$('#putindiv').window({
+	collapsible:false,
+  minimizable:false,
+  title:titlestr+"选择导入",
+   top:80,
+   left:20,
+   width:560,
+   fit:true,
+   modal:true,
+   href: '/html/putingrid/putingrid2.html'
+});
+else alert("生效后不能操作");
+}
+
+ 
+function useflag() {
+
+
+getSelected();
+	idstrs= selected[0][idf];
+	 
+	 $.ajax({ 
+     url:"/MainUse", //提交给哪个执行 
+     data:"hre="+ hrefstr+"&id="+ idstrs ,
+     type:"POST", 
+    success: ( function(result) {    
+    alert( result );
+   if( result.charAt(0)=="1" )
+   {
+   var sub_stri = result.substring(2);
+   
+          	 $('#tt').datagrid('reload');
+
+			      	$.messager.show({
+									msg : sub_stri ,
+									title : '提示'
+								});
+								 $('#tt').datagrid('reload');
+		    
+		      //显示操作结果
+            }
+           else
+           {
+           $.messager.show({
+									msg : "操作失败" ,
+									title : '提示'
+								});
+           } 
+            
+        })
+    });
+ }
+showextend=function (extstr ) {
+
+extjson=eval("("+ extstr+")" );
+for( var i =0; i < extjson.length; i ++ )
+
+
+{
+$('#layout').layout('add',{
+
+
+region: extjson[i].id ,
+id: extjson[i].id ,
+width: 180,
+height:100,
+title: '过滤',
+
+
+href: extjson[i].href,
+split: true,
+collapsed:true
+
+});
+
+
+
+
+}
+ 
+}
+
+
+
+</script>
+
+</head>
+<body>
+<div id="layout" class="easyui-layout"data-options="fit:true ">  
+
+
+‪<div id="center" region="center"   style="margin:0px;padding:0px;">
+<table id="tt"></table> 
+</div>
+<div id="east" region="east"   collapsed="true"  style="width:60%;overflow: hidden;">
+
+<form id="myForm">
+<input id="hrefstr" type="hidden" name="hre"/>
+
+</form>
+
+<div id="save" style=" display:none">
+<input type="button"  onclick="updateList()"  value="保存"></input>
+</div>
+</div>
+
+</div>
+</body>
+ </html>
