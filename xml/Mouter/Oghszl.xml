@@ -1,0 +1,183 @@
+<con>
+	<Oghszl lang="zh_CN">
+		<addidmodal>0</addidmodal>
+
+		<title>
+			供货商资料
+		</title>
+		<joinform>b_ghszl left join b_ghsfl ON b_ghszl.Bghs_fl=b_ghsfl.Bghsfl_Id where 1=1
+		</joinform>
+		<indextitle>编码,名称,电话,电子邮件,传真 </indextitle>
+		<indexfield>Bghs_Id,Bghs_Name,Bghs_Tel,Bghs_Email,Bghs_fax</indexfield>
+		<indexwidth>120,200,180,200,180</indexwidth>
+		<fieldstyle>1:4</fieldstyle>
+		<rowcount>10
+		</rowcount> 	
+		<conditionable>
+			0
+		</conditionable>
+
+		<title>供应商资料详细</title>
+		<selectcolumn>Bghs_Id,Bghs_Name,Bghs_Tel,Bghs_Post,Bghs_Add,Bghs_fl,Bghs_BankNo,bghs_BankName,Bghs_Email,Bghs_fax,Bghs_Chiefer,Bghs_Legelman,Bghs_Desc,Bghs_DefineDesc1,Bghs_DefineDesc2</selectcolumn>
+		<fieldtitle>id,bghsName,bghsTel,bghsPost,bghsAdd,bghsFlID,BghsBankNo,bghsBankName,bghsEmail,bghsFax,bghsChiefer,bghsLegelMan,bghsDesc,bghsDefineDesc1,bghsDefineDesc2 </fieldtitle>
+		<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,电话:001:validatebox-1,邮编:000:validatebox-1,地址:001:textbox-4,分类:100:combotree-0,银行帐号:101:validatebox-1,银行名称:100:validatebox-1,电子邮件:101:validatebox-2,传真:100:validatebox-1,责任人:101:validatebox-1,法人:131:validatebox-1,备注:131:textbox-4,自定义一:131:textbox-4,自定义二:131:textbox-4</columntitle> 
+		<group>编码信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Tghsfl_gettreeresult_partview.ComboList "⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙ "width" :"400px"
+		</comparam>
+		<sigleform>b_ghszl
+		</sigleform>
+		<idfield>Bghs_Id</idfield>
+	
+
+		<extendfield></extendfield>
+		<extendxml>
+			<formattable>tabformdisp</formattable>
+
+			<awidth>100</awidth>
+			<bwidth>220</bwidth>
+			<treecondition>Tghsfl-Bghs_flid</treecondition>
+			<mtitle>供货商资料</mtitle>
+		</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+		<secondcom></secondcom>
+		<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tghsfl","flfield":"bghs_fl"⊙"searchlabel":"供货商名称","searchfield":"bghs_Name" </exterparam>
+
+		<modextfield></modextfield>
+	</Oghszl>
+	<Oghszl lang="en">
+		<addidmodal>0</addidmodal>
+
+		<title>
+			供货商资料
+		</title>
+		<joinform>b_ghszl left join b_ghsfl ON b_ghszl.Bghs_fl=b_ghsfl.Bghsfl_Id where 1=1
+		</joinform> <indextitle>Code,name,telephone,email,fax</indextitle>
+		<indexfield>Bghs_Id,Bghs_Name,Bghs_Tel,Bghs_Email,Bghs_fax</indexfield>
+		<indexwidth>120,200,180,200,180</indexwidth>
+		<fieldstyle>1:4</fieldstyle>
+		<rowcount>10
+		</rowcount> 	
+		<conditionable>
+			0
+		</conditionable>
+
+		<title>供应商资料详细</title>
+		<selectcolumn>Bghs_Id,Bghs_Name,Bghs_Tel,Bghs_Post,Bghs_Add,Bghs_fl,Bghs_BankNo,bghs_BankName,Bghs_Email,Bghs_fax,Bghs_Chiefer,Bghs_Legelman,Bghs_Desc,Bghs_DefineDesc1,Bghs_DefineDesc2</selectcolumn>
+		<fieldtitle>id,bghsName,bghsTel,bghsPost,bghsAdd,bghsFlID,BghsBankNo,bghsBankName,bghsEmail,bghsFax,bghsChiefer,bghsLegelMan,bghsDesc,bghsDefineDesc1,bghsDefineDesc2 </fieldtitle>
+		<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s</typestr>
+		<columntitle>Code:001:validatebox-1:请输入唯一编码,Name:000:validatebox-1:请输入名称,Tel:001:validatebox-1,Post:000:validatebox-1,Address:001:textbox-4,Classification:100:combotree-0,BankNo:101:validatebox-1,BankName:100:validatebox-1,Email:101:validatebox-2,Fax:100:validatebox-1,chargeman:101:validatebox-1,Legal person:131:validatebox-1,Desc:131:textbox-4,Define1:131:textbox-4,Define2:131:textbox-4  
+		</columntitle>  
+
+		<group>main info⊙other info</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Tghsfl_gettreeresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙ "width" :"400px"
+		</comparam>
+		<sigleform>b_ghszl
+		</sigleform>
+		<idfield>Bghs_Id</idfield>
+		
+
+		<extendfield></extendfield>
+		<extendxml>
+			<formattable>tabformdisp</formattable>
+
+			<awidth>100</awidth>
+			<bwidth>220</bwidth>
+			<treecondition>Tghsfl-Bghs_flid</treecondition>
+			<mtitle>供货商资料</mtitle>
+		</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+		<secondcom></secondcom>
+		<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tghsfl","flfield":"bghs_fl"⊙"searchlabel":"供货商名称","searchfield":"bghs_Name" </exterparam>
+
+		<modextfield></modextfield>
+	</Oghszl>
+	<Oghszl lang="zh_TW">
+		<addidmodal>0</addidmodal>
+
+		<title>
+			供货商资料
+		</title>
+		<joinform>b_ghszl left join b_ghsfl ON b_ghszl.Bghs_fl=b_ghsfl.Bghsfl_Id where 1=1
+		</joinform>
+		<indextitle>編碼,名稱,电話,电子邮件,傳真 </indextitle>
+		<indexfield>Bghs_Id,Bghs_Name,Bghs_Tel,Bghs_Email,Bghs_fax</indexfield>
+		<indexwidth>120,200,180,200,180</indexwidth>
+		<fieldstyle>1:4</fieldstyle>
+		<rowcount>10
+		</rowcount> 	
+		<conditionable>
+			0
+		</conditionable>
+
+		<title>供应商詳細資料</title>
+		<selectcolumn>Bghs_Id,Bghs_Name,Bghs_Tel,Bghs_Post,Bghs_Add,Bghs_fl,Bghs_BankNo,bghs_BankName,Bghs_Email,Bghs_fax,Bghs_Chiefer,Bghs_Legelman,Bghs_Desc,Bghs_DefineDesc1,Bghs_DefineDesc2</selectcolumn>
+		<fieldtitle>id,bghsName,bghsTel,bghsPost,bghsAdd,bghsFlID,BghsBankNo,bghsBankName,bghsEmail,bghsFax,bghsChiefer,bghsLegelMan,bghsDesc,bghsDefineDesc1,bghsDefineDesc2 </fieldtitle>
+		<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s</typestr>
+		<columntitle>編碼:001:validatebox-1:请输入唯一編碼,名稱:000:validatebox-1:请输入名稱,电话:001:validatebox-1,邮編:000:validatebox-1,地址:001:textbox-4,分類:100:combotree-0,銀行帐号:101:validatebox-1,銀行名称:100:validatebox-1,电子邮件:101:validatebox-2,傳真:100:validatebox-1,责任人:101:validatebox-1,法人:131:validatebox-1,备注:131:textbox-4,自定义一:131:textbox-4,自定义二:131:textbox-4</columntitle> 
+		<group>編碼信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Tghsfl_gettreeresult_partview.ComboList "⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙ "width" :"400px"
+		</comparam>
+		<sigleform>b_ghszl
+		</sigleform>
+		<idfield>Bghs_Id</idfield>
+		
+
+		<extendfield></extendfield>
+		<extendxml>
+			<formattable>tabformdisp</formattable>
+
+			<awidth>100</awidth>
+			<bwidth>220</bwidth>
+			<treecondition>Tghsfl-Bghs_flid</treecondition>
+			<mtitle>供货商資料</mtitle>
+		</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+		<secondcom></secondcom>
+		<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tghsfl","flfield":"bghs_fl"⊙"searchlabel":"供货商名稱r","searchfield":"bghs_Name" </exterparam>
+
+		<modextfield></modextfield>
+	</Oghszl>
+	<Oghszl lang="jp">
+		<addidmodal>0</addidmodal>
+
+		<title>
+			供货商资料
+		</title>
+		<joinform>b_ghszl left join b_ghsfl ON b_ghszl.Bghs_fl=b_ghsfl.Bghsfl_Id where 1=1
+		</joinform>
+		<indextitle>编码,名称,电话,电子邮件,传真 </indextitle>
+		<indexfield>Bghs_Id,Bghs_Name,Bghs_Tel,Bghs_Email,Bghs_fax</indexfield>
+		<indexwidth>120,200,180,200,180</indexwidth>
+		<fieldstyle>1:4</fieldstyle>
+		<rowcount>10
+		</rowcount> 	
+		<conditionable>
+			0
+		</conditionable>
+
+		<title>供应商资料详细</title>
+		<selectcolumn>Bghs_Id,Bghs_Name,Bghs_Tel,Bghs_Post,Bghs_Add,Bghs_fl,Bghs_BankNo,bghs_BankName,Bghs_Email,Bghs_fax,Bghs_Chiefer,Bghs_Legelman,Bghs_Desc,Bghs_DefineDesc1,Bghs_DefineDesc2</selectcolumn>
+		<fieldtitle>id,bghsName,bghsTel,bghsPost,bghsAdd,bghsFlID,BghsBankNo,bghsBankName,bghsEmail,bghsFax,bghsChiefer,bghsLegelMan,bghsDesc,bghsDefineDesc1,bghsDefineDesc2 </fieldtitle>
+		<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,电话:001:validatebox-1,邮编:000:validatebox-1,地址:001:textbox-4,分类:100:combotree-0,银行帐号:101:validatebox-1,银行名称:100:validatebox-1,电子邮件:101:validatebox-2,传真:100:validatebox-1,责任人:101:validatebox-1,法人:131:validatebox-1,备注:131:textbox-4,自定义一:131:textbox-4,自定义二:131:textbox-4</columntitle> 
+		<group>编码信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":" MainInit?hre=Thhsfl_gettreeresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙ "width" :"400px"
+		</comparam>
+		<sigleform>b_ghszl
+		</sigleform>
+		<idfield>Bghs_Id</idfield>
+	
+
+		<extendfield></extendfield>
+		<extendxml>
+			<formattable>tabformdisp</formattable>
+
+			<awidth>100</awidth>
+			<bwidth>220</bwidth>
+			<treecondition>Tghsfl-Bghs_flid</treecondition>
+			<mtitle>供货商资料</mtitle>
+		</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+		<secondcom></secondcom>
+		<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tghsfl","flfield":"bghs_fl"⊙"searchlabel":"供货商名称","searchfield":"bghs_Name" </exterparam>
+
+		<modextfield></modextfield>
+	</Oghszl>
+</con>
