@@ -1,0 +1,38 @@
+ <Tbxrj lang="zh_CN" >
+   <Xselectcolumn>Xbxrj_Date,Xbxrj_zuhu,Xbxrj_weizi,Xbxrj_model,Xbxrj_desc,Xbxrj_Uflag, Xbxrj_fl</Xselectcolumn>
+	  <Xfieldtitle>XbxrjDate,Xbxrjzuhu,Xbxrjweizi,Xbxrjmodel,Xbxrjdesc,XbxrjUflag,Xbxrjfl</Xfieldtitle>
+	   <Xcolumntitle>日期,住户,位置,处理方式,内容,是否生效,分类 </Xcolumntitle>
+	 
+   <conditionable>
+    0
+   </conditionable>
+	 <jionform>X_bxrj where 1=1 </jionform>
+	 <Xfieldwidth>120,180,150,200,100,180,200</Xfieldwidth>
+	 
+ <Xgroupfield>1</Xgroupfield>
+	 <Xrowcount>12</Xrowcount>
+   <Xorderfield>Xbxrj_Id</Xorderfield>
+ <Mselectcolumn>Xbxrj_zuhu,Xbxrj_weizi,Xbxrj_desc</Mselectcolumn>
+	
+	
+	 <Mcolumntitle>住户:211: validatebox-0:选输入标题,位置:011:textbox-1,内容:011:textbox-1 </Mcolumntitle> 
+	 <Mfieldtitle> Xbxrjzuhu,Xbxrjweizi,Xbxrjdesc </Mfieldtitle>
+<idfield> Xbxrj_Id </idfield>
+	 <Msigleform> X_bxrj </Msigleform>
+	   <Mcomparam>"width":"300px", "required":true,"validType":"length[3,10]" ⊙"width" :"700px","height":"300px" , "multiline" :true
+	   </Mcomparam>
+	   
+<fontstr></fontstr>
+	   <extendfield> Xbxrj_Date:getdate(),Xbxrj_Id getid:bxrj:MMdd</extendfield>
+	<typestr>s,s,s</typestr>
+	   
+	   	  <fieldstyle>1:3</fieldstyle>
+<extendxml>
+	 <awidth>100px</awidth>
+	 <bwidth>220px</bwidth>
+	 <deview>Xbxrj_desc:内容</deview>
+	 </extendxml>
+	 
+	 	<firstcom></firstcom>
+<exterparam></exterparam>
+</Tbxrj>

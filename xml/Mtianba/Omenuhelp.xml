@@ -1,0 +1,35 @@
+   <Omenuhelp lang="zh_CN" >
+   <Xselectcolumn>Smenulyb_id, Smenulyb_name,Smenulyb_date,Smenulyb_desc </Xselectcolumn>
+<Xfieldtitle>id,Smenulyname,Smenulybdate,Smenulybdesc</Xfieldtitle>
+	   <Xcolumntitle>id,标题,日期,内容</Xcolumntitle>
+	 <jionform>S_menulyb where 1=1 </jionform>
+<Xfieldwidth>1,480,150,200,100, 200</Xfieldwidth>
+	 
+ <Xgroupfield>Smenulyb_code</Xgroupfield>
+	 <Xrowcount>12 </Xrowcount>
+   <Xorderfield> Smenulyb_ID </Xorderfield>
+ <selectcolumn> Smenulyb_name, Smenulyb_desc </selectcolumn>
+ <columntitle>标题:211: validatebox-0:选输入标题,内容:011:textbox-1 </columntitle> 
+	 <fieldtitle> Smenulyn, Smenulybdesc </fieldtitle>
+<idfield> Smenulyb_ID </idfield>
+	 <sigleform> S_menulyb </sigleform>
+	   <comparam>"width":"300", "required":true,"validType":"length[3,10]" ⊙"width":"700px","height":"300px", "multiline" :"true"
+	   </comparam>
+<extendfield>Smenulyb_date:getdate(),</extendfield>
+	<typestr>s,s,s</typestr>
+	  <conditionable>
+    0
+   </conditionable>
+	   	  <fieldstyle>1:2</fieldstyle>
+<extendxml>
+	 <awidth>100</awidth>
+	 <bwidth>720</bwidth>
+	 <deview>Smenulybdesc:内容</deview>
+	 </extendxml>
+<firstcom>helpdis:helpdisp:/Phtml/helpdisp.html:0</firstcom>
+<exterparam>"paramstr":"Rhelp","helptype":"db","helpcom":"idstrs" </exterparam>
+
+<title>ggghh</title>
+ 	</Omenuhelp>
+ 	
+ 	
