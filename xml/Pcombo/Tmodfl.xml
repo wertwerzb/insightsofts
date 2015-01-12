@@ -1,0 +1,34 @@
+<con>
+<Tmodfl lang="zh_CN">
+<idfield>mmodfl_id</idfield> 
+ <namefield>mmodfl_name
+ </namefield>
+	  <sigleform>m_modfl
+	  </sigleform>
+	 </Tmodfl> 
+	 
+<Tmodfl lang="zh_TW">
+<idfield>mmodfl_id</idfield> 
+ <namefield>mmodfl_name
+ </namefield>
+	  <sigleform>m_modfl
+	  </sigleform>
+	 </Tmodfl>
+	 
+<Tmodfl lang="en">
+<idfield>mmodfl_id</idfield> 
+ <namefield>mmodfl_name
+ </namefield>
+	  <sigleform>m_modfl
+	  </sigleform>
+	 </Tmodfl>
+	 
+<Tmodfl lang="jp">
+<idfield>mmodfl_id</idfield> 
+ <namefield>mmodfl_name
+ </namefield>
+	  <sigleform>m_modfl
+	  </sigleform>
+	 </Tmodfl>
+	 </con>
+

@@ -1,0 +1,29 @@
+<con>
+<Cygzl lang="zh_CN">
+ <idfield>Byg_id</idfield> 
+    <namefield>Byg_name</namefield>
+	  <sigleform>B_ygzl
+	  </sigleform>
+	 </Cygzl> 
+	 
+<Cygzl lang="zh_TW">
+ <idfield>Byg_id</idfield> 
+    <namefield>Byg_name</namefield>
+	  <sigleform>B_ygzl
+	  </sigleform>
+	 </Cygzl> 
+	 
+<Cygzl lang="en">
+ <idfield>Byg_id</idfield> 
+    <namefield>Byg_name</namefield>
+	  <sigleform>B_ygzl
+	  </sigleform>
+	 </Cygzl> 
+	 
+<Cygzl lang="jp">
+ <idfield>Byg_id</idfield> 
+    <namefield>Byg_name</namefield>
+	  <sigleform>B_ygzl
+	  </sigleform>
+	 </Cygzl>
+	 </con>

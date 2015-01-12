@@ -1,0 +1,33 @@
+<cong>
+<Tzhzl lang="zh_CN">
+<idfield>Bzh_Id</idfield> 
+ <namefield>Bzh_name
+ </namefield>
+	  <sigleform>B_zhzl1
+	  </sigleform>
+	 </Tzhzl>
+
+<Tzhzl lang="zh_TE">
+<idfield>Bzh_Id</idfield> 
+ <namefield>Bzh_name
+ </namefield>
+	  <sigleform>B_zhzl1
+	  </sigleform>
+	 </Tzhzl>
+	 
+<Tzhzl lang="en">
+<idfield>Bzh_Id</idfield> 
+ <namefield>Bzh_name
+ </namefield>
+	  <sigleform>B_zhzl1
+	  </sigleform>
+	 </Tzhzl>
+	 
+<Tzhzl lang="jp">
+<idfield>Bzh_Id</idfield> 
+ <namefield>Bzh_name
+ </namefield>
+	  <sigleform>B_zhzl1
+	  </sigleform>
+	 </Tzhzl>
+</cong>

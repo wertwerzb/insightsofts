@@ -1,0 +1,27 @@
+	 <con> 
+	 <Tghsfl lang="zh_TW">
+<idfield>Bghsfl_id</idfield> 
+ <namefield>Bghsfl_name</namefield>
+	  <sigleform>B_ghsfl
+	  </sigleform>
+	 </Tghsfl> 
+	 	  <Tghsfl lang="zh_TW">
+<idfield>Bghsfl_id</idfield> 
+ <namefield>Bghsfl_name</namefield>
+	  <sigleform>B_ghsfl
+	  </sigleform>
+	 </Tghsfl> 
+	 <Tghsfl lang="jp">
+<idfield>Bghsfl_id</idfield> 
+ <namefield>Bghsfl_name</namefield>
+	  <sigleform>B_ghsfl
+	  </sigleform>
+	 </Tghsfl> 
+
+	 <Tghsfl lang="en">
+<idfield>Bghsfl_id</idfield> 
+ <namefield>Bghsfl_name</namefield>
+	  <sigleform>B_ghsfl
+	  </sigleform>
+	 </Tghsfl> 
+	 </con>

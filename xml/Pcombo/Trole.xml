@@ -1,0 +1,31 @@
+ <Config>
+ <Trole lang="zh_CN">
+<idfield>Rolecode</idfield> 
+ <namefield>RoleName
+ </namefield>
+	  <sigleform>s_roled
+	  </sigleform>
+	 </Trole>
+	 <Trole lang="zh_TW">
+<idfield>Rolecode</idfield> 
+ <namefield>RoleName
+ </namefield>
+	  <sigleform>s_roled
+	  </sigleform>
+	 </Trole>
+	 <Trole lang="jp">
+<idfield>Rolecode</idfield> 
+ <namefield>RoleName
+ </namefield>
+	  <sigleform>s_roled
+	  </sigleform>
+	 </Trole>
+	 <Trole lang="en">
+<idfield>Rolecode</idfield> 
+ <namefield>RoleName
+ </namefield>
+	  <sigleform>s_roled
+	  </sigleform>
+	 </Trole>
+ </Config>
+

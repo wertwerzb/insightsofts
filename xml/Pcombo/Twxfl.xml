@@ -1,0 +1,28 @@
+	<cong> 
+	
+	 <Twxfl lang="zh_CN">
+<idfield>Bwxfl_id</idfield> 
+ <namefield>Bwxfl_name</namefield>
+	  <sigleform>B_wxfl
+	  </sigleform>
+	 </Twxfl> 
+	 <Twxfl lang="zh_TW">
+<idfield>Bwxfl_id</idfield> 
+ <namefield>Bwxfl_name</namefield>
+	  <sigleform>B_wxfl
+	  </sigleform>
+	 </Twxfl> 
+	 <Twxfl lang="en">
+<idfield>Bwxfl_id</idfield> 
+ <namefield>Bwxfl_name</namefield>
+	  <sigleform>B_wxfl
+	  </sigleform>
+	 </Twxfl> 
+	 <Twxfl lang="jp">
+<idfield>Bwxfl_id</idfield> 
+ <namefield>Bwxfl_name</namefield>
+	  <sigleform>B_wxfl
+	  </sigleform>
+	 </Twxfl> 
+
+	</cong> 

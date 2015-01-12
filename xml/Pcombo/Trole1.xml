@@ -1,0 +1,34 @@
+<Cong>
+ <Trole1 lang="zh_CN">
+<idfield>Rolecode</idfield> 
+ <namefield>RoleName
+ </namefield>
+	  <sigleform>s_roled where Rolecode like '{R}%'
+	  </sigleform>
+	 </Trole1>
+	 
+ <Trole1 lang="zh_TW">
+<idfield>Rolecode</idfield> 
+ <namefield>RoleName
+ </namefield>
+	  <sigleform>s_roled where Rolecode like '{R}%'
+	  </sigleform>
+	 </Trole1>
+	 
+ <Trole1 lang="jp">
+<idfield>Rolecode</idfield> 
+ <namefield>RoleName
+ </namefield>
+	  <sigleform>s_roled where Rolecode like '{R}%'
+	  </sigleform>
+	 </Trole1>
+	 
+ <Trole1 lang="en">
+<idfield>Rolecode</idfield> 
+ <namefield>RoleName
+ </namefield>
+	  <sigleform>s_roled where Rolecode like '{R}%'
+	  </sigleform>
+	 </Trole1>
+</Cong>
+

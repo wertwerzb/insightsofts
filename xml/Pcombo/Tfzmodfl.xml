@@ -1,0 +1,36 @@
+<con>
+<Tfzmodfl lang="zh_CN">
+<idfield>mmodfl_id</idfield> 
+ <namefield>mmodfl_name
+ </namefield>
+	  <sigleform>m_modfl where mmodfl_id like '02%'
+	  </sigleform>
+	 </Tfzmodfl> 
+	 
+<Tfzmodfl lang="zh_TW">
+<idfield>mmodfl_id</idfield> 
+ <namefield>mmodfl_name
+ </namefield>
+	  <sigleform>m_modfl where mmodfl_id like '02%'
+	  </sigleform>
+	 </Tfzmodfl> 
+	 
+<Tfzmodfl lang="en">
+<idfield>mmodfl_id</idfield> 
+ <namefield>mmodfl_name
+ </namefield>
+	  <sigleform>m_modfl where mmodfl_id like '02%'
+	  </sigleform>
+	 </Tfzmodfl> 
+	 
+<Tfzmodfl lang="jp">
+<idfield>mmodfl_id</idfield> 
+ <namefield>mmodfl_name
+ </namefield>
+	  <sigleform>m_modfl where mmodfl_id like '02%'
+	  </sigleform>
+	 </Tfzmodfl> 
+	 
+	 </con>
+	 
+

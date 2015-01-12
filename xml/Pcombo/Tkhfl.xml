@@ -1,0 +1,26 @@
+<Con> 
+	 <Tkhfl lang="zh_CN">
+<idfield>Bkhfl_id</idfield> 
+ <namefield>Bkhfl_name</namefield>
+	  <sigleform>B_khfl
+	  </sigleform>
+	  
+	 <Tkhfl lang="jp">
+<idfield>Bkhfl_id</idfield> 
+ <namefield>Bkhfl_name</namefield>
+	  <sigleform>B_khfl
+	  </sigleform>
+	  
+	 <Tkhfl lang="en">
+<idfield>Bkhfl_id</idfield> 
+ <namefield>Bkhfl_name</namefield>
+	  <sigleform>B_khfl
+	  </sigleform>
+	  
+	 <Tkhfl lang="zh_TW">
+<idfield>Bkhfl_id</idfield> 
+ <namefield>Bkhfl_name</namefield>
+	  <sigleform>B_khfl
+	  </sigleform>
+	  
+	 </Con> 

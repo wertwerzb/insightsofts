@@ -1,0 +1,35 @@
+<config>
+<Pbutton lang="zh_CN">
+<idfield>sbu_char</idfield> 
+ <namefield>sbu_zh_CNname
+ </namefield>
+	 <sigleform> S_butt where sbu_list=
+	  </sigleform>
+	 </Pbutton>
+	 
+<Pbutton lang="zh_TW">
+<idfield>sbu_char</idfield> 
+ <namefield>sbu_zh_CNname
+ </namefield>
+	 <sigleform> S_butt where sbu_list=
+	  </sigleform>
+	 </Pbutton>
+	 
+<Pbutton lang="jp">
+<idfield>sbu_char</idfield> 
+ <namefield>sbu_zh_CNname
+ </namefield>
+	 <sigleform> S_butt where sbu_list=
+	  </sigleform>
+	 </Pbutton>
+	 
+<Pbutton lang="en">
+<idfield>sbu_char</idfield> 
+ <namefield>sbu_zh_CNname
+ </namefield>
+	 <sigleform> S_butt where sbu_list=
+	  </sigleform>
+	 </Pbutton>
+	 
+	 </config>
+

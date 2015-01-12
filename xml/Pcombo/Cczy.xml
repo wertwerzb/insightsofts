@@ -1,0 +1,30 @@
+<config>
+<Cczy lang="zh_CN">
+ <idfield>id</idfield> 
+    <namefield>webname</namefield>
+	  <sigleform>s_czyaccess where webname!=''
+	  </sigleform>
+	 </Cczy> 
+	 
+<Cczy lang="zh_TW">
+ <idfield>id</idfield> 
+    <namefield>webname</namefield>
+	  <sigleform>s_czyaccess where webname!=''
+	  </sigleform>
+	 </Cczy> 
+	 
+<Cczy lang="en">
+ <idfield>id</idfield> 
+    <namefield>webname</namefield>
+	  <sigleform>s_czyaccess where webname!=''
+	  </sigleform>
+	 </Cczy> 
+	 
+<Cczy lang="jp">
+ <idfield>id</idfield> 
+    <namefield>webname</namefield>
+	  <sigleform>s_czyaccess where webname!=''
+	  </sigleform>
+	 </Cczy> 
+	 
+	 </config>

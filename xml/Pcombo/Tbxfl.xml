@@ -1,0 +1,32 @@
+<con>
+<Tbxfl lang="zh_CN">
+<idfield>xbxfl_id</idfield> 
+ <namefield>xbxfl_name
+ </namefield>
+	 <sigleform>x_bxfl
+	  </sigleform>
+	 </Tbxfl>
+	 <Tbxfl lang="zh_TW">
+<idfield>xbxfl_id</idfield> 
+ <namefield>xbxfl_name
+ </namefield>
+	 <sigleform>x_bxfl
+	  </sigleform>
+	  
+	 </Tbxfl>
+	 <Tbxfl lang="en">
+<idfield>xbxfl_id</idfield> 
+ <namefield>xbxfl_name
+ </namefield>
+	 <sigleform>x_bxfl
+	  </sigleform>
+	 </Tbxfl> <Tbxfl lang="jp">
+<idfield>xbxfl_id</idfield> 
+ <namefield>xbxfl_name
+ </namefield>
+	 <sigleform>x_bxfl
+	  </sigleform>
+	 </Tbxfl>
+	 </con>
+	 
+

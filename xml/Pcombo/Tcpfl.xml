@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <Con>
+<Tcpfl lang="zh_CN">
+<idfield>Bcpfl_id</idfield> 
+<namefield>Bcpfl_name</namefield>
+	  <sigleform>B_cpfl
+	  </sigleform>
+</Tcpfl> 
+
+<Tcpfl lang="zh_TW">
+<idfield>Bcpfl_id</idfield> 
+<namefield>Bcpfl_name</namefield>
+	  <sigleform>B_cpfl
+	  </sigleform>
+</Tcpfl> 
+<Tcpfl lang="jp">
+<idfield>Bcpfl_id</idfield> 
+<namefield>Bcpfl_name</namefield>
+	  <sigleform>B_cpfl
+	  </sigleform>
+</Tcpfl>
+<Tcpfl lang="en">
+<idfield>Bcpfl_id</idfield> 
+<namefield>Bcpfl_name</namefield>
+	  <sigleform>B_cpfl
+	  </sigleform>
+</Tcpfl>
+</Con>
+

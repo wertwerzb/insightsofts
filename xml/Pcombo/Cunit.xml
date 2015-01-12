@@ -1,0 +1,29 @@
+<con>
+<Cunit lang="zh_CN">
+ <idfield>Bunit_id</idfield> 
+    <namefield>Bunit_name</namefield>
+	  <sigleform>B_unit  where bunit_class=0
+	  </sigleform>
+	 </Cunit>
+	 
+<Cunit lang="zh_TW">
+ <idfield>Bunit_id</idfield> 
+    <namefield>Bunit_name</namefield>
+	  <sigleform>B_unit  where bunit_class=0
+	  </sigleform>
+	  </Cunit>
+<Cunit lang="jp">
+ <idfield>Bunit_id</idfield> 
+    <namefield>Bunit_name</namefield>
+	  <sigleform>B_unit  where bunit_class=0
+	  </sigleform>
+	 </Cunit>
+	 
+<Cunit lang="en">
+ <idfield>Bunit_id</idfield> 
+    <namefield>Bunit_name</namefield>
+	  <sigleform>B_unit  where bunit_class=0
+	  </sigleform>
+	 </Cunit>
+	 </con>
+

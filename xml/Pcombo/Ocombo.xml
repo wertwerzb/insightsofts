@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comconfig>
+<Tcpfl>
+<idfield>Bcpfl_id</idfield> 
+<namefield>Bcpfl_name</namefield>
+	  <sigleform>B_cpfl
+	  </sigleform>
+	 </Tcpfl> 
+	 <Twxfl>
+<idfield>Bwxfl_id</idfield> 
+ <namefield>Bwxfl_name</namefield>
+	  <sigleform>B_wxfl
+	  </sigleform>
+	 </Twxfl> 
+	 <Tghsfl>
+<idfield>Bghsfl_id</idfield> 
+ <namefield>Bghsfl_name</namefield>
+	  <sigleform>B_ghsfl
+	  </sigleform>
+	 </Tghsfl> 
+<Tkhfl>
+<idfield>Bkhfl_id</idfield> 
+ <namefield>Bkhfl_name</namefield>
+	  <sigleform>B_khfl
+	  </sigleform>
+	 </Tkhfl> 
+	 <Tmodfl>
+<idfield>mmodfl_id</idfield> 
+ <namefield>mmodfl_name
+ </namefield>
+	  <sigleform>m_modfl
+	  </sigleform>
+	 </Tmodfl> 
+	 <Tbxfl>
+<idfield>xbxfl_id</idfield> 
+ <namefield>xbxfl_name
+ </namefield>
+	 <sigleform>x_bxfl
+	  </sigleform>
+	 </Tbxfl>
+	 
+	 <Trole>
+<idfield>Rolecode</idfield> 
+ <namefield>RoleName
+ </namefield>
+	  <sigleform>s_roled
+	  </sigleform>
+	 </Trole>
+
+	 <Tzhzl>
+<idfield>Bzh_Id</idfield> 
+ <namefield>Bzh_name
+ </namefield>
+	  <sigleform>B_zhzl1
+	  </sigleform>
+	 </Tzhzl>
+
+	 <Cunit>
+ <idfield>Bunit_id</idfield> 
+    <namefield>Bunit_name</namefield>
+	  <sigleform>B_unit  where bunit_class=0
+	  </sigleform>
+	 </Cunit> <Cghs>
+ <idfield>Bghs_id</idfield> 
+    <namefield>Bghs_name</namefield>
+	  <sigleform>B_ghszl
+	  </sigleform>
+	 </Cghs> 
+	 
+	 <Ckhzl>
+ <idfield>Bkh_id</idfield> 
+    <namefield>Bkh_name</namefield>
+	  <sigleform>B_khzl
+	  </sigleform>
+	 </Ckhzl> 
+	 
+	 <Cygzl>
+ <idfield>Byg_id</idfield> 
+    <namefield>Byg_name</namefield>
+	  <sigleform>B_ygzl
+	  </sigleform>
+	 </Cygzl> 
+	 
+	 <Ccpzl>
+ <idfield>Bcp_id</idfield> 
+    <namefield>Bcp_name</namefield>
+	  <sigleform>B_cpzl
+	  </sigleform>
+	 </Ccpzl> 
+	 </comconfig>
