@@ -1,0 +1,78 @@
+<script type="text/javascript">
+var modcom ;
+ var htmldesc;
+ var htmlload;
+$(function(){
+for( var i =0; i < secondextjson.length; i ++ )
+{
+
+
+if(secondextjson[i].id=="loadhtmldiv")
+{ 
+htmlload = secondextjson[i].option.isload ;
+htmldesc=secondextjson[i].option.htmldesc ;
+modcom =secondextjson[i].option.modcom ;
+
+break;
+}
+
+}
+
+
+ var	 flclass= $("input[name='"+ modcom+ "']").val();
+ 
+ $("#fileinfo").html(" <input type='hidden' name='filepath' value='"+ idstrs  +"_"+idstrs+".html'/> <input type='hidden' name='isload' value='"+ htmlload+"' /> ");
+ $("#htmldesc").html( htmldesc );
+var imagsrc=( idstrs +"/"+idstrs).replace(/_/g,"/") +".html";
+ $("#htmldisplay").html( "<a href='/html/"+ imagsrc+ "?hrefstr="+ flclass+"'   target='_blank' >html模板文件</a><a href='/"+usercode+"/"+ imagsrc+"?hrefstr="+ flclass+"' target='_blank' >用户html文件</a> " ) ;
+  })
+	
+	
+
+function uploadfile() {
+
+if(idstrs==undefined)
+{
+alert(" 请先保存主体 ");
+return;
+}
+$('#ffhtml').form('submit', {
+url:"/UplFile",
+
+success:function(data){
+alert(data);
+}
+});
+ }
+ 
+
+
+
+
+</script>
+
+<div id="htmldiv" class="easyui-panel" data-options="title:'html效果预览'" ">
+<div id="htmldisplay" align="center">
+
+</div>
+
+ <form id="ffhtml" class="x-form" method="post" action="/UplFile" ENCTYPE="multipart/form-data">
+
+ <table>
+<tr  >
+<td  > <input type="file" name="file1"/> </td>
+<td >
+
+<input type="button"  onclick="uploadfile()"  value="上传"></input> 
+</td>
+</tr>
+<tr>
+<td id="htmldesc"> </td>
+<td id="fileinfo">
+
+</td>
+</tr>
+</table>
+</form>
+</div>
+

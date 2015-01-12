@@ -1,0 +1,54 @@
+
+<script type="text/javascript">
+
+var flclass1;
+
+var flstr1;
+
+
+
+
+$(function(){
+for( var i =0; i < extjson.length; i ++ )
+{
+if(extjson[i].name=="treefilter")
+{ 
+flclass1= extjson[i].option.flfield;
+flstr1=extjson[i].option.flclass;
+break;
+}
+}
+
+
+
+ $("#tre").tree({
+  url: '/MainInit?hre='+ flstr1+"_gettreeresult_partview.ComboList",
+   method:'get',
+   height:'15',
+   lines:'true',
+   onClick:treecondition,
+   });
+	 });
+	
+var treecondition =function(node)
+   {
+   
+     var condstr= flclass1+ " like \'"+node.id+"%\'";
+     getpagerecord(condstr ) ;
+    
+   }
+   var includstr =function(node)
+   {
+   
+     var condstr= flclass1+ " like \'%"+node.id+"%\'";
+     getpagerecord(condstr ) ;
+    
+   }
+   
+
+</script>
+
+
+<ul id="tre" ></ul>
+</ul>
+

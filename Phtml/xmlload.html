@@ -1,0 +1,75 @@
+<script type="text/javascript">
+var modcom ;
+ var xmldesc;
+ var isload;
+$(function(){
+for( var i =0; i < secondextjson.length; i ++ )
+{
+
+
+if(secondextjson[i].id=="loadxmldiv")
+{ 
+isload = secondextjson[i].option.isload ;
+xmldesc=secondextjson[i].option.xmldesc ;
+modcom =secondextjson[i].option.modcom ;
+
+break;
+}
+
+}
+
+ var	 flclass= $("input[name='"+ modcom+ "']").val();
+ 
+ $("#fileinfo").html(" <input type='hidden' name='filepath' value='"+ flclass +"_"+idstrs+".xml'/> <input type='hidden' name='isload' value='"+ isload+"' /> ");
+ $("#xmldesc").html( xmldesc );
+var imagsrc=(flclass+"/"+idstrs).replace(/_/g,"/") +".xml";
+ $("#xmldisplay").html("<span><a href='/xml/"+ imagsrc+"' target='_blank' >xml模板文件</a></span><span><a href='/"+usercode+"/" +imagsrc+"' target='_blank' >xml当前文件</a></span>") ;
+  })
+	
+	
+
+function uploadfile() {
+
+if(idstrs==undefined)
+{alert(" 请先保存主体 ");
+return;
+}
+$('#ffxml').form('submit', {
+url:"/UplFile",
+
+success:function(data){
+alert(data);
+}
+});
+ }
+ 
+
+
+
+
+</script>
+<div id="xmldiv" class="easyui-panel" data-options="title:'xml文件内容预览'" >
+<div id="xmldisplay" align="center">
+
+</div>
+
+ <form id="ffxml" class="x-form" method="post" action="/UplFile" ENCTYPE="multipart/form-data">
+
+ <table>
+<tr  >
+<td  > <input type="file" name="file1"/> </td>
+<td >
+
+<input type="button"  onclick="uploadfile()"  value="上传"></input> 
+</td>
+</tr>
+<tr>
+<td id="xmldesc"> </td>
+<td id="fileinfo">
+
+</td>
+</tr>
+</table>
+</form>
+</div>
+

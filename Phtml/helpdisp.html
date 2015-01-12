@@ -1,0 +1,45 @@
+<script type="text/javascript">
+
+var paramstr ;
+var helptype ;
+var helpcom ;
+
+
+
+$(function(){
+
+
+for( var i =0; i < secondextjson.length; i ++ )
+{
+if(secondextjson[i].id=="helpdis")
+{ 
+paramstr = secondextjson[i].option.paramstr ;
+helptype =secondextjson[i].option.helptype ;
+helpcom=secondextjson[i].option.helpcom ;
+break;
+}
+}
+
+
+var	 flclass= $("input[name='"+ helpcom + "']").val();
+alert( flclass );
+
+$.get("/MainDisp",
+  {
+ hre: paramstr+"_getdbresult_partview.ParemList" ,
+ id: idstrs
+ },function( datastr ) { 
+ 
+ $("#fileinfo").html(" <p>"+ datastr+ "</p> ");
+ 
+ 
+})
+ 
+ });
+	
+	
+ 
+</script>
+<div id="fileinfo" class="easyui-panel" data-options="title:'帮助'" >
+
+</div>

@@ -1,0 +1,67 @@
+<script type="text/javascript">
+
+var putinload;
+var puttitle;
+var searchstr;
+$(function(){
+
+for( var i =0; i < secondextjson.length; i ++ )
+{
+if(secondextjson[i].id=="computin")
+{ 
+putinload= secondextjson[i].option.putinload;
+puttitle = secondextjson[i].option.puttitle ;
+
+break;
+}
+}
+
+
+
+
+
+ });
+	
+
+    function chiocepuin () 
+	{	 
+	searchstr= putinload ;
+	
+	 /* $('#putindiv').window({
+	 
+	 
+	collapsible:false,
+  minimizable:false,
+  title: puttitle+ "选择导入",
+	  width:600,
+  height:400,
+	 buttons : [ {
+				text : '修改',
+				iconCls : 'icon-save',
+				handler : function() {
+					alert("ghhh");
+				}
+			} ],
+		
+	});
+	
+	*/
+//	alert($("#computin").attr("height"));
+	
+	 //if(useflaged!=1)
+	$('#putindiv').window({
+	collapsible:false,
+  minimizable:false,
+  title: puttitle+ "选择导入",
+   top:80,
+   left:20,
+   width:560,
+   height:400,
+  // fit:true,
+   modal:true,
+  href: '/html/putingrid/putingrid2.html'
+});
+}
+</script>
+ <img onclick="chiocepuin()" src="/jslib/jquery-easyui-1.4/themes/icons/search.png" /> 
+
