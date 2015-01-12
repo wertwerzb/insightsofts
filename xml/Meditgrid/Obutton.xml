@@ -1,0 +1,151 @@
+<config>
+<Obutton lang="zh_CN" >
+ <selectcolumn>Sbu_Id,Sbu_char ,Sbutt_paramsO, Sbutt_paramsD, Sbu_list,Sbu_mxlist,Sbu_func,Sbu_isAu,Sbu_zh_CNName,Sbu_icon</selectcolumn>
+	 
+	 <fieldtitle>id,Sbnchar,Sbuttparamso,Sbutt_paramsd,Sbulist,Smxbulist,Sbufunc,SbuisAu,SbuChName,Sbuicon</fieldtitle>
+	  <columntitle>编码,符号,参数, 特别参数, 所属模板,页元素,函数,自动,中文,图标</columntitle> 
+		 	<fieldwidth>80,50,220, 220,200,200,200,200,200,200
+		 </fieldwidth>
+		 <typestr>s,s,s,s,s,s,s,s,s,s
+	 </typestr>
+	 
+	 
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>text,text,text,text,combobox-2,text,text,text,text,text </comname> 
+	 		<comparam>width:300⊙"valueField":"value","textField":"label","data":[{"label":"list","value":"list"},{"label":"mxhead","value":"mxhead"} ,{"label":"mxbody","value":"mxbody"} ,{"label":"deview","value":"deview "} ] ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cmodpr_getcomresult_partview.ComboList"
+	 		 
+			</comparam>
+	  <sigleform>S_butt
+	  </sigleform>
+	  <idfield>Sbu_Id</idfield>
+	 	 <namefield>Sbu_char</namefield>
+		 <rowcount>12
+   </rowcount> 	
+   <addidmodal>1</addidmodal>
+   
+		 <extendxml> 
+<debug>1</debug>
+<mtitle>"按钮设计" </mtitle>
+</extendxml>
+
+<modextfield></modextfield>
+		 <firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+<extendfield></extendfield>
+    </Obutton> 
+    <Obutton lang="en" >
+<selectcolumn>Sbu_Id,Sbu_char,Sbu_list,Sbu_mxlist,Sbu_func,Sbu_isAu,Sbu_zh_CNName,Sbu_EnName,Sbu_JpName,Sbu_zh_TWName,Sbu_icon</selectcolumn>
+	 
+	 <fieldtitle>id,Sbnchar,Sbulist,Smxbulist,Sbufunc,SbuisAu,SbuChName,SbuEnName,SbuJpName,SbuftName,Sbuicon</fieldtitle>
+	  <columntitle>Codeif,char,template,页元素,函数,自动,中文,英文,日文,繁体,图标</columntitle> 
+		 	<fieldwidth>80,30,200,200,200,200,200,200,200,200,200
+		 </fieldwidth>
+		 <typestr>s,s,s,s,s,s,s,s,s,s,s
+	 </typestr>
+	 
+	 
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>text,text,combobox-2,text,text,text,text,text,text,text,text </comname> 
+	 		<comparam>width:300⊙"valueField":"value","textField":"label","data":[{"label":"list","value":"list"},{"label":"mxhead","value":"mxhead"} ,{"label":"mxbody","value":"mxbody"} ,{"label":"deview","value":"deview "} ] ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cmodpr_getcomresult_partview.ComboList"
+			</comparam>
+	  <sigleform>S_butt
+	  </sigleform>
+	  <idfield>Sbu_Id</idfield>
+	 	 <namefield>Sbu_char</namefield>
+		 <rowcount>12
+   </rowcount> 	
+   <addidmodal>1</addidmodal>
+   
+		 <extendxml> 
+<debug>1</debug>
+<mtitle>"按钮设计" </mtitle>
+</extendxml>
+
+<modextfield></modextfield>
+		 <firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+
+<extendfield></extendfield>
+    </Obutton> 
+<Obutton lang="zh_TW" >
+ <selectcolumn>Sbu_Id,Sbu_char,Sbu_list,Sbu_mxlist,Sbu_func,Sbu_isAu,Sbu_zh_CNName,Sbu_EnName,Sbu_JpName,Sbu_zh_TWName,Sbu_icon</selectcolumn>
+	 
+	 <fieldtitle>id,Sbnchar,Sbulist,Smxbulist,Sbufunc,SbuisAu,SbuChName,SbuEnName,SbuJpName,SbuftName,Sbuicon</fieldtitle>
+	  <columntitle>編碼,符号,所属模板,页元素,函数,自动,中文,英文,日文,繁体,图标</columntitle> 
+		 	<fieldwidth>80,30,200,200,200,200,200,200,200,200,200
+		 </fieldwidth>
+		 <typestr>s,s,s,s,s,s,s,s,s,s,s
+	 </typestr>
+	 
+	 
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>text,text,combobox-2,text,text,text,text,text,text,text,text </comname> 
+	 		<comparam>width:300⊙"valueField":"value","textField":"label","data":[{"label":"list","value":"list"},{"label":"mxhead","value":"mxhead"} ,{"label":"mxbody","value":"mxbody"} ,{"label":"deview","value":"deview "} ] ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cmodpr_getcomresult_partview.ComboList"
+			</comparam>
+	  <sigleform>S_butt
+	  </sigleform>
+	  <idfield>Sbu_Id</idfield>
+	 	 <namefield>Sbu_char</namefield>
+		 <rowcount>12
+   </rowcount> 	
+   <addidmodal>1</addidmodal>
+   
+		 <extendxml> 
+<debug>1</debug>
+<mtitle>"按钮设计" </mtitle>
+</extendxml>
+
+<modextfield></modextfield>
+		 <firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+
+<extendfield></extendfield>
+    </Obutton> 
+<Obutton lang="jp" >
+ <selectcolumn>Sbu_Id,Sbu_char,Sbu_list,Sbu_mxlist,Sbu_func,Sbu_isAu,Sbu_zh_CNName,Sbu_EnName,Sbu_JpName,Sbu_zh_TWName,Sbu_icon</selectcolumn>
+	 
+	 <fieldtitle>id,Sbnchar,Sbulist,Smxbulist,Sbufunc,SbuisAu,SbuChName,SbuEnName,SbuJpName,SbuftName,Sbuicon</fieldtitle>
+	  <columntitle>编码,符号,所属模板,页元素,函数,自动,中文,英文,日文,繁体,图标</columntitle> 
+		 	<fieldwidth>80,30,200,200,200,200,200,200,200,200,200
+		 </fieldwidth>
+		 <typestr>s,s,s,s,s,s,s,s,s,s,s
+	 </typestr>
+	 
+	 
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>text,text,combobox-2,text,text,text,text,text,text,text,text </comname> 
+	 		<comparam>width:300⊙"valueField":"value","textField":"label","data":[{"label":"list","value":"list"},{"label":"mxhead","value":"mxhead"} ,{"label":"mxbody","value":"mxbody"} ,{"label":"deview","value":"deview "} ] ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cmodpr_getcomresult_partview.ComboList" 
+			</comparam>
+	  <sigleform>S_butt
+	  </sigleform>
+	  <idfield>Sbu_Id</idfield>
+	 	 <namefield>Sbu_char</namefield>
+		 <rowcount>12
+   </rowcount> 	
+   <addidmodal>1</addidmodal>
+   
+		 <extendxml> 
+<debug>1</debug>
+<mtitle>"按钮设计" </mtitle>
+</extendxml>
+
+<modextfield></modextfield>
+		 <firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+
+<extendfield></extendfield>
+    </Obutton> 
+
+</config>

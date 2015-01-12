@@ -1,0 +1,40 @@
+<Orolectrl lang="zh_CN" >
+ <selectcolumn>sysmenuid,sysmenuname,jspnewsource,param1{P}, param1{R},testaccess
+  </selectcolumn>
+	 <fieldtitle>id,menuname,jspnewsource,param{p},param{R},canaccess
+  	</fieldtitle>
+	  <columntitle>id,名称,模板,全部按钮,按钮,是否常有
+		 </columntitle> 
+		 	<fieldwidth>60,200,200,200,200,200,200
+		 </fieldwidth>
+		 <typestr>i,H,H,s,s,i
+	 </typestr>
+	 
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,label,label,text,text,combobox-1</comname> 
+	 		<comparam>width:300⊙"valueField":"value","textField":"label","data":[{"label":"否","value":0},{"label":"是","value":1} ,{"label":"未完成","value":2} ] 
+	 			</comparam>
+	  <sigleform> Smenu
+	 </sigleform>
+	  
+	  
+	  <idfield>sysmenuid</idfield>
+	 	 <namefield>sysmenuname</namefield>
+		 <rowcount>11
+   </rowcount> 	
+   <extendfield></extendfield>
+   
+		 <extendxml> 
+<mtitle>"角色权限设置"</mtitle>
+
+	  <detailview>{"name": "cc","param":{"bcp_name" :"名称 ","Bcp_BUnit" :"单位"}}</detailview>
+</extendxml>
+
+		 <firstcom>east:treefilter:/html/fzdiv/treefilter1.html:0 </firstcom>
+		 
+<modextfield></modextfield>
+<secondcom></secondcom>
+<exterparam> "flclass":"Trole1","flfield":"rolecode" </exterparam>
+    </Orolectrl> 
