@@ -1,0 +1,34 @@
+<Ocpfl lang="zh_CN" >
+<addidmodal>2</addidmodal>
+ <selectcolumn> Bcpfl_id,Bcpfl_name,Bcpfl_desc
+  </selectcolumn>
+	 <fieldtitle>id,cpflname,cpfldesc
+  	 </fieldtitle>
+	  <columntitle>类型编码,名称,备注
+		 </columntitle> 
+		 <fieldwidth>80,200,280 
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+  <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text-1,textarea </comname> 
+	 		<comparam>width:300 ⊙"required" :true </comparam>
+ <sigleform>B_cpfl
+	  </sigleform>
+	  <idfield>Bcpfl_id</idfield>
+	 		<namefield>cpflname</namefield>
+		
+		 <curnode>01
+		</curnode> 
+		 <extendxml> 
+<flagfield>Tcpfl_uflag</flagfield>
+<mtitle>产品资料</mtitle>
+</extendxml>
+
+	 	<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Ocpfl> 

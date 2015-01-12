@@ -1,0 +1,33 @@
+
+<Omenu lang="zh_CN" >
+<extendxml> 
+
+<mtitle>产品资料</mtitle>
+</extendxml>
+ <selectcolumn> sysmenucode,sysmenuname,psysmenucode
+  </selectcolumn>
+	 <fieldtitle>id,menuname,psysmenucode
+  	</fieldtitle>
+	  <columntitle>类型编码,名称,父记录
+		 </columntitle> 
+		 	<fieldwidth>120,120,200
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text,text</comname> 
+	 		<comparam>width:300</comparam>
+	  <sigleform>smenu
+	  </sigleform>
+	  <idfield>sysmenucode</idfield>
+	 	 <namefield>menuname</namefield>
+		
+		 <curnode>0
+		</curnode> 
+	 	<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Omenu> 

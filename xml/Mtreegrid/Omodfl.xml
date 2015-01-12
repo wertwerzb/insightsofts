@@ -1,0 +1,126 @@
+<config>
+<Omodfl lang="zh_CN" >
+<addidmodal>2</addidmodal>
+<extendxml> 
+<mtitle>模板分类资料</mtitle>
+<useflag>Mmodfl_uflag</useflag>
+</extendxml>
+
+<selectcolumn>Mmodfl_id,Mmodfl_name,Mmodfl_desc,Mmodfl_uflag</selectcolumn>
+	 <fieldtitle>id,modflname,modfldesc,Mmodfluflag
+  	</fieldtitle>
+	  <columntitle>类型编码,名称,备注,生效
+		 </columntitle> 
+		 	<fieldwidth>120,200,180,180 
+		 </fieldwidth>
+		 <typestr>s,s,s,s
+	 </typestr>
+<comname>label,text,text,text</comname> 
+	 		<comparam>width:300</comparam>
+	  <sigleform>M_modfl
+	  </sigleform>
+	  <idfield>Mmodfl_id</idfield>
+	  
+	 	 <namefield>modflname</namefield>
+	 	
+		 <curnode>0
+		</curnode> 
+			<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+	 </Omodfl> 
+<Omodfl lang="en" >
+<addidmodal>2</addidmodal>
+<extendxml> 
+<mtitle>Template classification data</mtitle>
+<useflag>Mmodfl_uflag</useflag>
+</extendxml>
+
+<selectcolumn>Mmodfl_id,Mmodfl_name,Mmodfl_desc,Mmodfl_uflag</selectcolumn>
+	 <fieldtitle>id,modflname,modfldesc,Mmodfluflag
+  	</fieldtitle>
+	  <columntitle> Typecode,name,notes,effect
+		 </columntitle> 
+		 	<fieldwidth>120,200,180,180 
+		 </fieldwidth>
+		 <typestr>s,s,s,s
+	 </typestr>
+<comname>label,text,text,text</comname> 
+	 		<comparam>width:300</comparam>
+	  <sigleform>M_modfl
+	  </sigleform>
+	  <idfield>Mmodfl_id</idfield>
+	  
+	 	 <namefield>modflname</namefield>
+	 	
+		 <curnode>0
+		</curnode> 
+			<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+	 </Omodfl> 
+	 <Omodfl lang="zh_TW" >
+<addidmodal>2</addidmodal>
+<extendxml> 
+<mtitle>模板分类资料</mtitle>
+<useflag>Mmodfl_uflag</useflag>
+</extendxml>
+
+<selectcolumn>Mmodfl_id,Mmodfl_name,Mmodfl_desc,Mmodfl_uflag</selectcolumn>
+	 <fieldtitle>id,modflname,modfldesc,Mmodfluflag
+  	</fieldtitle>
+	  <columntitle>类型编码,名称,备注,生效
+		 </columntitle> 
+		 	<fieldwidth>120,200,180,180 
+		 </fieldwidth>
+		 <typestr>s,s,s,s
+	 </typestr>
+<comname>label,text,text,text</comname> 
+	 		<comparam>width:300</comparam>
+	  <sigleform>M_modfl
+	  </sigleform>
+	  <idfield>Mmodfl_id</idfield>
+	  
+	 	 <namefield>modflname</namefield>
+		
+		 <curnode>0
+		</curnode> 
+			<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+	 </Omodfl> 
+	 <Omodfl lang="jp" >
+<addidmodal>2</addidmodal>
+<extendxml> 
+<mtitle>模板分类资料</mtitle>
+<useflag>Mmodfl_uflag</useflag>
+</extendxml>
+
+<selectcolumn>Mmodfl_id,Mmodfl_name,Mmodfl_desc,Mmodfl_uflag</selectcolumn>
+	 <fieldtitle>id,modflname,modfldesc,Mmodfluflag
+  	</fieldtitle>
+	  <columntitle>タイプコーディング,名称,注,発効する
+		 </columntitle> 
+		 	<fieldwidth>120,200,180,180 
+		 </fieldwidth>
+		 <typestr>s,s,s,s
+	 </typestr>
+<comname>label,text,text,text</comname> 
+	 		<comparam>width:300</comparam>
+	  <sigleform>M_modfl
+	  </sigleform>
+	  <idfield>Mmodfl_id</idfield>
+	  
+	 	 <namefield>modflname</namefield>
+	 	
+		 <curnode>0
+		</curnode> 
+			<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+	 </Omodfl> 
+	 </config>

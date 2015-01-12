@@ -1,0 +1,34 @@
+<Obmjg lang="zh_CN" >
+
+<addidmodal>2</addidmodal>
+<extendxml> 
+<mtitle>产品资料</mtitle>
+</extendxml>
+
+<selectcolumn>Bbm_id,Bbm_name, Bbm_desc</selectcolumn>
+	 <fieldtitle>id,text,bmdesc
+  	</fieldtitle>
+	  <columntitle>类型编码,部门名称,备注
+		 </columntitle> 
+		 	<fieldwidth>120,200,180 
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text,text</comname> 
+	 		<comparam>width:300</comparam>
+	  <sigleform>B_bmjg
+	  </sigleform>
+	  <idfield>Bbm_id</idfield>
+	 	 <namefield>bmname</namefield>
+	 	
+		 <curnode>0
+		</curnode> 
+		<firstcom></firstcom>
+<exterparam></exterparam>
+
+<modextfield></modextfield>
+<extendfield></extendfield>
+	 </Obmjg> 

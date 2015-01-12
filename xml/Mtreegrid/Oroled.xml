@@ -1,0 +1,126 @@
+<config>
+<Oroled lang="zh_CN" >
+
+<addidmodal>2</addidmodal>
+<extendxml> 
+
+<mtitle>角色管理</mtitle>
+</extendxml>
+ <selectcolumn>rolecode,rolename,Srole_desc</selectcolumn>
+	 <fieldtitle>id,rolename,Dstror </fieldtitle>
+	  <columntitle>角色,名称,角色描述
+		 </columntitle> 
+		 	<fieldwidth>120,180,360
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text,text</comname> 
+	 		<comparam>"required":true ,"validType":"length[8,10]"</comparam>
+	  <sigleform>S_roled
+	  </sigleform>
+	  <idfield>rolecode</idfield>
+	 	 <namefield>rolename</namefield>
+		 <curnode>{R}
+		</curnode> 
+	 	<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Oroled> 
+<Oroled lang="en" >
+
+<addidmodal>2</addidmodal>
+<extendxml> 
+
+<mtitle>role manage</mtitle>
+</extendxml>
+ <selectcolumn>rolecode,rolename,Srole_desc</selectcolumn>
+	 <fieldtitle>id,rolename,Dstror </fieldtitle>
+	  <columntitle>role,name,description
+		 </columntitle> 
+		 	<fieldwidth>120,180,360
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text,text</comname> 
+	 		<comparam>"required":true ,"validType":"length[8,10]"</comparam>
+	  <sigleform>S_roled
+	  </sigleform>
+	  <idfield>rolecode</idfield>
+	 	 <namefield>rolename</namefield>
+		 <curnode>{R}
+		</curnode> 
+	 	<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Oroled> 
+		 <Oroled lang="zh_TW" >
+
+<addidmodal>2</addidmodal>
+<extendxml> 
+
+<mtitle>角色管理</mtitle>
+</extendxml>
+ <selectcolumn>rolecode,rolename,Srole_desc</selectcolumn>
+	 <fieldtitle>id,rolename,Dstror </fieldtitle>
+	  <columntitle>角色,名称,角色描述
+		 </columntitle> 
+		 	<fieldwidth>120,180,360
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text,text</comname> 
+	 		<comparam>"required":true ,"validType":"length[8,10]"</comparam>
+	  <sigleform>S_roled
+	  </sigleform>
+	  <idfield>rolecode</idfield>
+	 	 <namefield>rolename</namefield>
+		 <curnode>{R}
+		</curnode> 
+	 	<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Oroled> 
+		 <Oroled lang="jp" >
+
+<addidmodal>2</addidmodal>
+<extendxml> 
+
+<mtitle>角色管理</mtitle>
+</extendxml>
+ <selectcolumn>rolecode,rolename,Srole_desc</selectcolumn>
+	 <fieldtitle>id,rolename,Dstror </fieldtitle>
+	  <columntitle>角色,名称,角色描述
+		 </columntitle> 
+		 	<fieldwidth>120,180,360
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text,text</comname> 
+	 		<comparam>"required":true ,"validType":"length[8,10]"</comparam>
+	  <sigleform>S_roled
+	  </sigleform>
+	  <idfield>rolecode</idfield>
+	 	 <namefield>rolename</namefield>
+		 <curnode>{R}
+		</curnode> 
+	 	<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Oroled> 
+		 </config>

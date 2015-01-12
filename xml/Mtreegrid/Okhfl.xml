@@ -1,0 +1,34 @@
+ <Okhfl lang="zh_CN" >
+<addidmodal>2</addidmodal>
+ <selectcolumn> Bkhfl_id,Bkhfl_name,Bkhfl_desc
+  </selectcolumn>
+	 <fieldtitle>id,khflname,khfldesc
+  	</fieldtitle>
+	  <columntitle>类型编码,名称,备注
+		 </columntitle> 
+		 	<fieldwidth>120,200,180 
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text,text</comname> 
+	 		<comparam>width:300</comparam>
+	  <sigleform>B_khfl
+	  </sigleform>
+	  <idfield>Bkhfl_id</idfield>
+	 	 <namefield>khflname</namefield>
+		 
+		 <curnode>0
+		</curnode> 
+		 <extendxml> 
+
+<mtitle>产品资料</mtitle>
+</extendxml>
+
+	 	<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Okhfl> 

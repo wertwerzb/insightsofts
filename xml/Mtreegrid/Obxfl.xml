@@ -1,0 +1,35 @@
+
+<Obxfl lang="zh_CN" >
+
+<addidmodal>2</addidmodal>
+<extendxml> 
+
+<mtitle>维修分类</mtitle>
+</extendxml>
+ <selectcolumn>Xbxfl_id,Xbxfl_name,Xbxfl_yindui,Xbxfl_fangsi</selectcolumn>
+	 <fieldtitle>id,Xbxflname,
+	 Xbxfyindui,Xbxflfangsi</fieldtitle>
+	  <columntitle>类型编码,名称,应对方法,处理方式
+		 </columntitle> 
+		 	<fieldwidth>120,120,200,200
+		 </fieldwidth>
+		 <typestr>s,s,s,i
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname> label,text,text,combobox-1</comname> 
+	 		<comparam> width:300px⊙"valueField":"value","textField":"label","data":[{"label":"维修人维修","value":0},{"label":"报告上级","value":1} ,{"label":"自行处理","value":2}] </comparam>
+	  <sigleform>x_bxfl
+	  </sigleform>
+	  <idfield>Xbxfl_id</idfield>
+	 	 <namefield>Xbxflname</namefield>
+		
+		 <curnode>0
+		</curnode> 
+		<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Obxfl> 
+

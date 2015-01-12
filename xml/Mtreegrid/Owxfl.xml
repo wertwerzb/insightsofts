@@ -1,0 +1,33 @@
+	 <Owxfl lang="zh_CN" > 
+		 
+<addidmodal>2</addidmodal>
+		 <extendxml> 
+
+<mtitle>产品资料</mtitle>
+</extendxml>
+ <selectcolumn> Bwxfl_id,Bwxfl_name,Bwxfl_desc
+  </selectcolumn>
+	 <fieldtitle>id,wxflname,wxfldesc
+  	</fieldtitle>
+	  <columntitle>类型编码,名称,备注
+		 </columntitle> 
+		 	<fieldwidth>120,200,180 
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text,text</comname> 
+	 		<comparam>width:300</comparam>
+	  <sigleform>B_wxfl
+	  </sigleform>
+	  <idfield>Bwxfl_id</idfield>
+	 	 <namefield>wxflname</namefield>
+		<curnode>0
+		</curnode> 
+		<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Owxfl> 

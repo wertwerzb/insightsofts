@@ -1,0 +1,31 @@
+ <Ozhzl lang="zh_CN" >
+
+<addidmodal>2</addidmodal>
+<extendxml> 
+
+<mtitle>住户资料</mtitle>
+</extendxml>
+ <selectcolumn>Bzh_id,Bzh_name, Bzh_tel,Bzh_jizumanji,Bzh_siyongmanji,Bzh_work,Bzh_desc</selectcolumn>
+	 <fieldtitle>id,Bzhname, Bzhtel,Bzhjizumanji,Bzhsiyongmanji,Bzhwork,Bzhdesc </fieldtitle>
+	  <columntitle>位置,名称,电话,建筑面积,使用面积,工作,备注
+		 </columntitle> 
+		 	<fieldwidth>220,320,200,200,120,200,200
+		 </fieldwidth>
+		 <typestr>s,s,s,s,s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,text,text,text,text,text,text</comname> 
+	 		<comparam>"required":true ,"validType":"length[8,10]"</comparam>
+	  <sigleform>B_zhzl1
+	  </sigleform>
+	  <idfield>Bzh_id</idfield>
+	 	 <namefield>Bzhname</namefield>
+			<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Ozhzl> 
+
+

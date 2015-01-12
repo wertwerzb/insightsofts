@@ -1,0 +1,35 @@
+		 <Oghsfl lang="zh_CN" >
+		 
+<addidmodal>2</addidmodal>
+ <selectcolumn> Bghsfl_id,Bghsfl_name,Bghsfl_desc
+  </selectcolumn>
+	 <fieldtitle>id,ghsflname,ghsfldesc
+  	</fieldtitle>
+	  <columntitle>类型编码,名称,备注
+		 </columntitle> 
+		 	<fieldwidth>120,200,180 
+		 </fieldwidth>
+		 <typestr>s,s,s
+	 </typestr>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,textbox,textbox</comname> 
+	 		<comparam>width:300</comparam>
+	  <sigleform>B_ghsfl
+	  </sigleform>
+	  <idfield>Bghsfl_id</idfield>
+	 	 <namefield>ghsflname</namefield>
+		 		 <curnode>0
+		</curnode> 
+		 <extendxml> 
+
+
+<mtitle>产品资料</mtitle>
+</extendxml>
+
+	 	<firstcom></firstcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+<extendfield></extendfield>
+		 </Oghsfl> 
