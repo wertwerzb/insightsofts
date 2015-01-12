@@ -1,0 +1,11 @@
+ <Skhfl lang="zh_CN">
+   <sigleform>B_khfl
+	  </sigleform>
+	  <idfield>Bkhfl_id</idfield>
+	 	 <namefield>Bkhfl_name</namefield>
+		 <statefield>isfold</statefield>
+		 <attrfield>Bkhfl_desc</attrfield>
+		 <iconCls>3</iconCls>
+		 <condistr>1=1</condistr>
+		
+		 </Skhfl> 

@@ -1,0 +1,12 @@
+<Smenu lang="zh_CN">
+   <sigleform> smenu  inner join smenuctrl
+on SMenu.SYSMENUID = SMenuCtrl.MenuID </sigleform>
+	  <idfield>sysmenucode</idfield>
+	 	 <namefield>sysmenuname</namefield>
+		 <statefield>iswww</statefield>
+		 
+		 <attrfield>jspnewsource,jsplistsource</attrfield>
+		 <iconCls>icons</iconCls>
+		 <condistr>canaccess=1</condistr>
+		 </Smenu> 
+	

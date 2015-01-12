@@ -1,0 +1,11 @@
+<Scpfl lang="zh_CN">
+ <sigleform>B_cpfl
+	  </sigleform>
+	  <idfield>Bcpfl_id</idfield>
+	 		<namefield>Bcpfl_name</namefield>
+	   <statefield>isfolder</statefield>
+	   <attrfield>Bcpfl_desc</attrfield>
+	   <iconCls>3</iconCls>
+	   <condistr>1=1</condistr>
+		
+	  </Scpfl> 

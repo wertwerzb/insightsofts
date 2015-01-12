@@ -1,0 +1,42 @@
+	<config>
+	 <Smenu1 lang="zh_CN">
+   <sigleform> s_menu </sigleform>
+	  <idfield>sysmenucode</idfield>
+	 	 <namefield>sysmenuname</namefield>
+		 <statefield>iswww</statefield>
+		 
+<attrfield>jspnewsource,jsplistsource</attrfield>
+		 <iconCls>icons</iconCls>
+		 <condistr>1=1</condistr>
+		 </Smenu1> 
+		<Smenu1 lang="en">
+		 <sigleform> s_menu </sigleform>
+	  <idfield>sysmenucode</idfield>
+	 	 <namefield>sysmenuname_en</namefield>
+		 <statefield>iswww</statefield>
+		 
+<attrfield>jspnewsource,jsplistsource</attrfield>
+		 <iconCls>icons</iconCls>
+		 <condistr>1=1</condistr>
+		 </Smenu1> 
+		 <Smenu1 lang="zh_TW">
+   <sigleform> s_menu </sigleform>
+	  <idfield>sysmenucode</idfield>
+	 	 <namefield>sysmenuname_tw</namefield>
+		 <statefield>iswww</statefield>
+		 
+<attrfield>jspnewsource,jsplistsource</attrfield>
+		 <iconCls>icons</iconCls>
+		 <condistr>1=1</condistr>
+		 </Smenu1> 
+		 <Smenu1 lang="jp">
+   <sigleform> s_menu </sigleform>
+	  <idfield>sysmenucode</idfield>
+	 	 <namefield>sysmenuname_jp</namefield>
+		 <statefield>iswww</statefield>
+		 
+<attrfield>jspnewsource,jsplistsource</attrfield>
+		 <iconCls>icons</iconCls>
+		 <condistr>1=1</condistr>
+		 </Smenu1> 
+		 </config>
