@@ -1,0 +1,6 @@
+<Rimage>
+    <titlefield>类型,大小</titlefield>
+	  <sqlstring>select filetype,filesize from  filesetup where id=
+	  </sqlstring>
+ <stytlefun>"cgg":"dfff"</stytlefun> 
+</Rimage>
