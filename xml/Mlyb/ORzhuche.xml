@@ -1,0 +1,134 @@
+<config>
+<ORzhuche lang="zh_CN">
+<selectcolumn>webname,password,RoleID,1</selectcolumn>
+<!--S表示字符芋，H表示不被增删改查运算
+-->
+<typestr>s,s,s,h
+</typestr> 
+
+<!-- rand内部扩展字段用于生成四位随机数
+-->
+<fieldtitle>id,password,RoleID,rand</fieldtitle>
+
+<!--冒号用干分割显示，位置，组件，组件属性，组件内含#后边生成对应扩展的ID， firstcom必须含同名组件才可被扩展 -->
+<columntitle>用户名:001:validatebox-1:请输入名称,密码:001:validatebox_password-1,角色:001:combotree-0,验证码:001:validatebox#rand-1 </columntitle> 
+		<group>注册信息</group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Crole2_getcomresult_partview.ComboList"⊙"required":true ,"validType":"length[3,15]"⊙ "required":true ,"validType":" eqPassword['#myForm input[name=password]']"
+		</comparam>
+	
+	
+		<idfield>webname</idfield>
+	<sigleform> s_CzyAccess
+</sigleform>
+<extendfield>EmpID:1</extendfield>
+<extendxml>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+</extendxml>
+<!-- firstcom 用于扩展，:用于分割，ID，名称，代码片段的url -->
+
+		 <firstcom>rand:Pkhzl:/Phtml/imageyanzen.html:0</firstcom>
+<exterparam>"putinload":"Pkhzl","puttitle":"客户"</exterparam>
+	</ORzhuche>
+	 <ORzhuche lang="en">
+<selectcolumn>webname,password,RoleID,1</selectcolumn>
+<!--S表示字符芋，H表示不被增删改查运算
+-->
+<typestr>S,S,S,S,H
+</typestr> 
+
+<!-- rand内部扩展字段用于生成四位随机数
+-->
+<fieldtitle>id,password2,RoleID,rand</fieldtitle>
+
+<!--冒号用干分割显示，位置，组件，组件属性，组件内含#后边生成对应扩展的ID， firstcom必须含同名组件才可被扩展 -->
+<columntitle>username:001:validatebox-1:请输入名称,password:001:validatebox_password-1,role:001:combotree-0,checknumber:001:validatebox#rand-1 </columntitle> 
+		<group>register</group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/ MainInit?hre=Crole2_getcomresult_partview.ComboList "⊙"required":true ,"validType":"length[3,15]"⊙ "required":true ,"validType":" eqPassword['#myForm input[name=password]']"
+		</comparam>
+	
+	
+		<idfield>webname</idfield>
+	<sigleform> s_CzyAccess
+</sigleform>
+<extendfield>EmpID:1</extendfield>
+<extendxml>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+</extendxml>
+<!-- firstcom 用于扩展，:用于分割，ID，名称，代码片段的url -->
+
+		 <firstcom>rand:Pkhzl:/Phtml/imageyanzen.html:0</firstcom>
+<exterparam>"putinload":"Pkhzl","puttitle":"客户"</exterparam>
+	</ORzhuche>
+	 <ORzhuche lang="zh_TW">
+<selectcolumn>webname,password,RoleID,1</selectcolumn>
+<!--S表示字符芋，H表示不被增删改查运算
+-->
+<typestr>S,S,S,H
+</typestr> 
+
+<!-- rand内部扩展字段用于生成四位随机数
+-->
+<fieldtitle>id,password,RoleID,rand</fieldtitle>
+
+<!--冒号用干分割显示，位置，组件，组件属性，组件内含#后边生成对应扩展的ID， firstcom必须含同名组件才可被扩展 -->
+<columntitle>用户名:001:validatebox-1:请输入名稱,密碼:001:validatebox_password-1,角色:001:combotree-0,验证碼:001:validatebox#rand-1 </columntitle> 
+		<group>注册信息</group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/ 	MainInit?hre=Crole2_getcomresult_partview.ComboList"⊙"required":true ,"validType":"length[3,15]"⊙ "required":true ,"validType":" eqPassword['#myForm input[name=password]']"
+		</comparam>
+	
+	
+		<idfield>webname</idfield>
+	<sigleform> s_CzyAccess
+</sigleform>
+<extendfield>EmpID:1</extendfield>
+<extendxml>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+</extendxml>
+<!-- firstcom 用于扩展，:用于分割，ID，名称，代码片段的url -->
+
+		 <firstcom>rand:Pkhzl:/Phtml/imageyanzen.html:0</firstcom>
+<exterparam>"putinload":"Pkhzl","puttitle":"客户"</exterparam>
+	</ORzhuche>
+	 <ORzhuche lang="jp">
+<selectcolumn>webname,password,RoleID,1</selectcolumn>
+<!--S表示字符芋，H表示不被增删改查运算
+-->
+<typestr>S,S,S,H
+</typestr> 
+
+<!-- rand内部扩展字段用于生成四位随机数
+-->
+<fieldtitle>id,password,RoleID,rand</fieldtitle>
+
+<!--冒号用干分割显示，位置，组件，组件属性，组件内含#后边生成对应扩展的ID， firstcom必须含同名组件才可被扩展 -->
+<columntitle>用户名:001:validatebox-1:请输入名称,密码:001:validatebox_password-1,角色:001:combotree-0,验证码:001:validatebox#rand-1 </columntitle> 
+		<group>注册信息</group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Crole2_getcomresult_partview.ComboList"⊙"required":true ,"validType":"length[3,15]"⊙ "required":true ,"validType":" eqPassword['#myForm input[name=password]']"
+		</comparam>
+	
+	
+		<idfield>webname</idfield>
+	<sigleform> s_CzyAccess
+</sigleform>
+<extendfield>EmpID:1</extendfield>
+<extendxml>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+</extendxml>
+<!-- firstcom 用于扩展，:用于分割，ID，名称，代码片段的url -->
+
+		 <firstcom>rand:Pkhzl:/Phtml/imageyanzen.html:0</firstcom>
+<exterparam>"putinload":"Pkhzl","puttitle":"客户"</exterparam>
+	</ORzhuche>
+	</config>
