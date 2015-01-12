@@ -1,0 +1,12 @@
+<OcpzlU> 
+<helpdesc>生效后不能删除修改</helpdesc>
+  <updatefield>id</updatefield>
+<updatesql>UPDATE B_CPZL SET  Bcp_UFlag=1  where Bcp_Id='{1}'
+</updatesql> 
+<sqltext> SELECT case when Bcp_UFlag=1  then 1 else 0 end FROM B_CPZL 	 where Bcp_id 	='{1}' </sqltext> 
+<replacefield>id</replacefield>
+ <faultmessage>1⊙已生效完成</faultmessage>
+
+	</OcpzlU>
+	
+	 

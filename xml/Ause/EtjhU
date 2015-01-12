@@ -1,0 +1,16 @@
+<EtjhU> 
+<updatefield>
+Tjhid,tJHDDID
+ </updatefield>
+<updatesql> 
+delete FROM t_jhxx WHERE    Tjhmx_cgid ='{1}'
+  Insert into t_jhxx(Tjhmx_cp,Tjhmx_cgid,Tjhmx_Qty,Tjhmx_Price,Tjhmx_unitbz,Tjhmx_unit ) 
+  SELECT  txq_CP,{1},txq_Qty, bcp_RJPrice,1,Bcp_BUnit  FROM t_xqcpkc INNER JOIN B_CPZL ON t_xqcpkc.txq_CP=Bcp_Id WHERE (Bcp_Id NOT IN (SELECT TJHMX_CP  FROM t_jhxx INNER JOIN  t_JH ON t_JH.Tjh_id = t_jhxx.Tjhmx_cgid  WHERE t_JH.Tjh_dhClose = 0))  
+
+</updatesql> 
+<sqltext>SELECT case when count(*) &lt; 5 then 0 else 1 end FROM S_menulyb 	 where Smenulyb_code 	='{1}'⊙SELECT case when count(*) &gt;2 then 2 else 0 end FROM S_menulyb 	 where Smenulyb_code 	='{1}' 
+</sqltext> 
+<replacefield>id</replacefield>
+ <faultmessage>1⊙库中没有此记录 ⊙次数大于2</faultmessage>
+
+</EtjhU>

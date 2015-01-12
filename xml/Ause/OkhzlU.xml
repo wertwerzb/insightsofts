@@ -1,0 +1,13 @@
+<OkhzlU> 
+  <updatefield>
+  a
+  </updatefield>
+<updatesql>
+UPDATE B_CPZL SET  Bcp_UFlag=1  where Bcp_Id='{1}'
+</updatesql> 
+<sqltext>SELECT case when count(*) &lt; 5 then 0 else 1 end FROM S_menulyb 	 where Smenulyb_code 	='{1}'⊙SELECT case when count(*) &gt;2 then 2 else 0 end FROM S_menulyb 	 where Smenulyb_code 	='{1}' 
+</sqltext> 
+<replacefield>id</replacefield>
+ <faultmessage>1⊙库中没有此记录 ⊙次数大于2</faultmessage>
+	</OkhzlU>
+	

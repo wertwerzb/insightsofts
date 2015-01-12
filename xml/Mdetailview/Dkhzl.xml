@@ -1,0 +1,23 @@
+<Dkhzl lang="zh_CN" >
+<title>
+客戸资料
+</title>
+	  <joinform>b_khzl left join b_khfl ON b_khzl.Bkh_flid=b_khfl.Bkhfl_Id where 1=1
+	  </joinform>
+	  <indextitle>编码,名称,电话,电子邮件,传真 </indextitle>
+	  <indexfield>Bkh_Id,Bkh_Name,Bkh_Tel,Bkh_Email,Bkh_fax</indexfield>
+<indexwidth>120,200,180,200,180</indexwidth>
+	  <idfield>Bkh_Id</idfield>
+	  <fieldstyle>1:4</fieldstyle>
+	  <detailview>{"name": "cc","param":{"bcp_name" :"名称 ","Bcp_BUnit" :"单位"}}</detailview>
+	  <rowcount>11</rowcount> 	
+   
+   <conditionable>
+    0
+   </conditionable>
+     <extendxml> 
+<treecondition>Tcpfl-bcp_class</treecondition>
+<mtitle>产品资料</mtitle>
+
+</extendxml>
+  </Dkhzl>

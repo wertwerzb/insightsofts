@@ -1,0 +1,162 @@
+<config>
+<Orolectrl lang="zh_CN" >
+ <selectcolumn>sysmenucode,jsplistsource,sysmenuname,jspnewsource,param1{P}, param1{R},testaccess
+  </selectcolumn>
+	 <fieldtitle>id,listsource, menuname,jspnewsource,paramP,paramR,canaccess
+  	</fieldtitle>
+	  <columntitle>id,编码,名称,模板,全部按钮,按钮,是否常有
+		 </columntitle> 
+		 
+		 	<fieldwidth>60,200,200,200,200,200
+		 </fieldwidth>
+		 <typestr>h,h,h,h,h,s,h
+	 </typestr>
+	 
+	 <title>
+产品资料:3
+</title>
+ <fieldstyle>0:3</fieldstyle>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,label,label,label,text,text,combobox-1</comname> 
+	 		<comparam>width:300⊙"valueField":"value","textField":"label","data":[{"label":"否","value":0},{"label":"是","value":1} ,{"label":"未完成","value":2} ] 
+	 			</comparam>
+	 <sigleform> S_menu
+	 </sigleform>
+	 
+	  <idfield>sysmenucode</idfield>
+	 	 <namefield>sysmenuname</namefield>
+		 <rowcount>10
+   </rowcount> 	
+   <extendfield></extendfield>
+		<extendxml> 
+<mtitle>"角色权限设置"</mtitle>
+<detailview>{"name": "cc","param":{"para1":"paramP ","para2" :"paramR"}}</detailview>
+</extendxml>
+<firstcom>east:treefilter:/Phtml/treefilter1.html:0 </firstcom>
+<secondcom></secondcom>
+<modextfield></modextfield>
+<exterparam> "flclass":"Trole1","flfield":"Tchangerole" </exterparam>
+    </Orolectrl> 
+    <Orolectrl lang="en" >
+ <selectcolumn>sysmenucode,jsplistsource,sysmenuname,jspnewsource,param1{P}, param1{R},testaccess
+  </selectcolumn>
+	 <fieldtitle>id,listsource, menuname,jspnewsource,paramP,paramR,canaccess
+  	</fieldtitle>
+	  <columntitle>id,code,name,template,allbutton,ablebutton,是否常有
+		 </columntitle> 
+		 
+		 	<fieldwidth>60,200,200,200,200,200,200
+		 </fieldwidth>
+		 <typestr>h,h,h,h,h,s,h
+	 </typestr>
+	 
+	 <title>
+产品资料:3
+</title>
+ <fieldstyle>0:3</fieldstyle>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,label,label,label,text,text,combobox-1</comname> 
+	 		<comparam>width:300⊙"valueField":"value","textField":"label","data":[{"label":"否","value":0},{"label":"是","value":1} ,{"label":"未完成","value":2} ] 
+	 			</comparam>
+	 <sigleform> S_menu
+	 </sigleform>
+	 
+	  <idfield>sysmenucode</idfield>
+	 	 <namefield>sysmenuname</namefield>
+		 <rowcount>11
+   </rowcount> 	
+   <extendfield></extendfield>
+		<extendxml> 
+<mtitle>"角色权限设置"</mtitle>
+<detailview>{"name": "cc","param":{"para1":"paramP ","para2" :"paramR"}}</detailview>
+</extendxml>
+<firstcom>east:treefilter:/Phtml/treefilter1.html:0 </firstcom>
+<secondcom></secondcom>
+<modextfield></modextfield>
+<exterparam> "flclass":"Trole1","flfield":"Tchangerole" </exterparam>
+    </Orolectrl> 
+    <Orolectrl lang="zh_TW" >
+ <selectcolumn>jsplistsource,sysmenuname,jspnewsource,param1{P}, param1{R},testaccess
+  </selectcolumn>
+	 <fieldtitle>id,menuname,jspnewsource,paramP,paramR,canaccess
+  	</fieldtitle>
+	  <columntitle>id,名稱,模板,全部按钮,按钮,是否常有
+		 </columntitle> 
+		 
+		 	<fieldwidth>60,200,200,200,200,200
+		 </fieldwidth>
+		 <typestr>h,h,h,h,s,h
+	 </typestr>
+	 
+	 <title>
+产品资料:3
+</title>
+ <fieldstyle>0:3</fieldstyle>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,label,label,text,text,combobox-1</comname> 
+	 		<comparam>width:300⊙"valueField":"value","textField":"label","data":[{"label":"否","value":0},{"label":"是","value":1} ,{"label":"未完成","value":2} ] 
+	 			</comparam>
+	 <sigleform> S_menu
+	 </sigleform>
+	 
+	  <idfield>jsplistsource</idfield>
+	 	 <namefield>sysmenuname</namefield>
+		 <rowcount>11
+   </rowcount> 	
+   <extendfield></extendfield>
+		<extendxml> 
+<mtitle>"角色权限设置"</mtitle>
+<detailview>{"name": "cc","param":{"para1":"paramP ","para2" :"paramR"}}</detailview>
+</extendxml>
+<firstcom>east:treefilter:/Phtml/treefilter1.html:0 </firstcom>
+<secondcom></secondcom>
+<modextfield></modextfield>
+<exterparam> "flclass":"Trole1","flfield":"Tchangerole" </exterparam>
+    </Orolectrl> 
+    <Orolectrl lang="jp" >
+ <selectcolumn>jsplistsource,sysmenuname,jspnewsource,param1{P}, param1{R},testaccess
+  </selectcolumn>
+	 <fieldtitle>id,menuname,jspnewsource,paramP,paramR,canaccess
+  	</fieldtitle>
+	  <columntitle>id,名称,模板,全部按钮,按钮,是否常有
+		 </columntitle> 
+		 
+		 	<fieldwidth>60,200,200,200,200,200
+		 </fieldwidth>
+		 <typestr>h,h,h,h,s,h
+	 </typestr>
+	 
+	 <title>
+产品资料:3
+</title>
+ <fieldstyle>0:3</fieldstyle>
+	 <flagfield>
+	 0:ghh
+	 </flagfield>
+	  <comname>label,label,label,text,text,combobox-1</comname> 
+	 		<comparam>width:300⊙"valueField":"value","textField":"label","data":[{"label":"否","value":0},{"label":"是","value":1} ,{"label":"未完成","value":2} ] 
+	 			</comparam>
+	 <sigleform> S_menu
+	 </sigleform>
+	 
+	  <idfield>jsplistsource</idfield>
+	 	 <namefield>sysmenuname</namefield>
+		 <rowcount>11
+   </rowcount> 	
+   <extendfield></extendfield>
+		<extendxml> 
+<mtitle>"角色权限设置"</mtitle>
+<detailview>{"name": "cc","param":{"para1":"paramP ","para2" :"paramR"}}</detailview>
+</extendxml>
+<firstcom>east:treefilter:/Phtml/treefilter1.html:0 </firstcom>
+<secondcom></secondcom>
+<modextfield></modextfield>
+<exterparam> "flclass":"Trole1","flfield":"Tchangerole" </exterparam>
+    </Orolectrl> 
+</config>
