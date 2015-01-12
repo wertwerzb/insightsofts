@@ -13,7 +13,7 @@ public static String copyfile(String olefile,String newfile)
 	{ 
 	 try{ 
 	 FileInputStream input=new FileInputStream( olefile );//可替换为任何路径何和文件名 
-	 System.out.print( olefile );
+	 
 	 FileOutputStream output=new FileOutputStream( newfile );//可替 换为任何路径何和文件名
 
 int in=input.read();
