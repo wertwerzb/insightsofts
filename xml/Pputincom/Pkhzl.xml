@@ -1,0 +1,24 @@
+	<Pkhzl>
+		<ableputin>1
+		</ableputin>
+		<title>
+			客戸资料
+		</title> 
+		<searchbox>
+			客戸资料 
+		</searchbox> 	  
+		<indextitle>编码,名称,电话,电子邮件,传真</indextitle>
+		<indexfield>Bkh_Id,Bkh_Name,Bkh_Tel,Bkh_Email,Bkh_fax</indexfield>
+		
+<outfield>bcpName,bcpDefine1:Bkh_Id,Bkh_Name</outfield>
+		<injoinform>b_khzl left join b_khfl ON b_khzl.Bkh_flid=b_khfl.Bkhfl_Id
+		</injoinform>
+		<outsigleform>ggg
+		</outsigleform>
+		<outidfield>ggg
+		</outidfield>
+		<indexwidth>120,200,180,200,180</indexwidth>
+		<idfield>Bkh_Id</idfield>
+		<rowcount>11
+		</rowcount> 
+	</Pkhzl>

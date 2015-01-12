@@ -1,0 +1,21 @@
+	 <CFlogin> 
+<sqltext>
+SELECT count(*) FROM S_CzyAccess, s_roled  	 where S_CzyAccess.roleID = s_roled.RoleCode 	and S_CzyAccess.webname= '{2}' and s_roled.rolecode= '{1}' and password='{3}' ;
+</sqltext> 
+<fieldtitle>rolecode,usernamec,passwd</fieldtitle>
+  <retvalue>/erpindex.jsp</retvalue>
+<setvalue>rolecode,usernamec</setvalue>
+
+	<unretvalue>/jsp/login1.jsp
+	 </unretvalue>
+<columntitle>角色:0:combotree-0,用户名:1:text-1,密码:1:password-1
+		</columntitle> 
+		<comparam>"valueField":"id" ,"textField":"text", "url":"/MainInit?hre=Trole_gettreeresult_partview.ComboList" ⊙"width":"300px"⊙"width":"300px","height":"350px" 
+		</comparam>
+		<extendxml>
+<title>登陆</title>
+<awidth>100</awidth>
+<bwidth>220</bwidth>     
+</extendxml>
+	</CFlogin>
+	 
