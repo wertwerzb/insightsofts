@@ -1,0 +1,169 @@
+<config>
+<Ofzgn lang="zh_CN">
+	
+<extendfield></extendfield>
+<title>辅助功能</title>
+	  <joinform>S_fzcom where 1=1
+	  </joinform>
+	  <indextitle>编码,名称,作者,模板</indextitle>
+	  <indexfield>Sfzcom_code, Sfzcom_name,Sfzcom_author, Sfzcom_mod</indexfield>
+<indexwidth>120,200,180,180</indexwidth>
+
+	  <fieldstyle>0:3</fieldstyle> 
+	  <rowcount>10
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+ 	<selectcolumn>Sfzcom_code, Sfzcom_Name,Sfzcom_author,Sfzcom_mod,Sfzcom_feature</selectcolumn>
+		<fieldtitle>id, SfzcomName,Sfzcomauthor,Sfzcommod,Sfzcomfeature</fieldtitle>
+<typestr>s,s,s,s,s
+		</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,作者:001:validatebox-1,模板:001:combobox-0,作用:101:textbox-4</columntitle> 
+		<group>主要信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cfzmod_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙"width":"400px","height":"180px", "multiline" :true 
+		</comparam>
+		<sigleform>s_fzcom
+		</sigleform>
+		<idfield>Sfzcom_code</idfield>
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Twxfl-Bwx_flid</treecondition>
+<mtitle>辅助功能</mtitle>
+<modclass>Sfzcom_mod</modclass>
+</extendxml>
+	 	<firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+	</Ofzgn>
+
+<Ofzgn lang="en">
+	
+<extendfield></extendfield>
+<title>辅助功能</title>
+	  <joinform>S_fzcom where 1=1
+	  </joinform>
+	  <indextitle>code,name,writer,template</indextitle>
+	  <indexfield>Sfzcom_code, Sfzcom_name,Sfzcom_author, Sfzcom_mod</indexfield>
+<indexwidth>120,200,180,180</indexwidth>
+
+	  <fieldstyle>0:3</fieldstyle> 
+	  <rowcount>10
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+ 	<selectcolumn>Sfzcom_code, Sfzcom_Name,Sfzcom_author,Sfzcom_mod,Sfzcom_feature</selectcolumn>
+		<fieldtitle>id, SfzcomName,Sfzcomauthor,Sfzcommod,Sfzcomfeature</fieldtitle>
+<typestr>s,s,s,s,s
+		</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,作者:001:validatebox-1,模板:001:combobox-0,作用:101:textbox-4</columntitle> 
+		<group>主要信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cfzmod_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙"width":"400px","height":"180px", "multiline" :true 
+		</comparam>
+		<sigleform>s_fzcom
+		</sigleform>
+		<idfield>Sfzcom_code</idfield>
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Twxfl-Bwx_flid</treecondition>
+<mtitle>辅助功能</mtitle>
+<modclass>Sfzcom_mod</modclass>
+</extendxml>
+	 	<firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+	</Ofzgn>
+
+<Ofzgn lang="zh_TW">
+	
+<extendfield></extendfield>
+<title>辅助功能</title>
+	  <joinform>S_fzcom where 1=1
+	  </joinform>
+	  <indextitle>编碼,名稱,作者,模板</indextitle>
+	  <indexfield>Sfzcom_code, Sfzcom_name,Sfzcom_author, Sfzcom_mod</indexfield>
+<indexwidth>120,200,180,180</indexwidth>
+
+	  <fieldstyle>0:3</fieldstyle> 
+	  <rowcount>10
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+ 	<selectcolumn>Sfzcom_code, Sfzcom_Name,Sfzcom_author,Sfzcom_mod,Sfzcom_feature</selectcolumn>
+		<fieldtitle>id, SfzcomName,Sfzcomauthor,Sfzcommod,Sfzcomfeature</fieldtitle>
+<typestr>s,s,s,s,s
+		</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,作者:001:validatebox-1,模板:001:combobox-0,作用:101:textbox-4</columntitle> 
+		<group>主要信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cfzmod_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙"width":"400px","height":"180px", "multiline" :true 
+		</comparam>
+		<sigleform>s_fzcom
+		</sigleform>
+		<idfield>Sfzcom_code</idfield>
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Twxfl-Bwx_flid</treecondition>
+<mtitle>辅助功能</mtitle>
+<modclass>Sfzcom_mod</modclass>
+</extendxml>
+	 	<firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+	</Ofzgn>
+
+<Ofzgn lang="jp">
+	
+<extendfield></extendfield>
+<title>辅助功能</title>
+	  <joinform>S_fzcom where 1=1
+	  </joinform>
+	  <indextitle>编码,名称,作者,模板</indextitle>
+	  <indexfield>Sfzcom_code, Sfzcom_name,Sfzcom_author, Sfzcom_mod</indexfield>
+<indexwidth>120,200,180,180</indexwidth>
+
+	  <fieldstyle>0:3</fieldstyle> 
+	  <rowcount>10
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+ 	<selectcolumn>Sfzcom_code, Sfzcom_Name,Sfzcom_author,Sfzcom_mod,Sfzcom_feature</selectcolumn>
+		<fieldtitle>id, SfzcomName,Sfzcomauthor,Sfzcommod,Sfzcomfeature</fieldtitle>
+<typestr>s,s,s,s,s
+		</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,作者:001:validatebox-1,模板:001:combobox-0,作用:101:textbox-4</columntitle> 
+		<group>主要信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cfzmod_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙"width":"400px","height":"180px", "multiline" :true 
+		</comparam>
+		<sigleform>s_fzcom
+		</sigleform>
+		<idfield>Sfzcom_code</idfield>
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Twxfl-Bwx_flid</treecondition>
+<mtitle>辅助功能</mtitle>
+<modclass>Sfzcom_mod</modclass>
+</extendxml>
+	 	<firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+	</Ofzgn>
+</config>

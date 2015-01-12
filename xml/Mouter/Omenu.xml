@@ -1,0 +1,599 @@
+	 	 <con>
+	 	 <Omenu lang="zh_CN">
+	 <extendfield></extendfield>
+<title>
+菜单设计
+</title>
+   <joinform> s_menu where 1>0
+   </joinform>
+  	<indextitle>id,名称,模板</indextitle>
+	 <indexfield>sysmenucode,sysmenuname,jspnewsource</indexfield>
+<indexwidth>120,200,200</indexwidth>
+	  
+	  <fieldstyle>0:3</fieldstyle>
+	   <rowcount>12
+   </rowcount>
+  
+   <conditionable>
+    0
+   </conditionable>
+
+<selectcolumn>sysmenucode, sysmenuname,sysmenuname_en, sysmenuname_tw,sysmenuname_jp,jspnewsource,sysmodule,jsplistsource,iswww,icons,param10
+  </selectcolumn>
+<fieldtitle>id,menuname,menunameen,menunametw,menunamejp, flclass,sysmodule,jsplistsource,iswww,icons,param10
+  	</fieldtitle>
+<typestr>s,s,s,s,s,s,s,s,s,s,s
+	 </typestr>
+	 
+	 
+		<columntitle>代码:000:validatebox-3:请输入唯一编码,名称:001:validatebox-3,英文:000:validatebox-3,繁体:001:validatebox-3,日文:000:validatebox-3, 模板:001:combobox-6,模块:000: combobox-4,结构:001:textbox-0,文件夹:000:combobox-1,图标:001: combobox-2,是否公测:001: combobox-7
+		</columntitle> 
+		<group>详细信息</group>
+		 <comparam>width:300⊙"width":"200px","valueField":"value","textField":"label","data":[{"label":"文件","value":0},{"label":"文件夹","value":1} ,{"label":"未完成","value":2} ] ⊙ "valueField":"value","textField":"text", data: [ {
+			"value" :"",
+			"text" : "默认" 
+		}, {
+			"value" : "icon-add" ,
+			 "text" : "icon-add" 
+		}, {
+			 "value" : "icon-edit" ,
+		"text"	 : "icon-edit"  
+		}, {
+			"value" : "icon-remove" ,
+			 "text" : "icon-remove" 
+		}, {
+			 "value" : "icon-save" ,
+		 "text" : "icon-save" 
+		}, {
+			 "value" : "icon-cut" ,
+			 "text" : "icon-cut" 
+		}, {
+			"value" : "icon-ok" ,
+			 "text" : "icon-ok" 
+		}, {
+			 "value" : "icon-no" ,
+		 "text" : "icon-no" 
+		}, {
+			 "value" : "icon-cancel" ,
+			 "text" : "icon-cancel" 
+		}, {
+			 "value" : "icon-reload" ,
+			 "text" : "icon-reload" 
+		}, {
+			 "value" : "icon-search" ,
+			 "text" : "icon-search" 
+		}, {
+			 "value" : "icon-print" ,
+			 "text" : "icon-print" 
+		}, {
+			 "value" : "icon-help" ,
+			 "text" : "icon-help" 
+		}, {
+			 "value" : "icon-undo" ,
+			 "text" : "icon-undo"
+		}, {
+			 "value" : "icon-redo" ,
+			 "text" : "icon-redo" 
+		}, {
+			 "value" :"icon-back" ,
+			 "text" : "icon-back" 
+		}, {
+			 "value" : "icon-sum" ,
+			 "text" : "icon-sum" 
+		},{
+			 "value" : "icon-tip" ,
+			 "text" : "icon-tip" 
+		}]
+⊙"required":true ,"validType":"length[2,20]"⊙"valueField":"value","textField":"text","data":[ {
+			"value" :"1",
+			"text" : "系统" 
+		}, {
+		"value" : "2" ,
+			 "text" : "基础资料" 
+		} , {
+		"value" : "3" ,
+			 "text" : "计划管理" 
+		} , {
+		"value" : "4" ,
+			 "text" : "库存管理" 
+		} , {
+		"value" : "5" ,
+			 "text" : "生产管理" 
+		} , {
+		"value" : "6" ,
+			 "text" : "釆购管理" 
+		} , {
+		"value" : "7" ,
+			 "text" : "销售管理" 
+		} , {
+		"value" : "8" ,
+			 "text" : "质量管理" 
+		} , {
+		"value" : "9" ,
+			 "text" : "固定资产管理" 
+		} , {
+		"value" : "10" ,
+			 "text" : "财务管理" 
+		} , {
+		"value" : "11" ,
+			 "text" : "工资成本管理" 
+		},{
+		"value" : "12" ,
+			 "text" : "维修管理" 
+		}]⊙"width":"600px","height":"300px" , "multiline" :true ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cmodpr_getcomresult_partview.ComboList"⊙"valueField":"value","textField":"text", "data" : [{
+		"value" : "" ,
+			 "text" : "对外不可见" 
+		},{
+		"value" : "1" ,
+			 "text" : "对外可见" 
+		}]
+ </comparam>
+
+	  <sigleform>s_menu
+	  </sigleform>
+	  <idfield>sysmenucode</idfield> 
+
+		 <extendxml> 
+		 
+		 <formattable>groupformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<modclass>jspnewsource</modclass>
+<treecondition>Tcpfl-bcp_class</treecondition>
+<mtitle>菜单设计</mtitle>
+</extendxml>
+<firstcom></firstcom> 
+<secondcom>loadxmldiv:xmlload:/Phtml/xmlload.html:0</secondcom>
+<exterparam>"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass"</exterparam>
+
+<modextfield></modextfield>
+	</Omenu>	
+	 <Omenu lang="en">
+	 <extendfield></extendfield>
+<title>
+menu design
+</title>
+   <joinform> s_menu where 1>0
+   </joinform>
+  	<indextitle>id,name,template</indextitle>
+	 <indexfield>sysmenucode,sysmenuname_en,jspnewsource</indexfield>
+<indexwidth>120,200,200</indexwidth>
+	  
+	  <fieldstyle>0:3</fieldstyle>
+	   <rowcount>12
+   </rowcount>
+  
+   <conditionable>
+    0
+   </conditionable>
+
+<selectcolumn>sysmenucode, sysmenuname,sysmenuname_en, sysmenuname_tw,sysmenuname_jp,jspnewsource,sysmodule,jsplistsource,iswww,icons,param10
+  </selectcolumn>
+<fieldtitle>id,menuname,menunameen,menunametw,menunamejp ,flclass,sysmodule,jsplistsource,iswww,icons,param10
+  	</fieldtitle>
+<typestr>s,s,s,s,s,s,s,s,s,s,s
+	 </typestr>
+	 
+	 
+		<columntitle>code:000:validatebox-3:请输入唯一编码,chinesename:001:validatebox-3, name:001:validatebox-3, taiwanname:001:validatebox-3, japanesename:001:validatebox-3, template:000:combobox-6,module:001: combobox-4,structure:001:textbox-0, folder:000:combobox-1,icon:001: combobox-2
+		</columntitle> 
+		<group>详细信息</group>
+		 		 <comparam>width:300⊙"width":"200px","valueField":"value","textField":"label","data":[{"label":"文件","value":0},{"label":"文件夹","value":1} ,{"label":"未完成","value":2} ] ⊙ "valueField":"value","textField":"text", data: [ {
+			"value" :"",
+			"text" : "默认" 
+		}, {
+			"value" : "icon-add" ,
+			 "text" : "icon-add" 
+		}, {
+			 "value" : "icon-edit" ,
+		"text"	 : "icon-edit"  
+		}, {
+			"value" : "icon-remove" ,
+			 "text" : "icon-remove" 
+		}, {
+			 "value" : "icon-save" ,
+		 "text" : "icon-save" 
+		}, {
+			 "value" : "icon-cut" ,
+			 "text" : "icon-cut" 
+		}, {
+			"value" : "icon-ok" ,
+			 "text" : "icon-ok" 
+		}, {
+			 "value" : "icon-no" ,
+		 "text" : "icon-no" 
+		}, {
+			 "value" : "icon-cancel" ,
+			 "text" : "icon-cancel" 
+		}, {
+			 "value" : "icon-reload" ,
+			 "text" : "icon-reload" 
+		}, {
+			 "value" : "icon-search" ,
+			 "text" : "icon-search" 
+		}, {
+			 "value" : "icon-print" ,
+			 "text" : "icon-print" 
+		}, {
+			 "value" : "icon-help" ,
+			 "text" : "icon-help" 
+		}, {
+			 "value" : "icon-undo" ,
+			 "text" : "icon-undo"
+		}, {
+			 "value" : "icon-redo" ,
+			 "text" : "icon-redo" 
+		}, {
+			 "value" :"icon-back" ,
+			 "text" : "icon-back" 
+		}, {
+			 "value" : "icon-sum" ,
+			 "text" : "icon-sum" 
+		},{
+			 "value" : "icon-tip" ,
+			 "text" : "icon-tip" 
+		}]
+⊙"required":true ,"validType":"length[2,20]"⊙"valueField":"value","textField":"text","data":[ {
+			"value" :"1",
+			"text" : "系统" 
+		}, {
+		"value" : "2" ,
+			 "text" : "基础资料" 
+		} , {
+		"value" : "3" ,
+			 "text" : "计划管理" 
+		} , {
+		"value" : "4" ,
+			 "text" : "库存管理" 
+		} , {
+		"value" : "5" ,
+			 "text" : "生产管理" 
+		} , {
+		"value" : "6" ,
+			 "text" : "釆购管理" 
+		} , {
+		"value" : "7" ,
+			 "text" : "销售管理" 
+		} , {
+		"value" : "8" ,
+			 "text" : "质量管理" 
+		} , {
+		"value" : "9" ,
+			 "text" : "固定资产管理" 
+		} , {
+		"value" : "10" ,
+			 "text" : "财务管理" 
+		} , {
+		"value" : "11" ,
+			 "text" : "工资成本管理" 
+		},{
+		"value" : "12" ,
+			 "text" : "维修管理" 
+		}]⊙"width":"600px","height":"300px" , "multiline" :true ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cmodpr_getcomresult_partview.ComboList"⊙"valueField":"value","textField":"text", "data" : [{
+		"value" : "" ,
+			 "text" : "对外不可见" 
+		},{
+		"value" : "1" ,
+			 "text" : "对外可见" 
+		}]
+ </comparam>
+	  <sigleform>s_menu
+	  </sigleform>
+	  <idfield>sysmenucode</idfield> 
+
+		 <extendxml> 
+		 
+		 <formattable>groupformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<modclass>jspnewsource</modclass>
+<treecondition>Tcpfl-bcp_class</treecondition>
+<mtitle>菜单设计</mtitle>
+</extendxml>
+<firstcom></firstcom> 
+<secondcom>loadxmldiv:xmlload:/Phtml/xmlload.html:0</secondcom>
+<exterparam>"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass"</exterparam>
+
+<modextfield></modextfield>
+	</Omenu>	
+	 <Omenu lang="zh_TW">
+	 <extendfield></extendfield>
+<title>
+菜單設計
+</title>
+   <joinform> s_menu where 1>0
+   </joinform>
+  	<indextitle>id,名稱,模板</indextitle>
+	 <indexfield>sysmenucode,sysmenuname_tw,jspnewsource</indexfield>
+<indexwidth>120,200,200</indexwidth>
+	  
+	  <fieldstyle>0:3</fieldstyle>
+	   <rowcount>12
+   </rowcount>
+  
+   <conditionable>
+    0
+   </conditionable>
+
+<selectcolumn>sysmenucode, sysmenunamesysmenuname_en, sysmenuname_tw,sysmenuname_jpjspnewsource,sysmodule,jsplistsource,iswww,icons,param10
+  </selectcolumn>
+<fieldtitle>id,menuname, menunameen, menunametw, menunamejp,flclass,sysmodule,jsplistsource,iswww,icons,param10
+  	</fieldtitle>
+<typestr>s,s,s,s,s,s,s,s,s,s,s
+	 </typestr>
+	 
+	 
+		<columntitle>代碼:000:validatebox-3:请输入唯一编码,简体名称:001:validatebox-3, 英文名称:001:validatebox-3,繁体名称:001:validatebox-3,日文名称:001:validatebox-3,模板:000:combobox-6,模块:001: combobox-4,結构:001:textbox-0,文件夹:000:combobox-1,图标:001: combobox-2,对外见可:001:combobox-7
+		</columntitle> 
+		<group>詳細信息</group>
+		 <comparam>width:300⊙"width":"200px","valueField":"value","textField":"label","data":[{"label":"文件","value":0},{"label":"文件夹","value":1} ,{"label":"未完成","value":2} ] ⊙ "valueField":"value","textField":"text", data: [ {
+			"value" :"",
+			"text" : "默认" 
+		}, {
+			"value" : "icon-add" ,
+			 "text" : "icon-add" 
+		}, {
+			 "value" : "icon-edit" ,
+		"text"	 : "icon-edit"  
+		}, {
+			"value" : "icon-remove" ,
+			 "text" : "icon-remove" 
+		}, {
+			 "value" : "icon-save" ,
+		 "text" : "icon-save" 
+		}, {
+			 "value" : "icon-cut" ,
+			 "text" : "icon-cut" 
+		}, {
+			"value" : "icon-ok" ,
+			 "text" : "icon-ok" 
+		}, {
+			 "value" : "icon-no" ,
+		 "text" : "icon-no" 
+		}, {
+			 "value" : "icon-cancel" ,
+			 "text" : "icon-cancel" 
+		}, {
+			 "value" : "icon-reload" ,
+			 "text" : "icon-reload" 
+		}, {
+			 "value" : "icon-search" ,
+			 "text" : "icon-search" 
+		}, {
+			 "value" : "icon-print" ,
+			 "text" : "icon-print" 
+		}, {
+			 "value" : "icon-help" ,
+			 "text" : "icon-help" 
+		}, {
+			 "value" : "icon-undo" ,
+			 "text" : "icon-undo"
+		}, {
+			 "value" : "icon-redo" ,
+			 "text" : "icon-redo" 
+		}, {
+			 "value" :"icon-back" ,
+			 "text" : "icon-back" 
+		}, {
+			 "value" : "icon-sum" ,
+			 "text" : "icon-sum" 
+		},{
+			 "value" : "icon-tip" ,
+			 "text" : "icon-tip" 
+		}]
+⊙"required":true ,"validType":"length[2,20]"⊙"valueField":"value","textField":"text","data":[ {
+			"value" :"1",
+			"text" : "系統" 
+		}, {
+		"value" : "2" ,
+			 "text" : "基礎資料" 
+		} , {
+		"value" : "3" ,
+			 "text" : "计划管理" 
+		} , {
+		"value" : "4" ,
+			 "text" : "库存管理" 
+		} , {
+		"value" : "5" ,
+			 "text" : "生产管理" 
+		} , {
+		"value" : "6" ,
+			 "text" : "釆购管理" 
+		} , {
+		"value" : "7" ,
+			 "text" : "销售管理" 
+		} , {
+		"value" : "8" ,
+			 "text" : "质量管理" 
+		} , {
+		"value" : "9" ,
+			 "text" : "固定资产管理" 
+		} , {
+		"value" : "10" ,
+			 "text" : "财务管理" 
+		} , {
+		"value" : "11" ,
+			 "text" : "工资成本管理" 
+		},{
+		"value" : "12" ,
+			 "text" : "维修管理" 
+		}]⊙"width":"600px","height":"300px" , "multiline" :true ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cmodpr_getcomresult_partview.ComboList"⊙"valueField":"value","textField":"text", "data" :[ {
+		"value" : "" ,
+			 "text" : "对外不可见" 
+		},{
+		"value" : "1" ,
+			 "text" : "对外可见" 
+		}]
+ </comparam>
+
+	  <sigleform>s_menu
+	  </sigleform>
+	  <idfield>sysmenucode</idfield> 
+
+		 <extendxml> 
+		 
+		 <formattable>groupformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<modclass>jspnewsource</modclass>
+<treecondition>Tcpfl-bcp_class</treecondition>
+<mtitle>菜单设计</mtitle>
+</extendxml>
+<firstcom></firstcom> 
+<secondcom>loadxmldiv:xmlload:/Phtml/xmlload.html:0</secondcom>
+<exterparam>"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass"</exterparam>
+
+<modextfield></modextfield>
+	</Omenu>	
+	 <Omenu lang="jp">
+	 <extendfield></extendfield>
+<title>
+メニュー設計
+</title>
+   <joinform> s_menu where 1>0
+   </joinform>
+  	<indextitle>id,名称,テンプレート</indextitle>
+	 <indexfield>sysmenucode,sysmenuname_jp,jspnewsource</indexfield>
+<indexwidth>120,200,200</indexwidth>
+	  
+	  <fieldstyle>0:3</fieldstyle>
+	   <rowcount>12
+   </rowcount>
+  
+   <conditionable>
+    0
+   </conditionable>
+
+<selectcolumn>sysmenucode, sysmenuname,sysmenuname_en, sysmenunam_tw,sysmenuname_jp, jspnewsource,sysmodule,jsplistsource,iswww,icons,param10
+  </selectcolumn>
+<fieldtitle>id,menuname, menunameen, menunametw, menunamejp,flclass,sysmodule,jsplistsource,iswww,icons,param10
+  	</fieldtitle>
+<typestr>s,s,s,s,s,s,s,s,s,s,s
+	 </typestr>
+	 <columntitle>コード:000:validatebox-3: 唯一のコードを入力してください,名称:001:validatebox-3, 英文名称:001:validatebox-3, 繁体名称:001:validatebox-3, 日文名称:001:validatebox-3, 模板:000:combobox-6,モジュール:001: combobox-4,構造:001:textbox-0,フォルダ:000:combobox-1,アイコン:001: combobox-2,对外对见否:001:combobox-7
+		</columntitle> 
+		<group>详细信息</group>
+		 <comparam>width:300⊙"width":"200px","valueField":"value","textField":"label","data":[{"label":"文件","value":0},{"label":"文件夹","value":1} ,{"label":"未完成","value":2} ] ⊙ "valueField":"value","textField":"text", "data" : [ {
+			"value" :"",
+			"text" : "默认" 
+		}, {
+			"value" : "icon-add" ,
+			 "text" : "icon-add" 
+		}, {
+			 "value" : "icon-edit" ,
+		"text"	 : "icon-edit"  
+		}, {
+			"value" : "icon-remove" ,
+			 "text" : "icon-remove" 
+		}, {
+			 "value" : "icon-save" ,
+		 "text" : "icon-save" 
+		}, {
+			 "value" : "icon-cut" ,
+			 "text" : "icon-cut" 
+		}, {
+			"value" : "icon-ok" ,
+			 "text" : "icon-ok" 
+		}, {
+			 "value" : "icon-no" ,
+		 "text" : "icon-no" 
+		}, {
+			 "value" : "icon-cancel" ,
+			 "text" : "icon-cancel" 
+		}, {
+			 "value" : "icon-reload" ,
+			 "text" : "icon-reload" 
+		}, {
+			 "value" : "icon-search" ,
+			 "text" : "icon-search" 
+		}, {
+			 "value" : "icon-print" ,
+			 "text" : "icon-print" 
+		}, {
+			 "value" : "icon-help" ,
+			 "text" : "icon-help" 
+		}, {
+			 "value" : "icon-undo" ,
+			 "text" : "icon-undo"
+		}, {
+			 "value" : "icon-redo" ,
+			 "text" : "icon-redo" 
+		}, {
+			 "value" :"icon-back" ,
+			 "text" : "icon-back" 
+		}, {
+			 "value" : "icon-sum" ,
+			 "text" : "icon-sum" 
+		},{
+			 "value" : "icon-tip" ,
+			 "text" : "icon-tip" 
+		}]
+⊙"required":true ,"validType":"length[2,20]"⊙"valueField":"value","textField":"text","data":[ {
+			"value" :"1",
+			"text" : "系统" 
+		}, {
+		"value" : "2" ,
+			 "text" : "基础资料" 
+		} , {
+		"value" : "3" ,
+			 "text" : "计划管理" 
+		} , {
+		"value" : "4" ,
+			 "text" : "库存管理" 
+		} , {
+		"value" : "5" ,
+			 "text" : "生产管理" 
+		} , {
+		"value" : "6" ,
+			 "text" : "釆购管理" 
+		} , {
+		"value" : "7" ,
+			 "text" : "销售管理" 
+		} , {
+		"value" : "8" ,
+			 "text" : "质量管理" 
+		} , {
+		"value" : "9" ,
+			 "text" : "固定资产管理" 
+		} , {
+		"value" : "10" ,
+			 "text" : "财务管理" 
+		} , {
+		"value" : "11" ,
+			 "text" : "工资成本管理" 
+		},{
+		"value" : "12" ,
+			 "text" : "维修管理" 
+		}]⊙"width":"600px","height":"300px" , "multiline" :true ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cmodpr_getcomresult_partview.ComboList"⊙"valueField":"value","textField":"text", "data" : {
+		"value" : "" ,
+			 "text" : "对外不可见" 
+		},{
+		"value" : "12" ,
+			 "text" : "对外可见" 
+		}]
+ </comparam>
+
+	  <sigleform>s_menu
+	  </sigleform>
+	  <idfield>sysmenucode</idfield> 
+
+		 <extendxml> 
+		 
+		 <formattable>groupformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<modclass>jspnewsource</modclass>
+<treecondition>Tcpfl-bcp_class</treecondition>
+<mtitle>菜单设计</mtitle>
+</extendxml>
+<firstcom></firstcom> 
+<secondcom>loadxmldiv:xmlload:/Phtml/xmlload.html:0</secondcom>
+<exterparam>"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass"</exterparam>
+
+<modextfield></modextfield>
+	</Omenu>	
+	</con>

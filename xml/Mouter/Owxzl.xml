@@ -1,0 +1,176 @@
+<config>
+<Owxzl lang="zh_CN">
+<extendfield></extendfield>
+<title>
+外协资料
+</title>
+	  <joinform>b_wxzl left join b_wxfl ON b_wxzl.Bwx_flid=b_wxfl.Bwxfl_Id where 1=1
+	  </joinform>
+	  <indextitle>编码,名称,电话,电子邮件,传真 </indextitle>
+	  <indexfield>Bwx_Id,Bwx_Name,Bwx_Tel,Bwx_Email,Bwx_fax</indexfield>
+<indexwidth>120,200,180,200,180</indexwidth>
+	  <fieldstyle>1:4</fieldstyle> 
+	  <rowcount>10
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+ 	<selectcolumn>Bwx_Id,Bwx_Name,Bwx_Tel,Bwx_Post,Bwx_Add,Bwx_flid,Bwx_BankNo,bwx_BankName,Bwx_Email,Bwx_fax,Bwx_Chiefer,Bwx_Legelman,Bwx_Desc,Bwx_DefineDesc1,Bwx_DefineDesc2
+		</selectcolumn>
+		<fieldtitle>id,bwxName,bwxTel,bwxPost,bwxAdd,bwxFlID,BwxBankNo,bwxBankName,bwxEmail,bwxFax,bwxChiefer,bwxLegelMan,bwxDesc,bwxDefineDesc1,bwxDefineDesc2 		
+		</fieldtitle>
+<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s
+		</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,电话:001:validatebox-1,邮编:000:validatebox-1,地址:001:textbox-4,分类:100:combotree-0,银行帐号:101:validatebox-1,银行名称:100:validatebox-1,电子邮件:101:validatebox-2,传真:100:validatebox-1,责任人:101:validatebox-1,法人:131:validatebox-1,备注:131:textbox-4,自定义一:131:textbox-4,自定义二:131:textbox-4
+		</columntitle> 
+		<group>编码信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Twxfl_gettreeresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙ "width" :"400px"
+		</comparam>
+		<sigleform>b_wxzl
+		</sigleform>
+		<idfield>Bwx_Id</idfield>
+	
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Twxfl-Bwx_flid</treecondition>
+<mtitle>外协资料</mtitle>
+</extendxml> <firstcom>south:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+<secondcom></secondcom>
+<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Twxfl","flfield":"bwx_flid"⊙"searchlabel":"外协名称","searchfield":"bwx_Name" </exterparam>
+<modextfield></modextfield>
+	</Owxzl>
+	 <Owxzl lang="en">
+<extendfield></extendfield>
+<title>
+外协资料
+</title>
+	  <joinform>b_wxzl left join b_wxfl ON b_wxzl.Bwx_flid=b_wxfl.Bwxfl_Id where 1=1
+	  </joinform>
+	  <indextitle>code,name,tel,email,fax</indextitle>
+	  <indexfield>Bwx_Id,Bwx_Name,Bwx_Tel,Bwx_Email,Bwx_fax</indexfield>
+<indexwidth>120,200,180,200,180</indexwidth>
+	  <fieldstyle>1:4</fieldstyle> 
+	  <rowcount>10
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+ 	<selectcolumn>Bwx_Id,Bwx_Name,Bwx_Tel,Bwx_Post,Bwx_Add,Bwx_flid,Bwx_BankNo,bwx_BankName,Bwx_Email,Bwx_fax,Bwx_Chiefer,Bwx_Legelman,Bwx_Desc,Bwx_DefineDesc1,Bwx_DefineDesc2
+		</selectcolumn>
+		<fieldtitle>id,bwxName,bwxTel,bwxPost,bwxAdd,bwxFlID,BwxBankNo,bwxBankName,bwxEmail,bwxFax,bwxChiefer,bwxLegelMan,bwxDesc,bwxDefineDesc1,bwxDefineDesc2 		
+		</fieldtitle>
+<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s
+		</typestr>
+		<columntitle>code:001:validatebox-1:请输入唯一编码,name:000:validatebox-1:请输入名称,tel:001:validatebox-1,邮编:000:validatebox-1,address:001:textbox-4,class:100:combotree-0,BankNumber:101:validatebox-1,BankName:100:validatebox-1,Email:101:validatebox-2,Fax:100:validatebox-1,责任人:101:validatebox-1,法人:131:validatebox-1,备注:131:textbox-4,自定义一:131:textbox-4,自定义二:131:textbox-4
+		</columntitle> 
+		<group>编码信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Twxfl_gettreeresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙ "width" :"400px"
+		</comparam>
+		<sigleform>b_wxzl
+		</sigleform>
+		<idfield>Bwx_Id</idfield>
+		
+	
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Twxfl-Bwx_flid</treecondition>
+<mtitle>外协资料</mtitle>
+</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+<secondcom></secondcom>
+<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Twxfl","flfield":"bwx_flid"⊙"searchlabel":"外协名称","searchfield":"bwx_Name" </exterparam>
+<modextfield></modextfield>
+	</Owxzl>
+	 <Owxzl lang="zh_TW">
+<extendfield></extendfield>
+<title>
+外协资料
+</title>
+	  <joinform>b_wxzl left join b_wxfl ON b_wxzl.Bwx_flid=b_wxfl.Bwxfl_Id where 1=1
+	  </joinform>
+	  <indextitle>编碼,名稱,电话,电子邮件,传真 </indextitle>
+	  <indexfield>Bwx_Id,Bwx_Name,Bwx_Tel,Bwx_Email,Bwx_fax</indexfield>
+<indexwidth>120,200,180,200,180</indexwidth>
+	  <fieldstyle>1:4</fieldstyle> 
+	  <rowcount>10
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+ 	<selectcolumn>Bwx_Id,Bwx_Name,Bwx_Tel,Bwx_Post,Bwx_Add,Bwx_flid,Bwx_BankNo,bwx_BankName,Bwx_Email,Bwx_fax,Bwx_Chiefer,Bwx_Legelman,Bwx_Desc,Bwx_DefineDesc1,Bwx_DefineDesc2
+		</selectcolumn>
+		<fieldtitle>id,bwxName,bwxTel,bwxPost,bwxAdd,bwxFlID,BwxBankNo,bwxBankName,bwxEmail,bwxFax,bwxChiefer,bwxLegelMan,bwxDesc,bwxDefineDesc1,bwxDefineDesc2 		
+		</fieldtitle>
+<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s
+		</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,电话:001:validatebox-1,邮编:000:validatebox-1,地址:001:textbox-4,分类:100:combotree-0,银行帐号:101:validatebox-1,银行名称:100:validatebox-1,电子邮件:101:validatebox-2,传真:100:validatebox-1,责任人:101:validatebox-1,法人:131:validatebox-1,备注:131:textbox-4,自定义一:131:textbox-4,自定义二:131:textbox-4
+		</columntitle> 
+		<group>编码信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Twxfl_gettreeresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙ "width" :"400px"
+		</comparam>
+		<sigleform>b_wxzl
+		</sigleform>
+		<idfield>Bwx_Id</idfield>
+	
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Twxfl-Bwx_flid</treecondition>
+<mtitle>外协资料</mtitle>
+</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+<secondcom></secondcom>
+<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Twxfl","flfield":"bwx_flid"⊙"searchlabel":"外协名称","searchfield":"bwx_Name" </exterparam>
+<modextfield></modextfield>
+	</Owxzl>
+<Owxzl lang="jp">
+<extendfield></extendfield>
+<title>
+外协资料
+</title>
+	  <joinform>b_wxzl left join b_wxfl ON b_wxzl.Bwx_flid=b_wxfl.Bwxfl_Id where 1=1
+	  </joinform>
+	  <indextitle>编码,名称,电话,电子邮件,传真 </indextitle>
+	  <indexfield>Bwx_Id,Bwx_Name,Bwx_Tel,Bwx_Email,Bwx_fax</indexfield>
+<indexwidth>120,200,180,200,180</indexwidth>
+	  <fieldstyle>1:4</fieldstyle> 
+	  <rowcount>10
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+ 	<selectcolumn>Bwx_Id,Bwx_Name,Bwx_Tel,Bwx_Post,Bwx_Add,Bwx_flid,Bwx_BankNo,bwx_BankName,Bwx_Email,Bwx_fax,Bwx_Chiefer,Bwx_Legelman,Bwx_Desc,Bwx_DefineDesc1,Bwx_DefineDesc2
+		</selectcolumn>
+		<fieldtitle>id,bwxName,bwxTel,bwxPost,bwxAdd,bwxFlID,BwxBankNo,bwxBankName,bwxEmail,bwxFax,bwxChiefer,bwxLegelMan,bwxDesc,bwxDefineDesc1,bwxDefineDesc2 		
+		</fieldtitle>
+<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s
+		</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,电话:001:validatebox-1,邮编:000:validatebox-1,地址:001:textbox-4,分类:100:combotree-0,银行帐号:101:validatebox-1,银行名称:100:validatebox-1,电子邮件:101:validatebox-2,传真:100:validatebox-1,责任人:101:validatebox-1,法人:131:validatebox-1,备注:131:textbox-4,自定义一:131:textbox-4,自定义二:131:textbox-4
+		</columntitle> 
+		<group>编码信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/ MainInit?hre=Twxfl_gettreeresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" : "url" ⊙ "width" :"400px"
+		</comparam>
+		<sigleform>b_wxzl
+		</sigleform>
+		<idfield>Bwx_Id</idfield>
+		
+	
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Twxfl-Bwx_flid</treecondition>
+<mtitle>外协资料</mtitle>
+</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+<secondcom></secondcom>
+<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Twxfl","flfield":"bwx_flid"⊙"searchlabel":"外协名称","searchfield":"bwx_Name" </exterparam>
+<modextfield></modextfield>
+	</Owxzl>
+	</config>

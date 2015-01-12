@@ -1,0 +1,115 @@
+ <Obxrj lang="zh_CN">
+	 <addidmodal>0</addidmodal>
+
+<title>
+报修日记
+</title>
+   <joinform>x_bxrj where 1=1
+   </joinform>
+  	<indextitle>编码,日期,位置,是否生效</indextitle>
+	 <indexfield>Xbxrj_Id, Xbxrj_Date,Xbxrj_zuhu,Xbxrj_Uflag</indexfield>
+<indexwidth>120,200,200,200</indexwidth>
+	  
+	  <fieldstyle>0:4</fieldstyle>
+	   <rowcount>12
+   </rowcount>
+  
+   <conditionable>
+    0
+   </conditionable>
+
+<selectcolumn>Xbxrj_Id,Xbxrj_Date,Xbxrj_jlr,Xbxrj_zuhu,Xbxrj_weizi,Xbxrj_fl,Xbxrj_model ,Xbxrj_desc
+ </selectcolumn>
+<fieldtitle>id,Xbxrj_Date,Xbxrjjlr,Xbxrjzuhu,Xbxrjweizi,Xbxrjfl,Xbxrjmodel,Xbxrjdesc</fieldtitle>
+<typestr>s,d,s,s,s,s,i,s</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,时间:000:datetimebox-3,操作人:001:combobox-0,住户:031:textbox-2,位置:031:textbox-2,分类:000:textbox#Sbxfl-2,处理方式:001:combobox-5,详细说明:031: textbox-3
+		
+		</columntitle> 
+		
+		<group>详细信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainDisp?hre=Tzhzl_getcondattr_partview.SyncList"⊙ "required":true ,"validType":"length[3,10]"⊙"height":"300px" , "multiline" :true ⊙"width":"200px"⊙"valueField":"id" ,"textField" :"text",@Tbxfl⊙"valueField":"value","textField":"label","data":[{"label":"维修人维修","value":0},{"label":"报告上级","value":1} ,{"label":"自行处理","value":2}] 
+		
+		</comparam>
+		<sigleform>X_bxrj
+		</sigleform>
+		<idfield>Xbxrj_Id</idfield>
+	<extendxml>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>   
+
+
+<useflag>Xbxrj_Uflag</useflag>
+<mtitle>住户资料</mtitle>
+<treecondition>Tbxfl-Xbxrj_fl </treecondition>  
+</extendxml>
+<?xml version="1.0" encoding="UTF-8"?>
+
+  	<Exjcg lang="Jp"> 
+<title>
+现金采购资料
+</title>
+  
+   <joinform>T_xjcg where 1=1 
+   </joinform>
+  	<indextitle>编码,日期,供货商,是否生效</indextitle>
+	  <indexfield>Txjcg_Id,Txjcg_Date,Txjcg_ghs,Txjcg_Uflag</indexfield>
+<indexwidth>120,200,180,200</indexwidth>
+	  <fieldstyle>0:4</fieldstyle>
+	  
+	  <rowcount>11
+   </rowcount>
+   
+   <conditionable>
+    0
+   </conditionable>
+
+  
+   <Mselectcolumn>Txjcg_Date,Txjcg_ghs,Txjcg_PivohClass,Txjcg_fkAmt, Txjcg_fkmode ,Txjcg_Cac,Txjcg_Desc,Txjcg_cgEmp,Txjcg_PivohCode</Mselectcolumn>
+   
+<Mfieldtitle>TxjcgDate,Txjcgghs,TxjcgPivohClass,TxjcgfkAmt,Txjcgfkmode,TxjcgCac,TxjcgDesc,TxjcgcgEmp,TxjcgPivohCode</Mfieldtitle>
+	<Mtypestr>d,s,s,f,s,s,s,s,s</Mtypestr>
+		<Mcolumntitle>采购日期:010:datetimebox-3:请选择日期,供货商:011:combobox-0:,发票类型:010:combobox-1:,付款总额:011:validatebox#Pkhzl-3:,付款方式:010:combobox-2:,付款帐戸:011:validatebox-3:,备注:010:validatebox-3:,釆购人:011:combobox-4:,发票号:031:validatebox-3:
+		</Mcolumntitle> 
+		<Mcomparam> "valueField":"id","textField" :"text","url":"/MainInit?hre=Cygzl_getcomresult_partview.ComboList" ⊙ "valueField":"value","textField":"label","data":[{"label":"收据","value":0},{"label":"普通发票","value":1} ,{"label":"增值发票","value":2}]⊙ "valueField":"value","textField":"label","data":[{"label":"现金","value":0},{"label":"支票","value":1} ]⊙"required":true⊙ "valueField":"id","textField" :"text","url":"/MainInit?hre=Cygzl_getcomresult_partview.ComboList" "
+		</Mcomparam>
+		<Msigleform>T_xjcg
+		</Msigleform>
+		<Midfield>Txjcg_Id</Midfield>
+		<flagfield>bcp_Uflag</flagfield>
+		<Maddidmodal>3</Maddidmodal>
+		 <extendfield> Xbxrj_Date:getdate(), Xbxrj_Id:getid:fff:MMdd </extendfield>
+<Xselectcolumn>Txjcgmx_cp,Txjcgmx_Qty,Txjcgmx_Price,Txjcgmx_TaxRate</Xselectcolumn>
+	 <Xfieldtitle>id,Qty,Price,TaxRate</Xfieldtitle>
+	  <Xcolumntitle>产品,数量,单价,税率
+		 </Xcolumntitle> 
+		 	<Xfieldwidth>360,200,200,200
+		 </Xfieldwidth>
+		 <Xtypestr>s,s,s,s
+	  </Xtypestr>
+<Xcomname>combobox-3,text,text,text</Xcomname> 
+	 		<Xcomparam>width:200⊙"valueField":"value","textField":"label","data":[{"label":"文件","value":0},{"label":"文件夹","value":1} ,{"label":"未完成","value":2} ] ⊙"valueField":"value","te⊙ "valueField":"id","textField":"text",@Ccpzl </Xcomparam>
+	 	 <Xsigleform>T_xjcgxx 
+	 </Xsigleform>
+	
+<Xidfield>Txjcgmx_cp</Xidfield>
+<Xjionfield>Txjcgmx_Id</Xjionfield>
+	 	 <Xrowcount>11</Xrowcount> 	
+   <Xaddidmodal>1</Xaddidmodal>
+   <Xrowcount>11</Xrowcount> 	
+   
+	 <extendxml>
+	 <formattable>tabformdisp</formattable>
+
+  <useflag>Txjcg_Uflag</useflag>
+<mtitle>现金采购资料</mtitle>
+	 <ableputin>1</ableputin>
+	 <Mawidth>100</Mawidth>
+	 <Mbwidth>220</Mbwidth>
+	 </extendxml>
+	 	<firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+<modextfield></modextfield>
+	
+	</Obxrj>	

@@ -1,0 +1,192 @@
+<config>
+<Omodp lang="zh_CN">
+<extendfield></extendfield>
+	<title>
+		模板资料
+	</title>
+	<joinform>S_modpro where 1=1
+	</joinform>
+  	<indextitle>编码,名称,创建时间,版本,生效,实例</indextitle>
+	<indexfield>Mmod_code, Mmod_name,Mmod_dcreatedate,Mmod_ver,Mmod_Uflag,Mmod_demo </indexfield>
+	<indexwidth>120,200,180,100,180,180</indexwidth>
+	<fieldstyle>0:4</fieldstyle>
+	<rowcount>10
+	</rowcount>
+	
+	<conditionable>
+		0
+	</conditionable>
+		<title>模板资料详细</title>
+<selectcolumn>Mmod_code,Mmod_name,Mmod_czy,Mmod_tedian,Mmod_ca,Mmod_ver,Mmod_demo,Mmod_dcreatedate,Mmod_mcreatedate,mmod_fl,mmod_xmldesc</selectcolumn>
+<fieldtitle>id,Mmodname,Mmodczy,Mmodtedian,Mmodca,Mmodver,Mmoddemo,Mmoddcreatedate,Mmodmcreatedate,mmodfl,mmod_xmldesc </fieldtitle>
+<typestr>s,s,s,s,s,s,s,d,d,s,s</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,操作负责人:001:combobox-0,特点:031:textbox-3,需改进:031:textbox-2,版本:000:textbox-3,实例:001:validatebox-1,创建日期:000:datebox-3,修改日期:001: datebox-3,类型:001:combotree-4 ,xml说明:031:textbox-2 </columntitle> 
+		
+		<group>详细信息</group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cczy_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙"height":"300px", "multiline" :true ⊙"width":"200px"⊙"valueField":"id","textField" :"text", "url":"/MainInit?hre=Tmodfl_gettreeresult_partview.ComboList"
+		</comparam>
+		<sigleform> S_modpro
+		</sigleform>
+		<idfield>Mmod_code</idfield>
+		
+		 <curnode>0
+		</curnode> 
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<modclass>Mmod_demo</modclass>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+	<treecondition>Tmodfl- Mmod_fl</treecondition>
+		<mtitle>模板资料</mtitle>
+		<useflag>Mmod_Uflag</useflag>
+</extendxml>
+ 	<firstcom></firstcom>
+<secondcom>loadhtmldiv:htmlload:/Phtml/htmlload.html:0</secondcom>
+<exterparam>"isload":"9","htmldesc":"请选择小于40kb的html格式支件","filetype":"html","modcom":"Mmoddemo"</exterparam>
+	</Omodp>
+	 <Omodp lang="en">
+<extendfield></extendfield>
+	<title>
+		template information
+	</title>
+	<joinform>S_modpro where 1=1
+	</joinform>
+  	<indextitle>code,name,createdate,ver,user,inc</indextitle>
+	<indexfield>Mmod_code, Mmod_name,Mmod_dcreatedate,Mmod_ver,Mmod_Uflag,Mmod_demo </indexfield>
+	<indexwidth>120,200,180,100,180,180</indexwidth>
+	<fieldstyle>0:4</fieldstyle>
+	<rowcount>10
+	</rowcount>
+	
+	<conditionable>
+		0
+	</conditionable>
+		<title>模板资料详细</title>
+<selectcolumn>Mmod_code,Mmod_name,Mmod_czy,Mmod_tedian,Mmod_ca,Mmod_ver,Mmod_demo,Mmod_dcreatedate,Mmod_mcreatedate,mmod_fl,mmod_xmldesc</selectcolumn>
+<fieldtitle>id,Mmodname,Mmodczy,Mmodtedian,Mmodca,Mmodver,Mmoddemo,Mmoddcreatedate,Mmodmcreatedate,mmodfl,mmod_xmldesc </fieldtitle>
+<typestr>s,s,s,s,s,s,s,d,d,s,s</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,操作负责人:001:combobox-0,特点:031:textbox-3,需改进:031:textbox-2,版本:000:textbox-3,实例:001:validatebox-1,创建日期:000:datebox-3,修改日期:001: datebox-3,类型:001:combotree-4 ,xml说明:031:textbox-2 </columntitle> 
+		
+		<group>详细信息</group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cczy_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙"height":"300px", "multiline" :true ⊙"width":"200px"⊙"valueField":"id","textField" :"text", "url":"/MainInit?hre=Tmodfl_gettreeresult_partview.ComboList"</comparam>
+		<sigleform> S_modpro
+		</sigleform>
+		<idfield>Mmod_code</idfield>
+		
+		 <curnode>0
+		</curnode> 
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<modclass>Mmod_demo</modclass>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+	<treecondition>Tmodfl- Mmod_fl</treecondition>
+		<mtitle>模板资料</mtitle>
+		<useflag>Mmod_Uflag</useflag>
+</extendxml>
+ 	<firstcom></firstcom>
+<secondcom>loadhtmldiv:htmlload:/Phtml/htmlload.html:0</secondcom>
+<exterparam>"isload":"9","htmldesc":"请选择小于40kb的html格式支件","filetype":"html","modcom":"Mmoddemo"</exterparam>
+	</Omodp>
+<Omodp lang="zh_TW">
+<extendfield></extendfield>
+	<title>
+		模板资料
+	</title>
+	<joinform>S_modpro where 1=1
+	</joinform>
+  	<indextitle>编碼,名稱,创建时间,版本,生效,实例</indextitle>
+	<indexfield>Mmod_code, Mmod_name,Mmod_dcreatedate,Mmod_ver,Mmod_Uflag,Mmod_demo </indexfield>
+	<indexwidth>120,200,180,100,180,180</indexwidth>
+	<fieldstyle>0:4</fieldstyle>
+	<rowcount>10
+	</rowcount>
+	
+	<conditionable>
+		0
+	</conditionable>
+		<title>模板资料详细</title>
+<selectcolumn>Mmod_code,Mmod_name,Mmod_czy,Mmod_tedian,Mmod_ca,Mmod_ver,Mmod_demo,Mmod_dcreatedate,Mmod_mcreatedate,mmod_fl,mmod_xmldesc</selectcolumn>
+<fieldtitle>id,Mmodname,Mmodczy,Mmodtedian,Mmodca,Mmodver,Mmoddemo,Mmoddcreatedate,Mmodmcreatedate,mmodfl,mmod_xmldesc </fieldtitle>
+<typestr>s,s,s,s,s,s,s,d,d,s,s</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,操作负责人:001:combobox-0,特点:031:textbox-3,需改进:031:textbox-2,版本:000:textbox-3,实例:001:validatebox-1,创建日期:000:datebox-3,修改日期:001: datebox-3,类型:001:combotree-4 ,xml说明:031:textbox-2 </columntitle> 
+		
+		<group>详细信息</group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cczy_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙"height":"300px", "multiline" :true ⊙"width":"200px"⊙"valueField":"id","textField" :"text", "url":"/MainInit?hre=Tmodfl_gettreeresult_partview.ComboList"</comparam>
+		<sigleform> S_modpro
+		</sigleform>
+		<idfield>Mmod_code</idfield>
+		
+		 <curnode>0
+		</curnode> 
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<modclass>Mmod_demo</modclass>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+	<treecondition>Tmodfl- Mmod_fl</treecondition>
+		<mtitle>模板资料</mtitle>
+		<useflag>Mmod_Uflag</useflag>
+</extendxml>
+ 	<firstcom></firstcom>
+<secondcom>loadhtmldiv:htmlload:/Phtml/htmlload.html:0</secondcom>
+<exterparam>"isload":"9","htmldesc":"请选择小于40kb的html格式支件","filetype":"html","modcom":"Mmoddemo"</exterparam>
+	</Omodp>
+	 <Omodp lang="jp">
+<extendfield></extendfield>
+	<title>
+		模板资料
+	</title>
+	<joinform>S_modpro where 1=1
+	</joinform>
+  	<indextitle>编码,名称,创建时间,版本,生效,实例</indextitle>
+	<indexfield>Mmod_code, Mmod_name,Mmod_dcreatedate,Mmod_ver,Mmod_Uflag,Mmod_demo </indexfield>
+	<indexwidth>120,200,180,100,180,180</indexwidth>
+	<fieldstyle>0:4</fieldstyle>
+	<rowcount>10
+	</rowcount>
+	
+	<conditionable>
+		0
+	</conditionable>
+		<title>模板资料详细</title>
+<selectcolumn>Mmod_code,Mmod_name,Mmod_czy,Mmod_tedian,Mmod_ca,Mmod_ver,Mmod_demo,Mmod_dcreatedate,Mmod_mcreatedate,mmod_fl,mmod_xmldesc</selectcolumn>
+<fieldtitle>id,Mmodname,Mmodczy,Mmodtedian,Mmodca,Mmodver,Mmoddemo,Mmoddcreatedate,Mmodmcreatedate,mmodfl,mmod_xmldesc </fieldtitle>
+<typestr>s,s,s,s,s,s,s,d,d,s,s</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,操作负责人:001:combobox-0,特点:031:textbox-3,需改进:031:textbox-2,版本:000:textbox-3,实例:001:validatebox-1,创建日期:000:datebox-3,修改日期:001: datebox-3,类型:001:combotree-4 ,xml说明:031:textbox-2 </columntitle> 
+		
+		<group>详细信息</group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cczy_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙"height":"300px", "multiline" :true ⊙"width":"200px"⊙"valueField":"id","textField" :"text", "url":"/MainInit?hre=Tmodfl_gettreeresult_partview.ComboList"
+		</comparam>
+		<sigleform> S_modpro
+		</sigleform>
+		<idfield>Mmod_code</idfield>
+		
+		 <curnode>0
+		</curnode> 
+<extendxml>
+<formattable>tabformdisp</formattable>
+
+<modclass>Mmod_demo</modclass>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+	<treecondition>Tmodfl- Mmod_fl</treecondition>
+		<mtitle>模板资料</mtitle>
+		<useflag>Mmod_Uflag</useflag>
+</extendxml>
+ 	<firstcom></firstcom>
+<secondcom>loadhtmldiv:htmlload:/Phtml/htmlload.html:0</secondcom>
+<exterparam>"isload":"9","htmldesc":"请选择小于40kb的html格式支件","filetype":"html","modcom":"Mmoddemo"</exterparam>
+	</Omodp>
+	</config>

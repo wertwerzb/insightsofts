@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con>
+	<Okhzl lang="zh_CN">
+	 <extendfield></extendfield>
+	 
+<title>
+客戸资料
+</title>
+	  <joinform>b_khzl left join b_khfl ON b_khzl.Bkh_flid=b_khfl.Bkhfl_Id where 1=1
+	  </joinform>
+	  <indextitle>编码,名称,电话,电子邮件,传真 </indextitle>
+	  <indexfield>Bkh_Id,Bkh_Name,Bkh_Tel,Bkh_Email,Bkh_fax</indexfield>
+<indexwidth>120,200,180,200,180</indexwidth>
+	    <fieldstyle>1:4</fieldstyle>
+	  <rowcount>11
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+		<title>客戸资料详细</title>
+<selectcolumn>Bkh_Id,Bkh_Name,Bkh_Tel,Bkh_Post,Bkh_Add,Bkh_flid,Bkh_BankNo,bkh_BankName,Bkh_Email,Bkh_fax,Bkh_Chiefer,Bkh_Legelman,Bkh_Desc,Bkh_DefineDesc1,Bkh_DefineDesc2</selectcolumn>
+		<fieldtitle>id,bkhName,bkhTel,bkhPost,bkhAdd,bkhFlID,BkhBankNo,bkhBankName,bkhEmail,bkhFax,bkhChiefer,bkhLegelMan,bkhDesc,bkhDefineDesc1,bkhDefineDesc2 		
+		</fieldtitle>
+		<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s
+		</typestr>
+		<columntitle>编码:001:validatebox-1:请输入唯一编码,名称:000:validatebox-1:请输入名称,电话:001:validatebox-1,邮编:000:validatebox-1,地址:001:textbox-4,分类:100:combotree-0,银行帐号:101:validatebox-1,银行名称:100:validatebox-1,电子邮件:101:validatebox-2,传真:100:validatebox-1,责任人:101:validatebox-1,法人:131:validatebox-1,备注:131:textbox-4,自定义一:131:textbox-4,自定义二:131:textbox-4  
+		</columntitle>  
+		<group>编码信息⊙其他信息</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Tkhfl_gettreeresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" :"url" ⊙ "width" :"700px"
+		</comparam>
+		<sigleform>b_khzl
+		</sigleform>
+		<idfield>Bkh_Id</idfield>
+		
+		
+		<extendfield></extendfield>
+		 <extendxml>
+		 <formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Tkhfl-Bkh_flid</treecondition>
+<mtitle>客戸资料</mtitle>
+
+</extendxml>
+
+	 	
+		 <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+<secondcom>imagedis:loadxml:/Phtml/xmlload:0 </secondcom>
+<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tkhfl","flfield":"bkh_flid"⊙"searchlabel":"客户名称","searchfield":"bkh_Name" </exterparam>
+
+<modextfield></modextfield>
+	</Okhzl>
+	 	<Okhzl lang="en">
+	 <extendfield></extendfield>
+	 
+<title>
+客戸资料
+</title>
+	  <joinform>b_khzl left join b_khfl ON b_khzl.Bkh_flid=b_khfl.Bkhfl_Id where 1=1
+	  </joinform>
+	  <indextitle>Code,name,telephone,email,fax</indextitle>
+	  <indexfield>Bkh_Id,Bkh_Name,Bkh_Tel,Bkh_Email,Bkh_fax</indexfield>
+<indexwidth>120,200,180,200,180</indexwidth>
+	    <fieldstyle>1:4</fieldstyle>
+	  <rowcount>11
+   </rowcount> 	
+   <conditionable>
+    0
+   </conditionable>
+		<title>客戸资料详细</title>
+<selectcolumn>Bkh_Id,Bkh_Name,Bkh_Tel,Bkh_Post,Bkh_Add,Bkh_flid,Bkh_BankNo,bkh_BankName,Bkh_Email,Bkh_fax,Bkh_Chiefer,Bkh_Legelman,Bkh_Desc,Bkh_DefineDesc1,Bkh_DefineDesc2</selectcolumn>
+		<fieldtitle>id,bkhName,bkhTel,bkhPost,bkhAdd,bkhFlID,BkhBankNo,bkhBankName,bkhEmail,bkhFax,bkhChiefer,bkhLegelMan,bkhDesc,bkhDefineDesc1,bkhDefineDesc2 		
+		</fieldtitle>
+		<typestr>s,s,s,s,s,s,s,s,s,s,s,s,s,s,s
+		</typestr>
+		<columntitle>Code:001:validatebox-1:请输入唯一编码,Name:000:validatebox-1:请输入名称,Tel:001:validatebox-1,Post:000:validatebox-1,Address:001:textbox-4,Classification:100:combotree-0,BankNo:101:validatebox-1,BankName:100:validatebox-1,Email:101:validatebox-2,Fax:100:validatebox-1,chargeman:101:validatebox-1,Legal person:131:validatebox-1,Desc:131:textbox-4,Define1:131:textbox-4,Define2:131:textbox-4  
+		</columntitle>  
+		<group>main info⊙other info</group>
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Tkhfl_gettreeresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙ "required" :true,"validType":"email"⊙ "required" :true, "validType" :"url" ⊙ "width" :"700px"
+		</comparam>
+		<sigleform>b_khzl
+		</sigleform>
+		<idfield>Bkh_Id</idfield>
+	
+		
+		<extendfield></extendfield>
+		 <extendxml>
+		 <formattable>tabformdisp</formattable>
+
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<treecondition>Tkhfl-Bkh_flid</treecondition>
+<mtitle> Customer information </mtitle>
+
+</extendxml>
+
+	 	 <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+<secondcom>imagedis:loadxml:/Phtml/xmlload:0 </secondcom>
+<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tkhfl","flfield":"bkh_flid"⊙"searchlabel":"客户名称","searchfield":"bkh_Name" </exterparam>
+
+<modextfield></modextfield>
+	</Okhzl>
+	 </con>

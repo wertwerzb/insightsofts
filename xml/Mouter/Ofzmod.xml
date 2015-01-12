@@ -1,0 +1,192 @@
+<config>
+<Ofzmod lang="zh_CN">
+	  
+<extendfield></extendfield>
+	<title>
+		辅助模板资料
+	</title>
+	<joinform>M_fzmod where 1=1
+	</joinform>
+  	<indextitle>编码,名称,创建时间,版本,生效</indextitle>
+	<indexfield>Mfzmod_code, Mfzmod_name,Mfzmod_createdate,Mfzmod_ver,Mfzmod_Uflag</indexfield>
+	<indexwidth>120,200,180,100,180</indexwidth>
+	<fieldstyle>0:4</fieldstyle>
+	<rowcount>10
+	</rowcount>
+	
+	<conditionable>
+		0
+	</conditionable>
+<selectcolumn>Mfzmod_code,Mfzmod_name,Mfzmod_author,Mfzmod_charge,Mfzmod_createdate,Mfzmod_modifydate,mfzmod_fl,Mfzmod_ver ,Mfzmod_tedian,Mfzmod_xmldesc</selectcolumn>
+<fieldtitle>id,Mfzmodname,Mfzmodauthor,Mfzmodcharge,Mfzmoddcreatedate,Mfzmodmodifydate,mfzmodfl, Mfzmodver, Mfzmodtedian,  Mfzmod_xmldesc</fieldtitle>
+<typestr>s,s,s,s,s,d,d,s,s,s</typestr>
+		<columntitle>编码:000:validatebox-1:请输入唯一编码,名称:001:validatebox-1:请输入名称,作者:000:combobox-0,负责人:001:combobox-0,创建日期:000:datebox-3,修改日期:001: datebox-3,类型:000:combotree-4,版本:001:textbox-3,特点:131:textbox-5,xml结构说明:131:textbox-2</columntitle> 
+		
+		<group>主要信息⊙详细信息 </group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cczy_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙"height":"250px" , "multiline" :true ⊙"width":"200px"⊙"valueField":"id","textField" :"text", "url":"/MainInit?hre=Tmodfl_gettreeresult_partview.ComboList"⊙"height":"150px" 
+		</comparam>
+		<sigleform> M_fzmod 
+		</sigleform>
+		<idfield>Mfzmod_code</idfield>
+		
+<extendxml>
+<formattable>tabformdisp</formattable>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+	<treecondition>Tfzmodfl- Mfzmod_fl</treecondition>
+		<mtitle>模板资料</mtitle>
+		<useflag>Mfzmod_Uflag</useflag>
+</extendxml>
+
+	 	<firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+
+<modextfield>Mfzmodauthor:ip</modextfield>
+	</Ofzmod>
+<Ofzmod lang="en">
+	  
+<extendfield></extendfield>
+	<title>
+		template information
+	</title>
+	<joinform>M_fzmod where 1=1
+	</joinform>
+  	<indextitle>code,name,createdate,ver,生效</indextitle>
+	<indexfield>Mfzmod_code, Mfzmod_name,Mfzmod_createdate,Mfzmod_ver,Mfzmod_Uflag</indexfield>
+	<indexwidth>120,200,180,100,180</indexwidth>
+	<fieldstyle>0:4</fieldstyle>
+	<rowcount>10
+	</rowcount>
+	
+	<conditionable>
+		0
+	</conditionable>
+<selectcolumn>Mfzmod_code,Mfzmod_name,Mfzmod_author,Mfzmod_charge,Mfzmod_createdate,Mfzmod_modifydate,mfzmod_fl,Mfzmod_ver ,Mfzmod_tedian,Mfzmod_xmldesc</selectcolumn>
+<fieldtitle>id,Mfzmodname,Mfzmodauthor,Mfzmodcharge,Mfzmoddcreatedate,Mfzmodmodifydate,mfzmodfl, Mfzmodver, Mfzmodtedian,  Mfzmod_xmldesc</fieldtitle>
+<typestr>s,s,s,s,s,d,d,s,s,s</typestr>
+		<columntitle>编码:000:validatebox-1:请输入唯一编码,名称:001:validatebox-1:请输入名称,作者:000:combobox-0,负责人:001:combobox-0,创建日期:000:datebox-3,修改日期:001: datebox-3,类型:000:combotree-4,版本:001:textbox-3,特点:131:textbox-5,xml结构说明:131:textbox-2</columntitle> 
+		
+		<group>主要信息⊙详细信息 </group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cczy_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙"height":"250px" , "multiline" :true ⊙"width":"200px"⊙"valueField":"id","textField" :"text","url":"/MainInit?hre=Tmodfl_gettreeresult_partview.ComboList"⊙"height":"150px" 
+		</comparam>
+		<sigleform> M_fzmod 
+		</sigleform>
+		<idfield>Mfzmod_code</idfield>
+		
+<extendxml>
+<formattable>tabformdisp</formattable>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+	<treecondition>Tfzmodfl- Mfzmod_fl</treecondition>
+		<mtitle>模板资料</mtitle>
+		<useflag>Mfzmod_Uflag</useflag>
+</extendxml>
+
+	 	<firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+
+<modextfield>Mfzmodauthor:ip</modextfield>
+	</Ofzmod>
+<Ofzmod lang="zh_TW">
+	  
+<extendfield></extendfield>
+	<title>
+		辅助模板资料
+	</title>
+	<joinform>M_fzmod where 1=1
+	</joinform>
+  	<indextitle>编碼,名稱,创建时间,版本,生效</indextitle>
+	<indexfield>Mfzmod_code, Mfzmod_name,Mfzmod_createdate,Mfzmod_ver,Mfzmod_Uflag</indexfield>
+	<indexwidth>120,200,180,100,180</indexwidth>
+	<fieldstyle>0:4</fieldstyle>
+	<rowcount>10
+	</rowcount>
+	
+	<conditionable>
+		0
+	</conditionable>
+<selectcolumn>Mfzmod_code,Mfzmod_name,Mfzmod_author,Mfzmod_charge,Mfzmod_createdate,Mfzmod_modifydate,mfzmod_fl,Mfzmod_ver ,Mfzmod_tedian,Mfzmod_xmldesc</selectcolumn>
+<fieldtitle>id,Mfzmodname,Mfzmodauthor,Mfzmodcharge,Mfzmoddcreatedate,Mfzmodmodifydate,mfzmodfl, Mfzmodver, Mfzmodtedian,  Mfzmod_xmldesc</fieldtitle>
+<typestr>s,s,s,s,s,d,d,s,s,s</typestr>
+		<columntitle>编码:000:validatebox-1:请输入唯一编码,名称:001:validatebox-1:请输入名称,作者:000:combobox-0,负责人:001:combobox-0,创建日期:000:datebox-3,修改日期:001: datebox-3,类型:000:combotree-4,版本:001:textbox-3,特点:131:textbox-5,xml结构说明:131:textbox-2</columntitle> 
+		
+		<group>主要信息⊙详细信息 </group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cczy_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙"height":"250px" , "multiline" :true ⊙"width":"200px"⊙"valueField":"id","textField" :"text","url":"/MainInit?hre=Tmodfl_gettreeresult_partview.ComboList"⊙"height":"150px" 
+		</comparam>
+		<sigleform> M_fzmod 
+		</sigleform>
+		<idfield>Mfzmod_code</idfield>
+		
+<extendxml>
+<formattable>tabformdisp</formattable>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+	<treecondition>Tfzmodfl- Mfzmod_fl</treecondition>
+		<mtitle>模板资料</mtitle>
+		<useflag>Mfzmod_Uflag</useflag>
+</extendxml>
+
+	 	<firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+
+<modextfield>Mfzmodauthor:ip</modextfield>
+	</Ofzmod>
+<Ofzmod lang="jp">
+	  
+<extendfield></extendfield>
+	<title>
+		辅助模板资料
+	</title>
+	<joinform>M_fzmod where 1=1
+	</joinform>
+  	<indextitle>编码,名称,创建时间,版本,生效</indextitle>
+	<indexfield>Mfzmod_code, Mfzmod_name,Mfzmod_createdate,Mfzmod_ver,Mfzmod_Uflag</indexfield>
+	<indexwidth>120,200,180,100,180</indexwidth>
+	<fieldstyle>0:4</fieldstyle>
+	<rowcount>10
+	</rowcount>
+	
+	<conditionable>
+		0
+	</conditionable>
+<selectcolumn>Mfzmod_code,Mfzmod_name,Mfzmod_author,Mfzmod_charge,Mfzmod_createdate,Mfzmod_modifydate,mfzmod_fl,Mfzmod_ver ,Mfzmod_tedian,Mfzmod_xmldesc</selectcolumn>
+<fieldtitle>id,Mfzmodname,Mfzmodauthor,Mfzmodcharge,Mfzmoddcreatedate,Mfzmodmodifydate,mfzmodfl, Mfzmodver, Mfzmodtedian,  Mfzmod_xmldesc</fieldtitle>
+<typestr>s,s,s,s,s,d,d,s,s,s</typestr>
+		<columntitle>编码:000:validatebox-1:请输入唯一编码,名称:001:validatebox-1:请输入名称,作者:000:combobox-0,负责人:001:combobox-0,创建日期:000:datebox-3,修改日期:001: datebox-3,类型:000:combotree-4,版本:001:textbox-3,特点:131:textbox-5,xml结构说明:131:textbox-2</columntitle> 
+		
+		<group>主要信息⊙详细信息 </group>
+		
+		
+		<comparam>"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cczy_getcomresult_partview.ComboList"⊙ "required":true ,"validType":"length[3,10]"⊙"height":"250px" , "multiline" :true ⊙"width":"200px"⊙"valueField":"id","textField" :"text", "url":"/MainInit?hre=Tmodfl_gettreeresult_partview.ComboList"⊙"height":"150px" 
+		</comparam>
+		<sigleform> M_fzmod 
+		</sigleform>
+		<idfield>Mfzmod_code</idfield>
+		
+<extendxml>
+<formattable>tabformdisp</formattable>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+	<treecondition>Tfzmodfl- Mfzmod_fl</treecondition>
+		<mtitle>模板资料</mtitle>
+		<useflag>Mfzmod_Uflag</useflag>
+</extendxml>
+
+	 	<firstcom></firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
+
+<modextfield>Mfzmodauthor:ip</modextfield>
+	</Ofzmod>
+</config>
+
+  
