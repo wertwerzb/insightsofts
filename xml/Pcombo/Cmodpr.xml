@@ -1,0 +1,29 @@
+<con>
+<Cmodpr lang="zh_CN">
+ <idfield>Mmod_code</idfield> 
+    <namefield>Mmod_name</namefield>
+	  <sigleform>s_modpro
+	  </sigleform>
+	 </Cmodpr> 
+	 
+<Cmodpr lang="zh_TW">
+ <idfield>Mmod_code</idfield> 
+    <namefield>Mmod_name</namefield>
+	  <sigleform>s_modpro
+	  </sigleform>
+	 </Cmodpr>
+	 
+<Cmodpr lang="en">
+ <idfield>Mmod_code</idfield> 
+    <namefield>Mmod_name</namefield>
+	  <sigleform>s_modpro
+	  </sigleform>
+	 </Cmodpr> 
+	 
+<Cmodpr lang="jp">
+ <idfield>Mmod_code</idfield> 
+    <namefield>Mmod_name</namefield>
+	  <sigleform>s_modpro
+	  </sigleform>
+	 </Cmodpr> 
+	 </con>

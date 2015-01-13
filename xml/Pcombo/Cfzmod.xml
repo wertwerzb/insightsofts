@@ -1,0 +1,30 @@
+<config>
+<Cfzmod lang="zh_CN">
+ <idfield>Mfzmod_code</idfield> 
+    <namefield>Mfzmod_name</namefield>
+	  <sigleform>M_fzmod
+	  </sigleform>
+	 </Cfzmod> 
+	 
+<Cfzmod lang="zh_TW">
+ <idfield>Mfzmod_code</idfield> 
+    <namefield>Mfzmod_name</namefield>
+	  <sigleform>M_fzmod
+	  </sigleform>
+	 </Cfzmod> 
+	 
+<Cfzmod lang="en">
+ <idfield>Mfzmod_code</idfield> 
+    <namefield>Mfzmod_name</namefield>
+	  <sigleform>M_fzmod
+	  </sigleform>
+	 </Cfzmod> 
+	 
+<Cfzmod lang="jp">
+ <idfield>Mfzmod_code</idfield> 
+    <namefield>Mfzmod_name</namefield>
+	  <sigleform>M_fzmod
+	  </sigleform>
+	 </Cfzmod> 
+	 </config>
+	 
