@@ -1,13 +1,13 @@
 <Omenu lang="zh_CN" >
- <selectcolumn>sysmenuid,sysmenuname,jspnewsource,jsplistsource,param1,sysmodule,sysmenucode,iswww,icons
+ <selectcolumn>sysmenucode,sysmenuname,jspnewsource,jsplistsource,param1,sysmodule
   </selectcolumn>
-	 <fieldtitle>id,menuname,jspnewsource,jsplistsource,para1,sysmodule,sysmenucode,iswww,icons
+	 <fieldtitle>id,menuname,jspnewsource,jsplistsource,para1,sysmodule
   	</fieldtitle>
-	  <columntitle>id,名称,模板,明细,按钮,模块,结构,文件夹,图标:fff
+	  <columntitle>id,名称,模板,明细,按钮,模块
 		 </columntitle> 
 		 	<fieldwidth>60,200,200,200,200,200,200,200,200
 		 </fieldwidth>
-		 <typestr>i,s,s,s,s,s,s,i,s
+		 <typestr>i,s,s,s,s,s,
 	 </typestr>
 	 <flagfield>
 	 0:ghh
@@ -69,11 +69,11 @@
 			 "text" : "icon-tip" 
 		}],"formatter":comicon
 			</comparam>
-	  <sigleform>smenu
+	  <sigleform>s_menu
 	  </sigleform>
-	  <jionform>smenu where 1=1
+	  <jionform>s_menu where 1=1
 	  </jionform>
-	  <idfield>sysmenuid</idfield>
+	  <idfield>sysmenucode</idfield>
 	 	 <namefield>sysmenuname</namefield>
 		 <rowcount>11
    </rowcount> 	
