@@ -26,11 +26,11 @@ var ipadress='<%=ipadress%>';
 var usercode='<%=ggg%>';
  
  
-
+ // www.insightsofts.com/MainInit?hre=Ocpzl_getfirstinit_mainview.OuterList
 $(function(){
   $.get("/MainInit",
   {
-  hre: hrefstr+"_get2init_mainview.OuterList"
+  hre: hrefstr+"_getfirstinit_mainview.OuterList"
  },function(datastr) {
  var jsonstr1;
  if( datastr.indexOf("⊙")>0 )
@@ -43,12 +43,8 @@ showextend( datastr.split("⊙")[1] );
  
 try{
  var ggg=eval("("+ jsonstr1 +")");
+// var ggg= JSON.parse( jsonstr1 );
   idf= ggg.idfield;
-  var desc= ggg.formatstr ;
-  var exterstr = ggg.exterstr ;
-  var awidth= exterstr.awidth; 
-  var bwidth= exterstr.bwidth;
-  var formattable = exterstr.formattable ;
   
   var pagesize= ggg.rowcount ;
   var pagelis="["+ pagesize+","+( pagesize*2 ) +","+( pagesize*3 ) +","+( pagesize*4)+"]";
@@ -71,6 +67,7 @@ try{
   catch(err) { 
   alert( datastr+ err );
   }
+  // alert("xcc");
   
   $('#tt').datagrid({  
    url:'/MainDisp',
@@ -92,19 +89,9 @@ try{
 				//fit:true,
 	   	toolbar: toolba,
 			 striped: true,
-				 idField:idf,
-				 
-   onSelect:getSelected,
+				 idField:idf
 				 });  
-				 statemod="Look";
-	 var formstr=$("#myForm");
- 
-
-
-groupformdisp ( desc, formstr, awidth,bwidth );
-
-   $.parser.parse();
-
+				
 		 });
 	 })
  
@@ -117,89 +104,81 @@ function getpagerecord(condstr ) {
 }
 
 
-function getSelected( index,row )
+function getSelected()
 {
-
-   	idstrs= row[idf];
-
-	 if( idstrs!=undefined ) 
- $('#myForm').form('load', '/MainDisp?hre='+ hrefstr+'_getidjsoin_mainview.OuterList&idstr='+idstrs); 
-   
-	 $('#layout').layout('expand','east') ;
-	 statemod="Look";
+   selected = $('#tt').datagrid('getSelections');
+   if( selected==undefined )alert("请先选择一项");
 }
 
-function add(cfg) 
+function add() 
 	{	 
-	if( statemod!="Add" ){
-	 statemod="Add";
-	 
-	  $('#myForm').form('clear'); 
+	 statemod="add";
+	 $('#secondform').window({
+	
+  //collapsible:false,
+  //minimizable:false,
+  title: mtitle + "新增",
+   top:80,
+   left:20,
+width:560,
+modal:true,
+href: '/Djsp/outersecond.jsp',
+});
+  $('#myForm').form('clear'); 
 idstrs=undefined;
-	 $('#layout').layout('expand','east') ;
 
-}
-else
-{
-// Edit_otheractions.FormEdit_MtreegridAdd_otheractions.FormAdd_Mtreegrid
-$("#hrefstr").val( hrefstr+"_"+cfg );
-$("#myForm").form("submit",{
-			url :"/MainEdit",
-			
-			onSubmit : function(param) {
-				var isValid = $("#myForm").form('validate');
-				if (!isValid) {
-			 $.messager.progress('close');
-				}
-				return isValid;
-			},
-			success : function(result) { 
-    alert( result );
-     		$.messager.show({
-								msg : result ,
-								title : '成功'
-							}); 	 
-			 	 $('#tt').datagrid('reload'); 	
-			}
-			});
-   
-}
+displayList();
 }
 		
- function edit(fgg) 
+ function edit() 
 	{	 
-	if( statemod!="Edit" ){
-	 $('#layout').layout('expand','east') ;
+	
+	 statemod="edit";
+	 getSelected();
+	idstrs= selected[0][idf];
+	
+	
+	if (usefield !=undefined)useflaged= selected[0][usefield];
+	$('#secondform').window({
+	
+  //collapsible:false,
+  //minimizable:false,
+  title: mtitle + "修改",
+   top:80,
+   left:20,
+width:560,
+modal:true,
+href: '/Djsp/outersecond.jsp',
+});
 
-  statemod="Edit";
-  }
-  else
-  {
-$("#hrefstr").val( hrefstr+"_"+fgg );
-$("#myForm").form("submit",{
-			url :"/MainEdit",
-			
-			onSubmit : function(param) {
-				var isValid = $("#myForm").form('validate');
-				if (!isValid) {
-			 $.messager.progress('close');
-				}
-				return isValid;
-			},
-			success : function(result) { 
-    alert( result );
-     		$.messager.show({
-								msg : result ,
-								title : '成功'
-							}); 	 
-			 	 $('#tt').datagrid('reload'); 	
-			}
-			});
-   
-
-  }
+  $('#myForm').form('load', '/MainDisp?hre='+ hrefstr+'_getidjsoin_mainview.OuterList&idstr='+ selected[0][idf] ); 
+ 
+ 
+displayList();
+  
 }
+ function look() 
+	{	 
+	
+	 statemod="look";
+	 getSelected();
+	idstrs= selected[0][idf];
+	if (usefield !=undefined)useflaged= selected[0][usefield];
+	$('#secondform').window({
+	
+  title: mtitle + "浏览",
+   top:80,
+   left:20,
+width:560,
+modal:true,
+href: '/Djsp/outersecond.jsp',
+});
 
+  $('#myForm').form('load', '/MainDisp?hre='+ hrefstr+'_getidjsoin_mainview.OuterList&idstr='+ selected[0][idf] ); 
+ 
+displayList();
+  
+}
 function delet() {
 getSelected();
     	if (usefield !=undefined)useflaged= selected[0][usefield];
@@ -242,24 +221,6 @@ getSelected();
        });
  }
  
- function chiocepuin (nntn) 
-	{	 
-	searchstr=nntn;
-	 if(useflaged!=1)
-	$('#putindiv').window({
-	collapsible:false,
-  minimizable:false,
-  title:titlestr+"选择导入",
-   top:80,
-   left:20,
-   width:560,
-   fit:true,
-   modal:true,
-   href: '/html/putingrid/putingrid2.html'
-});
-else alert("生效后不能操作");
-}
-
  
 function useflag() {
 
@@ -334,24 +295,18 @@ collapsed:true
 
 </head>
 <body>
-<div id="layout" class="easyui-layout"data-options="fit:true ">  
+<div id="layout" class="easyui-layout"data-options="fit:true">  
 
 
-‪<div id="center" region="center"   style="margin:0px;padding:0px;">
+‪<div region="center"   style="margin:0px;padding:0px;background:#eee;border:0;">
 <table id="tt"></table> 
 </div>
-<div id="east" region="east"   collapsed="true"  style="width:60%;overflow: hidden;">
 
-<form id="myForm">
-<input id="hrefstr" type="hidden" name="hre"/>
 
-</form>
-
-<div id="save" style=" display:none">
-<input type="button"  onclick="updateList()"  value="保存"></input>
-</div>
-</div>
 
 </div>
+<div id="secondform">
+</div>
+	 
 </body>
  </html>
