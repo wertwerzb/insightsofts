@@ -2,7 +2,9 @@
 var modcom ;
  var xmldesc;
  var isload;
+ var idmod;
 $(function(){
+alert()
 for( var i =0; i < secondextjson.length; i ++ )
 {
 
@@ -12,17 +14,18 @@ if(secondextjson[i].id=="loadxmldiv")
 isload = secondextjson[i].option.isload ;
 xmldesc=secondextjson[i].option.xmldesc ;
 modcom =secondextjson[i].option.modcom ;
-
+idmod =secondextjson[i].option.idmod;
 break;
 }
 
 }
 
  var	 flclass= $("input[name='"+ modcom+ "']").val();
- 
- $("#fileinfo").html(" <input type='hidden' name='filepath' value='"+ flclass +"_"+idstrs+".xml'/> <input type='hidden' name='isload' value='"+ isload+"' /> ");
+ var fff = $("input[name='"+ idmod+ "']").val();
+ $("#fileinfo").html(" <input type='hidden' name='filepath' value='"+ flclass +"_"+fff+".xml'/> <input type='hidden' name='isload' value='"+ isload+"' /> ");
  $("#xmldesc").html( xmldesc );
-var imagsrc=(flclass+"/"+idstrs).replace(/_/g,"/") +".xml";
+var imagsrc=(flclass+"/"+fff).replace(/_/g,"/") +".xml";
+alert( imagsrc );
  $("#xmldisplay").html("<span><a href='/xml/"+ imagsrc+"' target='_blank' >xml模板文件</a></span><span><a href='/"+usercode+"/" +imagsrc+"' target='_blank' >xml当前文件</a></span>") ;
   })
 	
