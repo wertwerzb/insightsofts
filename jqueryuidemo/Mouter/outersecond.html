@@ -1,0 +1,186 @@
+<script type="text/javascript">
+  var flagfields;
+  var secondextjson;
+ $(function(){
+ $.get("secondinit.json",function( datastr ) { 
+var jsonstr1;
+ if( datastr.indexOf("⊙")>0 )
+ {
+ jsonstr1= datastr.split("⊙")[0];
+ secondextjson=eval("("+ datastr.split("⊙")[1] +")" );
+
+ }
+ else jsonstr1= datastr;
+ 
+ alert( datastr );
+   try{
+ var titlestr = eval("("+ jsonstr1 +")"); 
+ var ggg= titlestr.formatstr ;
+  var exterstr = titlestr.exterstr ;
+  var awidth= exterstr.awidth; 
+  var bwidth= exterstr.bwidth;
+  var formattable = exterstr.formattable ;
+flagfields = exterstr.flagfields ;
+
+if(flagfields==undefined ) flagfields ="ALL⊙";
+ 
+}
+  catch(err) { 
+  alert( datastr+ err );
+  }
+
+
+
+ var formstr=$("#myForm");
+ 
+
+var mm="groupformdisp";
+
+CallFunc(formattable, ggg , formstr, awidth,bwidth )
+   $.parser.parse();
+
+// www.insightsofts.com/MainDisp?hre=Ocpzl_getidjsoin_mainview.OuterList&idstr=pc56sj
+//if( idstrs!=undefined ) 
+//$('#myForm').form('load', '/MainDisp?hre='+ hrefstr+'_getidjsoin_mainview.OuterList&idstr='+idstrs); 
+  
+//displayList();
+ 
+
+
+ }); 
+}); 
+  function CallFunc(mm,x,y) { 
+ var Fun=eval(mm+" ( ggg , formstr, awidth,bwidth ) ");
+
+  
+  }
+
+ function displayList() {
+
+ if(statemod=="add") 
+ {
+ enableCom( $('#myForm'),"id");
+ enableCom( $('#myForm'),"ALL⊙");
+ return;
+ }
+ if(statemod=="edit") 
+ {
+ if(useflaged==1)
+ {
+ 
+ if( flagfields== "ALL⊙" )
+ $("#savebutton").css("display", "none");
+  disableCom($('#myForm'),flagfields);
+  }
+ else
+ enableCom( $('#myForm'),flagfields);
+
+if( secondextjson!=undefined) 
+showsecondextend( );
+//refreshsecondextend ();
+
+	$("input[name='id']").attr('readonly',true);
+	
+ return;
+ }
+if(statemod=="look")
+{ disableCom( $('#myForm'),"ALL⊙");
+$("#savebutton").css("display", "none");
+
+ }
+ }
+ 
+ 
+   function updateList() {
+   
+  var st="";
+  
+ if(statemod=="add")st="_Add";
+ else if (statemod=="edit")st="_Edit" ;
+
+ else return;
+ 
+   $("#hrefstr").val( hrefstr+st+"_mainactions.Modicom" );
+   alert :
+$("#myForm").form("submit",{
+			url :"/MainEdit",
+			
+			onSubmit : function(param) {
+				var isValid = $("#myForm").form('validate');
+				if (!isValid) {
+			 $.messager.progress('close');
+				}
+				return isValid;
+			},
+			success : function(result) { 
+			alert( result );
+     		$.messager.show({
+								msg : result ,
+								title : '成功'
+							}); 	 
+			 	 $('#tt').datagrid('reload'); 	
+			}
+			});
+   
+  }
+ showsecondextend=function ( ) {
+for( var i =0; i <secondextjson.length; i ++ )
+{
+$('#'+ secondextjson[i].id ).panel({
+href: secondextjson[i].href,
+
+
+});
+
+$('#'+ secondextjson[i].id ).panel( 'refresh');
+
+
+
+}
+ 
+}
+
+
+function chiocepuin (nntn) 
+	{	 
+	searchstr=nntn;
+	 if(useflaged!=1)
+	$('#putindiv').window({
+	collapsible:false,
+  minimizable:false,
+  title:titlestr+"选择导入",
+   top:80,
+   left:20,
+   width:560,
+   fit:true,
+   modal:true,
+   href: '/html/putingrid/putingrid2.html'
+});
+else alert("生效后不能操作");
+}
+
+
+
+
+</script>
+<div>
+<form id="myForm">
+<input id="hrefstr" type="hidden" name="hre"/>
+</form>
+</div>
+<input id="savebutton" type="button"  onclick="updateList()"  value="保存"></input>
+<div id="imagedis">
+	</div>
+	
+<div id="loadxmldiv">
+	</div>
+<div id="loadhtmldiv">
+	</div>
+
+<div id="putindiv">
+	</div>
+	
+
+		
+
+		

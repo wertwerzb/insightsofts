@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	 	 	<link rel="stylesheet" type="text/css" href="../jqueryui/themes/default/easyui.css">	
+	<link rel="stylesheet" type="text/css" href="../jqueryui/themes/icons.css">
+	<link rel="stylesheet" type="text/css" href="../jqueryui/demo/demo.css">
+<script type="text/javascript" src="../jqueryui/jquery-1.7.2.min.js" charset="utf-8" ></script>
+<script type="text/javascript" src="../jqueryui/jquery.easyui.min.js" charset="utf-8" ></script>
+<script type="text/javascript" src="../jqueryui/locale/easyui-lang-zh_CN.js"></script> 
+<script type="text/javascript" src="../jqueryui/formformat.js"></script>
+<script type="text/javascript" src="../jqueryui/syUtil.js"></script> 
+<script type="text/javascript">
+  var hrefstr= sy.getUrlParam("hrefstr");
+  alert( hrefstr );
+  
+  var statemod;
+var idstrs;
+var idf;//id字段
+var selected=undefined;
+var condistr="1=1";
+ 
+ var mtitle;
+ var usefield;
+ var useflaged;
+ var extjson;
+
+var usercode='guest';
+ 
+ 
+ 
+$(function(){
+  $.get("firstinit.json"
+  ,function(datastr) {
+ var jsonstr1;
+ if( datastr.indexOf("⊙")>0 )
+ {
+ jsonstr1= datastr.split("⊙")[0];
+
+showextend( datastr.split("⊙")[1] );
+ }
+ else jsonstr1= datastr;
+ 
+try{
+ var ggg=eval("("+ jsonstr1 +")");
+// var ggg= JSON.parse( jsonstr1 );
+  idf= ggg.idfield;
+  
+  var pagesize= ggg.rowcount ;
+  var pagelis="["+ pagesize+","+( pagesize*2 ) +","+( pagesize*3 ) +","+( pagesize*4)+"]";
+  
+  var toolba= ggg.button ; 
+  var griddata= ggg. columns ; 
+ 
+ 
+  var pagelist= eval( pagelis ); 
+  frozenstr =  ggg.frocolumns ; 
+  
+
+  var fldata= ggg.exterstr ;
+  
+  
+  mtitle= fldata.mtitle;
+  usefield = fldata.useflag;
+  
+  }
+  catch(err) { 
+  alert( datastr+ err );
+  }
+  // alert("xcc");
+  
+   
+  $('#tt').datagrid({  
+   url:'pagerecord.json',
+    
+ 		pagination:true, 
+ 		 pageList: pagelist ,
+ 		 	pageSize:pagesize,
+				fitColumns: true,
+				singleSelect: true,
+		frozenColumns: frozenstr,
+				columns: griddata ,
+				width:"100%",
+				border:0,
+				//fit:true,
+	   	toolbar: toolba,
+			 striped: true,
+				 idField:idf
+				 });  
+				
+		 });
+	 })
+ 
+
+function getpagerecord(condstr ) {
+   var nnnn = $('#tt').datagrid('options').queryParams;
+  nnnn.condstr= condstr ;
+  $('#tt').datagrid('load', nnnn) ;
+ 
+}
+
+
+function getSelected()
+{
+   selected = $('#tt').datagrid('getSelections');
+   if( selected==undefined )alert("请先选择一项");
+}
+
+function add() 
+	{	 
+	 statemod="add";
+	 $('#secondform').window({
+	
+  //collapsible:false,
+  //minimizable:false,
+  title: mtitle + "新增",
+   top:80,
+   left:20,
+width:560,
+modal:true,
+href: 'outersecond.html',
+});
+  $('#myForm').form('clear'); 
+idstrs=undefined;
+
+displayList();
+}
+		
+ function edit() 
+	{	 
+	
+	 statemod="edit";
+	 getSelected();
+	idstrs= selected[0][idf];
+	
+	
+	if (usefield !=undefined)useflaged= selected[0][usefield];
+	$('#secondform').window({
+	
+  title: mtitle + "修改",
+   top:80,
+   left:20,
+width:560,
+modal:true,
+href: 'outersecond.html',
+})
+
+  //$('#myForm').form('load', '/MainDisp?hre='+ hrefstr+'_getidjsoin_mainview.OuterList&idstr='+ selected[0][idf] ); 
+ 
+ 
+displayList();
+  
+}
+ function look() 
+	{	 
+	
+	 statemod="look";
+	 getSelected();
+	idstrs= selected[0][idf];
+	if (usefield !=undefined)useflaged= selected[0][usefield];
+	$('#secondform').window({
+	
+  title: mtitle + "浏览",
+   top:80,
+   left:20,
+width:560,
+modal:true,
+href: 'outersecond.html',
+});
+
+  $('#myForm').form('load', '/MainDisp?hre='+ hrefstr+'_getidjsoin_mainview.OuterList&idstr='+ selected[0][idf] ); 
+ 
+displayList();
+  
+}
+function delet() {
+getSelected();
+    	if (usefield !=undefined)useflaged= selected[0][usefield];
+    	if( useflaged==1 )
+    	{alert("已生效不能删除");
+    	return;
+    	}
+    
+  idstrs= selected[0][idf] ;
+ 
+    $.ajax({ 
+     url:"/MainEdit", //提交给哪个执行 
+     data:"hre="+ hrefstr+"_Del_mainactions.Modicom&id="+ idstrs ,
+     type:"POST", 
+    success: ( function(result) {    
+   if( result.charAt(0)=="1" )
+   {
+   var sub_stri = result.substring(2);
+   
+    	var delrow= 	 $('#tt').datagrid('getRowIndex', idstrs );
+          	
+          	 $('#tt').datagrid('deleteRow', delrow );
+								
+          	$.messager.show({
+									msg : sub_stri ,
+									title : '提示'
+								});
+							        //显示操作结果
+            }
+           else
+           {
+           $.messager.show({
+									msg : "未删除成功" ,
+									title : '提示'
+								});
+           } 
+            
+            
+            })
+       });
+ }
+ 
+ 
+function useflag() {
+
+
+getSelected();
+	idstrs= selected[0][idf];
+	 
+	 $.ajax({ 
+     url:"/MainUse", //提交给哪个执行 
+     data:"hre="+ hrefstr+"&id="+ idstrs ,
+     type:"POST", 
+    success: ( function(result) {    
+    alert( result );
+   if( result.charAt(0)=="1" )
+   {
+   var sub_stri = result.substring(2);
+   
+          	 $('#tt').datagrid('reload');
+
+			      	$.messager.show({
+									msg : sub_stri ,
+									title : '提示'
+								});
+								 $('#tt').datagrid('reload');
+		    
+		      //显示操作结果
+            }
+           else
+           {
+           $.messager.show({
+									msg : "操作失败" ,
+									title : '提示'
+								});
+           } 
+            
+        })
+    });
+ }
+showextend=function (extstr ) {
+
+extjson=eval("("+ extstr+")" );
+for( var i =0; i < extjson.length; i ++ )
+
+
+{
+$('#layout').layout('add',{
+
+
+region: extjson[i].id ,
+id: extjson[i].id ,
+width: 180,
+height:100,
+title: '过滤',
+
+
+href: extjson[i].href,
+split: true,
+collapsed:true
+
+});
+
+
+
+
+}
+ 
+}
+
+
+
+</script>
+
+</head>
+<body>
+<div id="layout" class="easyui-layout"data-options="fit:true">  
+
+‪whb
+‪<div region="center"   style="margin:0px;padding:0px;background:#eee;border:0;">
+<table id="tt"></table> 
+</div>
+
+
+
+</div>
+<div id="secondform">
+</div>
+	 
+</body>
+ </html>
