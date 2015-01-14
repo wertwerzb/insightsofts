@@ -1,0 +1,79 @@
+
+<script type="text/javascript">   
+ var myForm ;
+ var secondhrefstr;
+ $(function(){
+ 
+for( var i =0; i < extjson.length; i ++ )
+{
+if(extjson[i].name=="secondcom")
+{ 
+secondhrefstr = extjson[i].option.secondhrefstr ;
+
+break;
+}
+
+ 
+ $.get("/MainInit",
+  {
+ hre: secondhrefstr +"_getinithtml_mainview.LybList" 
+ },function( datastr ) {
+ 
+ try{
+ var tdata= eval("("+ datastr +")"); 
+ var ggg= tdata.formatstr ;
+ var exterstr = tdata.exterstr ;
+  var awidth= exterstr.awidth; 
+  var bwidth= exterstr.bwidth;
+ 
+}
+  catch(err) { 
+  alert( datastr+ err );
+  }
+ var formstr=$("#myForm");
+  divformformat( ggg, formstr,awidth,bwidth );
+  $.parser.parse();
+ 
+ }); 
+}); 
+
+
+ 
+ 
+   function add() {
+ $("#hrefstr").val( secondhrefstr+"_add_mainactions.ModiMx" );
+$("#my2Form").form("submit",{
+			url :"/MainEdit",
+			
+			onSubmit : function(param) {
+				var isValid = $("#myForm").form('validate');
+				if (!isValid) {
+			 $.messager.progress('close');
+				}
+				return isValid;
+			},
+			success : function(result) { 
+			alert(result)	;		 	
+			}
+			});
+
+ }
+
+
+
+</script>
+<div>
+<form id="my2Form" method="post" >
+
+</form>
+
+<input id="savebutton" type="button"  onclick="add()"  value="保存"></input>
+
+
+
+</div>
+
+
+
+
+		

@@ -1,0 +1,55 @@
+
+<script type="text/javascript">
+
+var searchfield;
+
+var searchlabel;
+
+
+
+
+$(function(){
+for( var i =0; i < extjson.length; i ++ )
+{
+if(extjson[i].name=="siglefilter")
+{ 
+searchfield= extjson[i].option.searchfield ;
+searchlabel=extjson[i].option.searchlabel;
+break;
+}
+
+
+
+}
+$("#label1").html( searchlabel );
+})
+
+function consearch() {
+  
+var searchstr=$("input[name='searchtext']").val();
+
+     var condstr= searchfield+ " like \'%"+ searchstr+"%\'";
+     alert( condstr );
+ getpagerecord(condstr ) ;
+   
+     
+ }
+ 
+
+</script>
+
+ <table>
+<tr  >
+<td  id="label1"></td>
+<td >
+
+<td  > <input type="text" name="searchtext"/> </td>
+<td >
+
+<input type="button"  onclick="consearch()"  value="搜索"></input> 
+</td>
+</tr>
+
+</table>
+
+

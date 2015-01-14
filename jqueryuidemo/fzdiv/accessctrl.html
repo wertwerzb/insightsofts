@@ -1,0 +1,35 @@
+<script type="text/javascript">
+
+
+$(function(){
+$.ajax({url:'/MainDisp',
+  data:'hre=Pbutton_getparamresult_partview.ComboList&init='+ paramP+'&cond='+ jspnewsource+'&ablestr='+ paramR ,
+  
+success:function(datastr) { 
+
+dd= eval("("+ datastr +")");
+ 	 
+
+ var result="";
+ for(var i=0;i<dd.length;i++)
+ {
+ var checkstr="";
+ if(dd[i].selected=="true" ) checkstr=" checked=\"true\"";
+  result += "<ui><input type=\"checkbox\""+ checkstr+ "  name=\""+dd[i].id+"\" value=\""+dd[i].id+" \">"+dd[i].text+"</input></ui>";
+  
+  }
+ if(result.length>3)
+$("#dg").html( "<form id=\'"+ idstr+"\'>"+ result+"</form> <input type=\"button\" onclick=\"updatecheck(\'"+idstr+ "\' )\">保存</input>");
+  else  $("#dg").html("");
+ 	 }
+ })
+
+
+ });
+	
+	
+ 
+</script>
+
+<div id="dg">
+</div>

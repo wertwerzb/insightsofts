@@ -1,0 +1,60 @@
+Main
+<script type="text/javascript">
+
+var flclass1;
+
+var flstr1;
+
+
+
+
+$(function(){
+for( var i =0; i < extjson.length; i ++ )
+{
+if(extjson[i].name=="treefilter")
+{ 
+flclass1= extjson[i].option.flfield;
+flstr1=extjson[i].option.flclass;
+break;
+}
+}
+
+
+
+ $("#tre").tree({
+  url: '/MainInit?hre='+ flstr1+"_gettreeresult_partview.ComboList",
+   method:'get',
+   height:'15',
+   lines:'true',
+   onClick:treecondition,
+   });
+   
+   $("#hrebutton").html("fgghj");
+	 
+	});
+var treecondition =function(node)
+   {
+   
+   alert( "hre="+ flclass1 +"_R&role="+ node.id );
+
+     $.ajax({ 
+     url:"/MainStaticfun", //提交给哪个执行     
+     url:"/MainStaticfun", //提交给哪个执行 
+     data:"hre="+ flclass1 +"_actionrequsts_Staticcom.otheractions&role="+ node.id ,
+     type:"POST", 
+    success: ( function(result) {    
+   location=location
+   // 	alert( parent.location ); //='/erpindex.jsp' ;
+  
+  })
+   });
+   
+   }
+
+</script>
+
+
+<ul id="tre" ></ul>
+</ul>
+
+<a href="#" id="hrebutton" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="javascript:alert('easyui')"></a>

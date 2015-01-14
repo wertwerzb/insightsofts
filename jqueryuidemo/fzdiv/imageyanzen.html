@@ -1,0 +1,35 @@
+<script type="text/javascript">
+
+var picisload;
+var imagedesc;
+var picfiletype;
+
+
+$(function(){
+
+for( var i =0; i < secondextjson.length; i ++ )
+{
+if(secondextjson[i].id=="rand")
+{ 
+
+
+break;
+}
+}
+
+
+
+
+
+ });
+	
+
+function call_image(){
+  
+    var img = document.getElementById("image");
+    img.src = "image.jsp?" + Math.random();
+}
+</script>
+
+<img id="image" title="换一张" src="image.jsp?Math.radom();" onclick="return call_image();">&nbsp;&nbsp;<a href="javascript:call_image();">换一张</a>
+
