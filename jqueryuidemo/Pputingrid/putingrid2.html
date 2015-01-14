@@ -1,0 +1,94 @@
+
+<script type="text/javascript">
+
+var idfff;
+var selected=undefined;
+var condistr="1=1";
+var titlestr;
+ var flclass ;
+ var putinstr;
+ 
+ var putoutstr;
+ 
+$(function(){
+alert( searchstr );
+  $.get("/MainInit",
+  {
+  hre: searchstr+ "_getinit_partview.CPutinCom"
+ },function(datastr) {
+ 	var data= datastr.split("⊙");
+  idfff= data[1] ;
+  try{
+  var pagesize= data[2] ;
+  var pagelis="["+ pagesize+","+( pagesize*2 ) +","+( pagesize*3 ) +","+( pagesize*4)+"]";
+  var griddata= eval("("+data[0]+")"); 
+ 
+  var pagelist= eval("("+pagelis +")" ); 
+  titlestr = data[3];
+putinstr = data[4].split(":")[1];
+
+putoutstr = data[4].split(":")[0];
+}
+  catch(err) { 
+  alert( datastr+ err );
+  }
+
+  $('#puttt').datagrid({  
+   url:'/MainDisp',
+    queryParams:{ 
+    hre: searchstr+ '_getpagerecord_partviewCPutinCom',
+    page:1,
+    condstr:'1=1',
+    rows:pagesize
+    },
+ 		pagination:true, 
+ 		 pageList: pagelist ,
+ 		 	pageSize:pagesize,
+				fitColumns: true, 
+				 singleSelect:true,    checkbox:true,
+		columns: griddata,
+				width:"100%",
+				border:0,
+		//		 rownumbers : true,
+			 striped: true,
+				 idField:idfff
+				 });  
+			
+		 });
+	 })
+	
+function getpagerecord(condstr ) {
+   var nnnn = $('#puttt').datagrid('options').queryParams;
+  nnnn.condstr= condstr ;
+  $('#puttt').datagrid('load', nnnn) ;
+ 
+}
+
+function selputin()
+{
+ 		var rows = $('#puttt').datagrid('getSelected') ;
+ 		var putindata= putinstr.split(",");
+ 		 		var putoutdata= putoutstr.split(",");
+ 		for(var i=0;i<putindata.length;i++)	  
+ 			{
+ 			 $("input[name='"+ putoutdata[i]+"']").val( rows[ putindata[i] ] );
+ 			} 
+ 			
+ 			  $('#putindiv').window('close',true);
+
+
+}
+
+</script>
+
+</head>
+<body>
+
+<div style="margin:10px 0;">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="selputin()">选择输入</a>
+			
+	</div>
+<div id="layout" class="easyui-layout" data-options="fit:true">   
+‪ 
+‪<div region="center"   style="margin:0px;padding:0px;background:#eee;border:0;">
+<table id="puttt"></table> 

@@ -1,0 +1,129 @@
+
+<script type="text/javascript">
+
+var idf;
+var selected=undefined;
+var condistr="1=1";
+var titlestr;
+ var flclass ;
+$(function(){
+alert( hrefstr );
+  $.get("/MainInit",
+  {
+  hre: hrefstr+"_getinit_partview.ChoicePutin"
+ },function(datastr) { 
+
+ data= datastr.split("⊙");
+ try{
+  idf= data[1] ;
+  
+  var pagesize= data[2] ;
+  var pagelis="["+ pagesize+","+( pagesize*2 ) +","+( pagesize*3 ) +","+( pagesize*4)+"]";
+  var griddata= eval("("+data[0]+")"); 
+ 
+  var pagelist= eval("("+pagelis +")" ); 
+  }
+  catch(err) { 
+  alert( datastr+ err );
+  }
+  titlestr = data[3]; 
+
+  $('#puttt').datagrid({  
+   url:'/MainDisp',
+    queryParams:{ 
+    hre: hrefstr+ '_getpagerecord_partview.ChoicePutin',
+    page:1,
+    condstr:'1=1',
+    rows:pagesize
+    },
+ 		pagination:true, 
+ 		 pageList: pagelist ,
+ 		 	pageSize:pagesize,
+				fitColumns: true,     checkbox:true,
+		columns: griddata,
+				width:"100%",
+				border:0,
+		//		 rownumbers : true,
+			 striped: true,
+				 idField:idf
+				 });  
+				
+		 });
+	 })
+	
+function getpagerecord(condstr ) {
+   var nnnn = $('#puttt').datagrid('options').queryParams;
+  nnnn.condstr= condstr ;
+  $('#puttt').datagrid('load', nnnn) ;
+ 
+}
+
+function selputin()
+{
+ 		var rows = $('#puttt').datagrid('getSelections') ;
+ 		var ss;
+ 		if( rows.length>=1 )
+ 		{
+ 		
+ 		ss= rows[0][idf];
+		 for(var i=1; i<rows.length; i++){
+				ss +=","+ rows[i][idf];
+			}
+			  $.ajax({ 
+       url:"/MainDisp",    
+     data:"hre="+ hrefstr+"_insertrecord_partview.ChoicePutin&id="+idstrs+ "&condstr="+ss,
+     type:"POST", 
+     success: ( function(result) {    
+     		$.messager.show({
+								msg : result ,
+								title : '成功'
+							});
+					 $('#puttt').datagrid('unselectAll');
+				    })
+            
+       });
+  }
+ var nnnn = $('#ttu').datagrid('options').queryParams;
+  $('#').datagrid('load', nnnn) ;
+  
+}
+/*function closewind()
+{
+alert(idstrs);
+close();
+
+}*/
+
+function allputin()
+{
+			  $.ajax({ 
+       url:"/MainPutin",    
+     data:"hre="+ hrefstr+"insertr&id="+idstrs+"&condstr=ALL⊙",
+     type:"POST", 
+     success: ( function(result) {    
+     		$.messager.show({
+								msg : result ,
+								title : '成功'
+							});
+					 $('#puttt').datagrid('unselectAll');
+				    })
+            
+       });
+  
+ var nnnn = $('#ttu').datagrid('options').queryParams;
+  $('#').datagrid('load', nnnn) ;
+}
+</script>
+
+
+<div style="margin:10px 0;">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="selputin()">选择输入</a>
+	 <a href="javascript:void(0)" class="easyui-linkbutton" onclick="allputin()">全部输入</a>		
+	</div>
+<div id="layout" class="easyui-layout" data-options="fit:true">   
+‪ 
+‪<div region="center"   style="margin:0px;padding:0px;background:#eee;border:0;">
+<table id="puttt"></table> 
+</div>
+‪</div>  
+

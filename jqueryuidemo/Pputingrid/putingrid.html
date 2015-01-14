@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 	<link rel="stylesheet" type="text/css" href="/jslib/jquery-easyui-1.4/themes/default/easyui.css">	
+	<link rel="stylesheet" type="text/css" href="/jslib/jquery-easyui-1.4/themes/icons.css">
+	<link rel="stylesheet" type="text/css" href="/jslib/jquery-easyui-1.4/demo/demo.css">
+<script type="text/javascript" src="/jslib/jquery-easyui-1.4/jquery-1.7.2.min.js" charset="utf-8" ></script>
+<script type="text/javascript" src="/jslib/jquery-easyui-1.4/jquery.easyui.min.js" charset="utf-8" ></script>
+<script type="text/javascript" src="/jslib/jquery-easyui-1.4/locale/easyui-lang-zh_CN.js"></script> 
+
+<script type="text/javascript" src="/jslib/jquery.form.js"></script>
+<script type="text/javascript" src="/jsext/syUtil.js"></script> 
+
+<title>批量输入</title>
+<script type="text/javascript">
+
+
+     
+  var hrefstr= sy.getUrlParam ("hrefstr"); 
+  idstrs="xjcg140417_5";
+  alert( hrefstr );
+var idf;
+var selected=undefined;
+var condistr="1=1";
+var titlestr;
+ var flclass ;
+$(function(){
+  $.get("/MainInit",
+  {
+  hre: hrefstr+"_getinit_partview.ChoicePutin"
+ },function(datastr) { 
+
+ data= datastr.split("⊙");
+  idf= data[1] ;
+  
+  var pagesize= data[2] ;
+  var pagelis="["+ pagesize+","+( pagesize*2 ) +","+( pagesize*3 ) +","+( pagesize*4)+"]";
+  var griddata= eval("("+data[0]+")"); 
+ 
+  var pagelist= eval("("+pagelis +")" ); 
+  titlestr = data[3]; 
+
+  $('#puttt').datagrid({  
+   url:'/MainDisp',
+    queryParams:{ 
+    hre: hrefstr+ '_getpagerecord_partview.ChoicePutin',
+    page:1,
+    condstr:'1=1',
+    rows:pagesize
+    },
+ 		pagination:true, 
+ 		 pageList: pagelist ,
+ 		 	pageSize:pagesize,
+				fitColumns: true,     checkbox:true,
+		columns: griddata,
+				width:"100%",
+				border:0,
+		//		 rownumbers : true,
+			 striped: true,
+				 idField:idf
+				 });  
+				
+		 });
+	 })
+	
+function getpagerecord(condstr ) {
+   var nnnn = $('#puttt').datagrid('options').queryParams;
+  nnnn.condstr= condstr ;
+  $('#puttt').datagrid('load', nnnn) ;
+ 
+}
+
+function selputin()
+{
+ 		var rows = $('#puttt').datagrid('getSelections') ;
+ 		var ss;
+ 		if( rows.length>=1 )
+ 		{
+ 		
+ 		ss= rows[0][idf];
+		 for(var i=1; i<rows.length; i++){
+				ss +=","+ rows[i][idf];
+			}
+			  $.ajax({ 
+       url:"/MainEdit",    
+     data:"hre="+ hrefstr+"_insertrecord_partview.ChoicePutin&id="+idstrs+ "&condstr="+ss,
+     type:"POST", 
+     success: ( function(result) {    
+     		$.messager.show({
+								msg : result ,
+								title : '成功'
+							});
+					 $('#puttt').datagrid('unselectAll');
+				    })
+            
+       });
+  }
+}
+function closewind()
+{
+alert(idstrs);
+close(self);
+}
+
+function allputin()
+{
+
+			  $.ajax({ 
+       url:"/MainEdit",    
+     data:"hre="+ hrefstr+"_insertrecord_partview.ChoicePutin&id="+idstrs+"&condstr=ALL⊙",
+     type:"POST", 
+     success: ( function(result) {    
+     		$.messager.show({
+								msg : result ,
+								title : '成功'
+							});
+					 $('#puttt').datagrid('unselectAll');
+				    })
+            
+       });
+   
+}
+</script>
+
+</head>
+<body>
+
+<div style="margin:10px 0;">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="selputin()">选择输入</a>
+	 <a href="javascript:void(0)" class="easyui-linkbutton" onclick="allputin()">全部输入</a>
+	 
+	 <a href="javascript:void(0)" class="easyui-linkbutton" onclick="closewind()">关闭</a>
+	</div>
+<div id="layout" class="easyui-layout"data-options="fit:true">   
+‪ 
+‪<div region="center"   style="margin:0px;padding:0px;background:#eee;border:0;">
+<table id="puttt"></table> 
+</div>
+‪</div>  
+
+</body>
+ </html>
