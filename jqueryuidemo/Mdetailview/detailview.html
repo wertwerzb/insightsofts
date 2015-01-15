@@ -27,7 +27,7 @@ var editRow;
 	var datagrid;
 
 $(function(){
- $.get('init.json',function(datastr) { 
+ $.get('init',function(datastr) { 
  alert(datastr);
  var jsonstr1;
  if( datastr.indexOf("⊙")>0 )
@@ -55,7 +55,7 @@ deview=extendstr.detailview;
   alert( datastr+ err );
   }
 datagrid= $('#tt').datagrid({  
-   url:'pagerecord.json', 
+   url:'pagerecord', 
    	pagination:true, 
  		 pageList: pagelist ,
  		 	pageSize:pagesize,
