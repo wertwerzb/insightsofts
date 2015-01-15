@@ -27,7 +27,7 @@ var editRow;
 var nodeid;
 var idstrs;
 $(function(){
- $.get('inithtml.json',function(datastr) { 
+ $.get('inithtml',function(datastr) { 
  
 try{
  var tdata= eval("("+ datastr +")"); 
@@ -51,7 +51,7 @@ try{
 				animate: true,
 				collapsible: true,
 				fitColumns: true,
-				url: 'record.json',
+				url: 'record',
 				
 			 toolbar: toolba,
 				method: 'get',
