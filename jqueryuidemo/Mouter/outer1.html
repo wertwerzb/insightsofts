@@ -34,7 +34,7 @@ var usercode='guest';
  
  
 $(function(){
-  $.get("2init.json"
+  $.get("2init"
   ,function(datastr) {
 var jsonstr1;
  if( datastr.indexOf("⊙")>0 )
@@ -79,7 +79,7 @@ try{
   
    
   $('#tt').datagrid({  
-   url:'pagerecord.json',
+   url:'pagerecord',
     
  	 		pagination:true, 
  		 pageList: pagelist ,
