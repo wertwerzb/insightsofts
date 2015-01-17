@@ -16,16 +16,12 @@
 <script type="text/javascript" src="../../jslib/weiUtil.js"></script> 
 <script type="text/javascript">
  
-var request ={QueryString:function(val) 
-　　{var uri = window.location.search; 
-　　var re = new RegExp("" +val+ "=([^&?]*)", "ig"); 
-　　return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
-     }}
      var condistr="1=1";
-  var hrefstr= request.QueryString("hrefstr");
+  var hrefstr = sy.getUrlParam ("hrefstr");
 
 var editRow;
 	var datagrid;
+	var edittype;
 
 $(function(){
  $.get('inithtml',function(datastr) { 
@@ -65,36 +61,38 @@ datagrid= $('#tt').datagrid({
 				columns: columnsinfo ,
 			onAfterEdit : function(rowIndex, rowData, changes)
 		 {
-				 var inserted = datagrid.datagrid('getChanges', 'inserted');
+			/*	 var inserted = datagrid.datagrid('getChanges', 'inserted');
 				var updated = datagrid.datagrid('getChanges', 'updated');
-				if (inserted.length < 1 && updated.length < 1) {
+				if (inserted.length < 1 && updated.length < 1) */
+				
+				 	if (edittype == undefined) 
+				{
 					editRow = undefined;
 					datagrid.datagrid('unselectAll');
 					return;
 				}
-				var urlf = '';
-				 	if (inserted.length > 0) {
-			 urlf = 'Add';
-			}
-			 		if (updated.length > 0) {
-				 		urlf = 'Edit';
-				 		 	}
+			
 				 		 	
  var gh= object2Str( rowData ) ;
-				  $.ajax({ 
+ alert(gh);
+ 
+			/*	  $.ajax({ 
        url:"/MainEdit", //提交给哪个执行 
-     data:"hre="+ hrefstr+"_"+ urlf+ "_mainactions.Modigrid&"+ gh ,
+     data: "hre="+ hrefstr+"_" +edittype+"&"+gh,
      type:"POST", 
      success: ( function(result) {    
      		$.messager.show({
 								msg : result ,
 								title : '成功'
-							});
+							});*/
+						alert(	 "hre="+ hrefstr+"_" +edittype+"&"+gh );
+							edittype= undefined;
+							alert("成功");
 									editRow = undefined;
 					 $('#tt').datagrid('unselectAll');
-				    })
+				 //   })
             
-       });
+      // });
 
 				
      }
@@ -112,17 +110,20 @@ function getpagerecord(condstr ) {
 }
 
 
-		function edit(){
+		function edit(fffg){
+		alert( fffg );
 		 	var rows = datagrid.datagrid('getSelections');
 		if (rows.length == 1) {
 			if (editRow != undefined) {
 				datagrid.datagrid('endEdit', editRow);
+				edittype= undefined;
 			}
 
 			if (editRow == undefined) {
 				editRow = datagrid.datagrid('getRowIndex', rows[0]);
 				datagrid.datagrid('beginEdit', editRow);
 				datagrid.datagrid('unselectAll');
+				edittype= fffg;
 			}
 		} else {
 			$.messager.show({
@@ -132,7 +133,7 @@ function getpagerecord(condstr ) {
 		}
 	}
 
-	 	 	function add() {
+	 	 	function add(addstr) {
 	 	 	if (editRow != undefined) {
 			datagrid.datagrid('endEdit', editRow);
 		}
@@ -151,6 +152,8 @@ function getpagerecord(condstr ) {
 			});
 			editRow = 0;
 			datagrid.datagrid('selectRow', editRow);
+			
+				edittype= addstr;
 			datagrid.datagrid('beginEdit', editRow);
 		 }
 	}
