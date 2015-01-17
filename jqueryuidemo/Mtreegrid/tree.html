@@ -78,18 +78,16 @@ try{
 					   treegrid.treegrid('unselectAll');
 					   return;
 				   }
-
-				var urlf = '';
-				if (editType == 'add') {
-					urlf = 'Add';
-				}
-				if (editType == 'edit') {
-					urlf = 'Edit';
-				}
+				   	editRow = undefined;
+						editType = undefined;
+					 $('#tt').treegrid('unselectAll');
+					 alert("保存成功")
+/*
+	
      var gh= object2Str( row) ;
 				  $.ajax({ 
        url:"/MainEdit", //提交给哪个执行 
-     data:"hre="+ hrefstr+ "_"+urlf+"_mainactions.Moditree&"+ gh ,
+     data:"hre="+ hrefstr+ "_"+ editType +"_mainactions.Moditree&"+ gh ,
      type:"POST", 
      success: ( function(result) {    
      		$.messager.show({
@@ -103,7 +101,7 @@ try{
 					 }    
        )
             
-       });
+       });*/
 
 				
      }
@@ -112,10 +110,9 @@ try{
 				 });  
 	});
 });
-function look(){
 
-}
-		function edit(){
+		function edit(fffg){
+		alert(fffg)
 		 var node = treegrid.treegrid('getSelected');
 		if (node && node.id) {
 			if (editRow != undefined) {
@@ -124,7 +121,7 @@ function look(){
 	  if (editRow == undefined) {
 				treegrid.treegrid('beginEdit', node.id);
 				editRow = node;
-				editType = 'edit';
+				editType = fffg;
 			}
 		} else {
 			$.messager.show({
@@ -135,7 +132,8 @@ function look(){
 
  
 	 	}
-	 	 	function add() {
+	 	 	function add(fffh) {
+	 	 	alert(fffh);
 	 	 	if (editRow != undefined) {
 			treegrid.treegrid('endEdit', editRow.id);
 		} 		
@@ -143,7 +141,7 @@ function look(){
 		{
 		 
 		 //node = treegrid.treegrid('getSelected');
-		 var fff;
+		/* var fff;
 		 		if( nodeid==undefined)
 		 		fff="";else fff= nodeid.id;
 		 $.get("/MainDisp?hre="+ hrefstr+ "_getaddid_mainview.TreeList&pid="+fff,
@@ -153,18 +151,18 @@ function look(){
 		 	id: newid ,
 			 
 				 _parent: nodeid == null ? '0' : nodeid.id
-			} ];
+			} ];*/
 	 treegrid.treegrid('append', {
 				parent : nodeid == null? '' : nodeid.id,
-				data : row
+				data :'11'
 			});
 
 			editRow = row[0];
-			editType = 'add'
+			editType = fffh;
 			treegrid.treegrid('select', editRow.id);
 			treegrid.treegrid('beginEdit', editRow.id);
 
- });
+// });
  
 		 
 
