@@ -16,7 +16,6 @@
 <script type="text/javascript" src="../../jslib/weiUtil.js"></script> 
 <script type="text/javascript">
   var hrefstr= sy.getUrlParam("hrefstr");
-  alert( hrefstr );
   
   var statemod;
 var idstrs;
@@ -44,11 +43,13 @@ var jsonstr1;
 showextend( datastr.split("⊙")[1] );
  }
  else jsonstr1= datastr;
- 
 try{
  var ggg=eval("("+ jsonstr1 +")");
   idf= ggg.idfield;
   var desc= ggg.formatstr ;
+  
+  var ffff= ggg.ffff ;
+ if( ffff=="" ) alert("fggg");
   var exterstr = ggg.exterstr ;
   var awidth= exterstr.awidth; 
   var bwidth= exterstr.bwidth;
@@ -106,6 +107,7 @@ groupformdisp ( desc, formstr, awidth,bwidth );
 
    $.parser.parse(); 			
 		 });
+		 
 	 })
  
 
@@ -122,7 +124,7 @@ function getSelected( index,row )
    	idstrs= row[idf];
 
 	 if( idstrs!=undefined ) 
- $('#myForm').form('load', 'pagerecord.json'); 
+ $('#myForm').form('load', 'idrecord'); 
    
 	 $('#layout').layout('expand','east') ;
 	 statemod="Look";
