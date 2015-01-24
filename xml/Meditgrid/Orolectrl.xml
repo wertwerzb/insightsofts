@@ -36,5 +36,5 @@
 		 
 <modextfield></modextfield>
 <secondcom></secondcom>
-<exterparam> "flclass":"Trole1","flfield":"rolecode" </exterparam>
+<useflag> "flclass":"Trole1","flfield":"rolecode" </useflag>
     </Orolectrl> 
