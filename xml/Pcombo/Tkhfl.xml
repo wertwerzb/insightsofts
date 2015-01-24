@@ -4,23 +4,23 @@
  <namefield>Bkhfl_name</namefield>
 	  <sigleform>B_khfl
 	  </sigleform>
-	  
+	  </Tkhfl>
 	 <Tkhfl lang="jp">
 <idfield>Bkhfl_id</idfield> 
  <namefield>Bkhfl_name</namefield>
 	  <sigleform>B_khfl
 	  </sigleform>
-	  
+	  </Tkhfl>
 	 <Tkhfl lang="en">
 <idfield>Bkhfl_id</idfield> 
  <namefield>Bkhfl_name</namefield>
 	  <sigleform>B_khfl
 	  </sigleform>
-	  
+	  </Tkhfl>
 	 <Tkhfl lang="zh_TW">
 <idfield>Bkhfl_id</idfield> 
  <namefield>Bkhfl_name</namefield>
 	  <sigleform>B_khfl
 	  </sigleform>
-	  
+	  </Tkhfl>
 	 </Con> 
