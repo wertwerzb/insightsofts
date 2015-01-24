@@ -26,7 +26,7 @@
 		 <curnode>0
 		</curnode> 
 			<firstcom></firstcom>
-<exterparam></exterparam>
+<useflag></useflag>
 <modextfield></modextfield>
 <extendfield></extendfield>
 	 </Omodfl> 
@@ -57,7 +57,7 @@
 		 <curnode>0
 		</curnode> 
 			<firstcom></firstcom>
-<exterparam></exterparam>
+<useflag></useflag>
 <modextfield></modextfield>
 <extendfield></extendfield>
 	 </Omodfl> 
@@ -88,7 +88,7 @@
 		 <curnode>0
 		</curnode> 
 			<firstcom></firstcom>
-<exterparam></exterparam>
+<useflag></useflag>
 <modextfield></modextfield>
 <extendfield></extendfield>
 	 </Omodfl> 
@@ -119,7 +119,7 @@
 		 <curnode>0
 		</curnode> 
 			<firstcom></firstcom>
-<exterparam></exterparam>
+<useflag></useflag>
 <modextfield></modextfield>
 <extendfield></extendfield>
 	 </Omodfl> 
