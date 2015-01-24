@@ -37,7 +37,8 @@
 <bwidth>220</bwidth>
 <treecondition>Twxfl-Bwx_flid</treecondition>
 <mtitle>外协资料</mtitle>
-</extendxml> <firstcom>south:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+</extendxml> <firstcom> ⊙[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{ "flclass":"Twxfl","flfield":"bwx_flid" ,"searchlabel":"外协名称","searchfield":"bwx_Name" } }] </firstcom>
 <secondcom></secondcom>
 <exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Twxfl","flfield":"bwx_flid"⊙"searchlabel":"外协名称","searchfield":"bwx_Name" </exterparam>
 <modextfield></modextfield>
@@ -81,7 +82,8 @@
 <bwidth>220</bwidth>
 <treecondition>Twxfl-Bwx_flid</treecondition>
 <mtitle>外协资料</mtitle>
-</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+</extendxml> <firstcom> ⊙[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{ "flclass":"Twxfl","flfield":"bwx_flid","searchlabel":"外协名称","searchfield":"bwx_Name" } }] </firstcom>
 <secondcom></secondcom>
 <exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Twxfl","flfield":"bwx_flid"⊙"searchlabel":"外协名称","searchfield":"bwx_Name" </exterparam>
 <modextfield></modextfield>

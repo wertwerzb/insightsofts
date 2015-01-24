@@ -143,9 +143,9 @@
 <treecondition>Tcpfl-bcp_class</treecondition>
 <mtitle>菜单设计</mtitle>
 </extendxml>
-<firstcom></firstcom> 
+<firstcom>⊙[{"id":"south","name":"xmlload","href":"/Phtml/xmlload.html", "height":"300px","title" :"图片","option":{"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass","idmod":"jsplistsource"}}] </firstcom> 
 <secondcom>loadxmldiv:xmlload:/Phtml/xmlload.html:0</secondcom>
-<exterparam>"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass"</exterparam>
+<exterparam></exterparam>
 
 <modextfield></modextfield>
 	</Omenu>	
@@ -292,7 +292,7 @@ menu design
 <treecondition>Tcpfl-bcp_class</treecondition>
 <mtitle>菜单设计</mtitle>
 </extendxml>
-<firstcom></firstcom> 
+<firstcom>⊙[{"id":"south","name":"xmlload","href":"/Phtml/xmlload.html", "height":"300px","title" :"图片","option":{"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass","idmod":"jsplistsource"}}]</firstcom> 
 <secondcom>loadxmldiv:xmlload:/Phtml/xmlload.html:0</secondcom>
 <exterparam>"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass"</exterparam>
 
@@ -442,7 +442,7 @@ menu design
 <treecondition>Tcpfl-bcp_class</treecondition>
 <mtitle>菜单设计</mtitle>
 </extendxml>
-<firstcom></firstcom> 
+<firstcom>⊙[{"id":"south","name":"xmlload","href":"/Phtml/xmlload.html", "height":"300px","title" :"图片","option":{"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass","idmod":"jsplistsource"}}]</firstcom> 
 <secondcom>loadxmldiv:xmlload:/Phtml/xmlload.html:0</secondcom>
 <exterparam>"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass"</exterparam>
 
@@ -590,7 +590,7 @@ menu design
 <treecondition>Tcpfl-bcp_class</treecondition>
 <mtitle>菜单设计</mtitle>
 </extendxml>
-<firstcom></firstcom> 
+<firstcom>⊙[{"id":"south","name":"xmlload","href":"/Phtml/xmlload.html", "height":"300px","title" :"图片","option":{"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass","idmod":"jsplistsource"}}]</firstcom> 
 <secondcom>loadxmldiv:xmlload:/Phtml/xmlload.html:0</secondcom>
 <exterparam>"isload":"4","xmldesc":"请选择小于40kb的xml格式支件","filetype":"xml","modcom":"flclass"</exterparam>
 

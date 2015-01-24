@@ -2,7 +2,6 @@
 	<Oghszl lang="zh_CN">
 		<addidmodal>0</addidmodal>
 
-
 		<title>
 			供货商资料
 		</title>
@@ -39,7 +38,8 @@
 			<bwidth>220</bwidth>
 			<treecondition>Tghsfl-Bghs_flid</treecondition>
 			<mtitle>供货商资料</mtitle>
-		</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+		</extendxml> <firstcom> ⊙[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{ "flclass":"Tghsfl","flfield":"bghs_fl" ,"searchlabel":"供货商名称","searchfield":"bghs_Name" } }] </firstcom>
 		<secondcom></secondcom>
 		<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tghsfl","flfield":"bghs_fl"⊙"searchlabel":"供货商名称","searchfield":"bghs_Name" </exterparam>
 
@@ -85,7 +85,8 @@
 			<bwidth>220</bwidth>
 			<treecondition>Tghsfl-Bghs_flid</treecondition>
 			<mtitle>供货商资料</mtitle>
-		</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+		</extendxml> <firstcom>⊙[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{ "flclass":"Tghsfl","flfield":"bghs_fl" ,"searchlabel":"供货商名称","searchfield":"bghs_Name" } }]</firstcom>
 		<secondcom></secondcom>
 		<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tghsfl","flfield":"bghs_fl"⊙"searchlabel":"供货商名称","searchfield":"bghs_Name" </exterparam>
 
@@ -130,7 +131,8 @@
 			<bwidth>220</bwidth>
 			<treecondition>Tghsfl-Bghs_flid</treecondition>
 			<mtitle>供货商資料</mtitle>
-		</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+		</extendxml> <firstcom> ⊙[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{ "flclass":"Tghsfl","flfield":"bghs_fl" ,"searchlabel":"供货商名称","searchfield":"bghs_Name" } }] </firstcom>
 		<secondcom></secondcom>
 		<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tghsfl","flfield":"bghs_fl"⊙"searchlabel":"供货商名稱r","searchfield":"bghs_Name" </exterparam>
 
@@ -175,7 +177,8 @@
 			<bwidth>220</bwidth>
 			<treecondition>Tghsfl-Bghs_flid</treecondition>
 			<mtitle>供货商资料</mtitle>
-		</extendxml> <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+		</extendxml> <firstcom>⊙[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{ "flclass":"Tghsfl","flfield":"bghs_fl" ,"searchlabel":"供货商名称","searchfield":"bghs_Name" } }]</firstcom>
 		<secondcom></secondcom>
 		<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tghsfl","flfield":"bghs_fl"⊙"searchlabel":"供货商名称","searchfield":"bghs_Name" </exterparam>
 

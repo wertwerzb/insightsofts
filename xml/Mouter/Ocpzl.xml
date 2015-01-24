@@ -19,7 +19,7 @@
 		<typestr>s,s,s,s,f,f,s,i,s,s,s,s</typestr>
 		
 		<columntitle>编码:001:validatebox-1,名称:000:validatebox#Pkhzl-1:请输入名称,规格:001:validatebox-1,类型:000:combotree-0,参考售价:001:validatebox-1,参考进价:000:validatebox-1,品牌:001:validatebox-1,单位:001:combobox-2,备注:131:textbox-3,自定义一:131:textbox-3,自定义二:131:textbox-3,自定义三:131:textbox-4</columntitle> 
-		<comparam>"width":"210px","valueField":"id","textField":"text","url":"/MainDisp?hre=Scpfl_getcondattr_partview.SyncList"⊙"required":true ,"validType" :"length[3,10]" ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cunit_getcomresult_partview.ComboList"⊙"width":"480px"⊙"height":"300px","multiline" :true
+		<comparam>"width":"210px","valueField":"id","textField":"text","url":"/MainDisp?hre=Scpfl_getsteprecord_partview.SyncList"⊙"required":true ,"validType" :"length[1,15]" ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cunit_getcomresult_partview.ComboList"⊙"width":"480px"⊙"height":"300px","multiline" :true
 		</comparam>
 		<group>编码信息⊙其他信息
 		</group>
@@ -30,9 +30,10 @@
 	
 		<extendfield></extendfield>
 		
-		 <firstcom>south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
-<secondcom>imagedis:pictureload:/Phtml/pictureload.html:0 </secondcom>
-<exterparam>"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"⊙ "flclass":"Tcpfl","flfield":"bcp_class"⊙"searchlabel":"产品名称","searchfield":"bcp_Name" </exterparam>
+		 <firstcom>⊙[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{"flclass":"Tcpfl","flfield":"bcp_class","searchlabel":"产品名称","searchfield":"bcp_Name"} }, {"id": "south","name":"pictureload","href":"/Phtml/pictureload.html", "height":"300px","title" :"图片","option":{"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"}}]</firstcom>
+		 
+<useflag>"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"⊙ "flclass":"Tcpfl","flfield":"bcp_class","searchlabel":"产品名称","searchfield":"bcp_Name" </useflag>
 
 		
 <extendxml>

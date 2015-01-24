@@ -45,9 +45,10 @@
 </extendxml>
 
 	 	
-		 <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
-<secondcom>imagedis:loadxml:/Phtml/xmlload:0 </secondcom>
-<exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tkhfl","flfield":"bkh_flid"⊙"searchlabel":"客户名称","searchfield":"bkh_Name" </exterparam>
+		 <firstcom> ⊙[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{ "flclass":"Tkhfl","flfield":"bkh_flid","searchlabel":"客户名称","searchfield":"bkh_Name" } }] </firstcom>
+<secondcom></secondcom>
+<exterparam></exterparam>
 
 <modextfield></modextfield>
 	</Okhzl>
@@ -95,7 +96,8 @@
 
 </extendxml>
 
-	 	 <firstcom>east:treefilter:/Phtml/treefilter.html:1,south:siglefilter:/Phtml/siglefilter.html:2</firstcom>
+	 	 <firstcom> ⊙[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{ "flclass":"Tkhfl","flfield":"bkh_flid","searchlabel":"客户名称","searchfield":"bkh_Name" } }] </firstcom>
 <secondcom>imagedis:loadxml:/Phtml/xmlload:0 </secondcom>
 <exterparam>"width":"200px","pathcom1":"id"⊙ "flclass":"Tkhfl","flfield":"bkh_flid"⊙"searchlabel":"客户名称","searchfield":"bkh_Name" </exterparam>
 
