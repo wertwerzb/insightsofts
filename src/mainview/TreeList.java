@@ -50,7 +50,7 @@ public class TreeList
  private String langstr;
 private String firstcom;
 private String htefstr;
- 	private String exterparam;
+ 	private String useflag;
 	
  
  
@@ -172,7 +172,7 @@ else return sql;
 public String getinithtml()
 	{
 		String result= "{\"columns\":"+gettitlehtml() + ",\"idfield\":\""  + idfield+ "\",\"namefield\":\""+ namefield + "\",\"button\":"+ getbutton() +"," +
-"\"exterstr\":{"+ exterstr.substring(0, exterstr.length() - 1) + "}}" + extendjson.getextendjson( firstcom, exterparam ) ; 
+"\"exterstr\":{"+ exterstr.substring(0, exterstr.length() - 1) + "},\"firstcom\":"+firstcom+"}"  ; 
 
 return result ;
 
@@ -246,7 +246,7 @@ String 	 realPath= innpath.getxmlpath( rolestr,usercode,"/Mtreegrid/"+ hreft+".x
 addidmodal = database.element("addidmodal").getText().trim();
 curnode= database.element("curnode").getText().trim();
 				 firstcom = database.element("firstcom").getText().trim() ;
-		 exterparam = database.element("exterparam").getText().trim() ;
+		 useflag = database.element("useflag").getText().trim() ;
 			}
 			
 			 else

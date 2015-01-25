@@ -40,7 +40,7 @@ public class GridList
 	private String rolestr;
 	 private String usercode;
 	 private String firstcom;
- 	private String exterparam;
+ 	private String useflag;
  	 private String langstr;
 	public GridList(String role, String usercode, String hreft,String langname )
 	{
@@ -88,7 +88,7 @@ private String getbutton()
 public String getinithtml()
 	{
 		String result= "{\"columns\":"+gettitlehtml() +",\"idfield\":\"" + idfield + "\", \"namefield\":\""+ namefield + "\",\"rowcount\":"+ rowcount + ",\"button\":"+ getbutton() +",\"exterstr\":" +
-"{"+ exterstr.substring(0, exterstr.length() - 1) + "}} " + extendjson.getextendjson( firstcom, exterparam ) ; 
+"{"+ exterstr.substring(0, exterstr.length() - 1) + "},\"firstcom\":"+ firstcom+"}"; 
 
 return result ;
 
@@ -186,7 +186,7 @@ Element database = (Element)document.selectSingleNode("//" + hreft+ "[@lang='"+ 
 		  	rowcount = database.element("rowcount").getText().trim() ;
 		 
 				 firstcom = database.element("firstcom").getText().trim() ;
-		 exterparam = database.element("exterparam").getText().trim() ; 	
+		 useflag = database.element("useflag").getText().trim() ; 	
 		
 		
 			}

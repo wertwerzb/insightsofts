@@ -42,7 +42,7 @@ public class DetailList
 	private String rolestr;
 	 private String usercode;
 	 private String firstcom;
- 	private String exterparam;
+ 	private String innerparam;
 	private String fieldstyle;
 	private String langstr;
 	public DetailList(String role, String usercode, String hreft, String langname )
@@ -139,7 +139,7 @@ return Cjson.IndexGridjson.getgridtitle(fieldstyle,fieldtitle, title, columntitl
 public String getinit()
 	{
 		String result= "{"+gettitlehtml() +",\"idfield\":\"" + idfield + "\", \"namefield\":\""+ namefield + "\",\"rowcount\":"+ rowcount + ",\"button\":"+ getbutton() +",\"exterstr\":" +
-"{"+ exterstr.substring(0, exterstr.length() - 1) + "}} " + extendjson.getextendjson( firstcom, exterparam ) ; 
+"{"+ exterstr.substring(0, exterstr.length() - 1) + "} ,\"firstcom\":"+ firstcom +",\"innerparam\":"+ innerparam+"}"; ; 
 
 return result ;
 
@@ -238,7 +238,7 @@ Element database = (Element)document.selectSingleNode("//" + hreft+ "[@lang='"+ 
 		  	rowcount = database.element("rowcount").getText().trim() ;
 		 
 				 firstcom = database.element("firstcom").getText().trim() ;
-		 exterparam = database.element("exterparam").getText().trim() ; 	
+		 innerparam = database.element("innerparam").getText().trim() ; 	
 		
 		
 			}

@@ -16,6 +16,8 @@ import java.util.Iterator;
 import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 import Cjson.* ;
+
+import org.apache.log4j.Logger;
 /**
  * Title:       
  * Description:
@@ -47,22 +49,23 @@ private String  title;
 
 
 	private String comparam;
-	private String columnnum;
+	private String innerparam;
  	private String firstcom;
-	private String secondcom;
- 	private String exterparam;
 	 private String group ;
 	 private String exterstr;
 	 private String usercode;
 	 	 private String langstr;
 	 	 private String hrefstr;
+private static final Logger logger = Logger.getLogger(OuterList.class);
 
 	public OuterList(String role,String userstr,String hreft,String langname )
 	{
 	rolestr=role;
-	usercode=usercode;
+	usercode=userstr;
 		hrefstr = hreft;
 		 langstr = langname;
+		 logger.debug("启动");
+		 logger.debug( " debug " ); logger.error( " error " );
 		setvar(hreft);
 		 if (("1").equals(conditionable.trim()))  incondition = getconditionsql(role);
 		else incondition = "";
@@ -85,24 +88,12 @@ private String  title;
 		 
 		 
 		}
-	 public String getfirstinit()
-{   
 
-
-String result="{\"button\":" +getfirstbutton(rolestr)+","+getfirsttitle()+",\"idfield\":\""+ idfield +"\", \"rowcount\":"+ rowcount+", \"exterstr\":{"+ exterstr.substring(0, exterstr.length()- 1) + "}}"
-+ extendjson.getextendjson( firstcom, exterparam );
-
-
-return result ;
-
-
-}
 	 public String get2init()
 {   
 
 
-String result="{\"button\":" +getfirstbutton(rolestr)+","+getfirsttitle()+",\"idfield\":\""+ idfield +"\", \"rowcount\":"+ rowcount+",\"formatstr\":"+  getsecondindex()+", \"exterstr\":{"+ exterstr.substring(0, exterstr.length()- 1) + "}}"
-+ extendjson.getextendjson( firstcom, exterparam );
+String result="{\"button\":" +getfirstbutton(rolestr)+","+getfirsttitle()+",\"idfield\":\""+ idfield +"\", \"rowcount\":"+ rowcount+",\"formatstr\":"+  getsecondindex()+", \"exterstr\":{"+ exterstr.substring(0, exterstr.length()- 1) + "}, \"innerparam\":"+ innerparam+",\"firstcom\":"+ firstcom+ "}" ;
 
 
 return result ;
@@ -205,13 +196,51 @@ return result;
 		String result = initbutton.getbuttonstr("outersecond", rolestr,hrefstr, langstr );
 		return result;
 	}
-	public String getsecondinit()
+	public String getvar()
 	{
-		String result= "{\"mxbutton\":"+getmxbutton( rolestr ) +",\"formatstr\":"+  getsecondindex()+ ",\"exterstr\":" + 
-"{"+ exterstr.substring(0, exterstr.length() - 1) + "}}" + extendjson.getextendjson( secondcom, exterparam ); 
-return result;
+		String result="";
+		
+		if( innerparam==null ) 
+		 result= result+"innerparam is null ";
+		 		if( firstcom==null ) 
+		 result= result+"firstcom is null ";
+		 if( sigleform ==null ) 
+		 result= result+" sigleform is null "; 
+		 		 if( joinform ==null ) 
+		 result= result+" joinform is null "; 
+		 		 if( title ==null ) 
+		 result= result +" title is null "; 
+		 
+		 		 if( indextitle ==null ) 
+		 result= result +" indextitle is null "; 
+		 		 		 if( indexfield ==null ) 
+		 result= result +" indexfield is null "; 
+		 		 		 if( indexwidth ==null ) 
+		 result= result +" indexwidth is null "; 
+		 		 		 		 if( rowcount ==null ) 
+		 result= result +" rowcount is null "; 
+	 		 if( conditionable ==null ) 
+		 result= result +" conditionable is null "; 
+		 
+	 		 if( fieldstyle ==null ) 
+		 result= result +" fieldstyle is null "; 
+		 	 		 if( selectcolumn ==null ) 
+		 result= result +" selectcolumn is null "; 
+		 	 		 if( fieldtitle ==null ) 
+		 result= result +" fieldtitle is null "; 		 	 		 if( columntitle ==null ) 
+		 result= result +" columntitle is null "; 
+		 if( idfield ==null ) 
+		 result= result +" idfield is null "; 	
+if( comparam ==null ) 
+		 result= result +" comparam is null "; 	
 
-	}
+if( group ==null ) 
+		 result= result +" group is null "; 	
+		 if( exterstr ==null ) 
+		 result= result +" exterstr is null "; 	
+
+return result;
+}
 private void replcerol( )
 	{
 if( joinform.indexOf("{U}")>0)
@@ -274,8 +303,8 @@ Element database = (Element)document.selectSingleNode("//" + hreft+ "[@lang='"+ 
 				idfield = database.element("idfield").getText().trim() ;
 		comparam = database.element("comparam").getText().trim() ;
 		 firstcom = database.element("firstcom").getText().trim() ;
-		 secondcom = database.element("secondcom").getText().trim() ; 
-		 exterparam = database.element("exterparam").getText().trim() ;
+		 
+		 innerparam = database.element("innerparam").getText().trim() ;
 			
 			}
 			 else

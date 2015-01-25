@@ -54,7 +54,7 @@ public class TianbaList
 	 private 	String incondition;
 	 
 	 private String firstcom;
- 	private String exterparam;
+ 	private String innerparam;
  	 private String hrefstr;
  	 private String langstr;
  	 private String title;
@@ -244,11 +244,12 @@ String pagesizestr= request.getParameter("rows");
 	 	public String getinithtml()
 	{
 		String result="{\"button\":"+getbutton() + ","+ getXtitlehtml() + ",\"formatstr\":" + getMfirstindex() + ",\"otherinfo\":"+ getother() +",\"exterstr\":" +
-"{"+ exterstr.substring(0, exterstr.length() - 1) + "}}" + extendjson.getextendjson( firstcom, exterparam ) ; 
+"{"+ exterstr.substring(0, exterstr.length() - 1) + "},\"firstcom\":"+ firstcom +",\"innerparam\":"+ innerparam+" }"; 
 
 		return result;
 
 	}
+	
 	
 	 	public String getother()
 	{
@@ -323,7 +324,7 @@ String pagesizestr= request.getParameter("rows");
 				 fieldstyle= database.element("fieldstyle").getText().trim() ;
 
 				 firstcom = database.element("firstcom").getText().trim() ;
-		 exterparam = database.element("exterparam").getText().trim() ;
+		 innerparam = database.element("innerparam").getText().trim() ;
 		}			
 		 else
 		  {

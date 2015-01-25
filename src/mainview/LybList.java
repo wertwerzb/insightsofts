@@ -33,7 +33,7 @@ public class LybList
 	private String langstr;
 	private String usercode;
 	private String firstcom;
- 	private String exterparam;
+ 	private String innerparam;
 	private String langName;
  
 
@@ -89,7 +89,7 @@ return result;
 
 	public String getinithtml()
 	{
-		String result="{\"formatstr\":" +  getfirstindex() + ",\"exterstr\":{" + exterstr.substring(0, exterstr.length() - 1) + "}}" + extendjson.getextendjson(firstcom, exterparam) ;
+		String result="{\"formatstr\":" +  getfirstindex() + ",\"exterstr\":{" + exterstr.substring(0, exterstr.length() - 1) + "},\"firstcom\":"+ firstcom +",\"innerparam\":"+ innerparam+"}"; 
 		return result;
 
 	}
@@ -133,7 +133,7 @@ Element database = (Element)document.selectSingleNode("//" + hreft+ "[@lang='"+ 
 				idfield = database.element("idfield").getText().trim() ;
 				comparam = database.element("comparam").getText().trim() ;
 				firstcom = database.element("firstcom").getText().trim() ;
-				exterparam = database.element("exterparam").getText().trim() ;
+				innerparam = database.element("innerparam").getText().trim() ;
 			}
 			else
 			{
