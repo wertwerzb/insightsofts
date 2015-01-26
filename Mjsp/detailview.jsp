@@ -6,7 +6,6 @@
 <script type="text/javascript" src="/jslib/jquery.form.js"></script>
 
 	<script type="text/javascript" src="/jsext/datagrid-detailview.js"></script>
-	 	<script type="text/javascript" src="/html/fzcom/fzcom2.js"></script>
 <title>表格模板管理</title>
 <script type="text/javascript">
 var request ={QueryString:function(val) 
@@ -25,6 +24,8 @@ var request ={QueryString:function(val)
 	var deview ;
 var editRow;
 	var datagrid;
+var extjson;
+var innerjson ;
 
 $(function(){
  $.get('/MainInit',
@@ -32,17 +33,12 @@ $(function(){
   hre: hrefstr+ '_getinit_mainview.DetailList'
  },function(datastr) { 
 
- var jsonstr1;
- if( datastr.indexOf("⊙")>0 )
- {
- jsonstr1= datastr.split("⊙")[0];
-
-showextend( datastr.split("⊙")[1] );
- }
- else jsonstr1= datastr;
  
 try{
- var ggg=eval("("+ jsonstr1 +")");
+ var ggg=eval("("+ datastr +")");
+ extjson =ggg.firstcom;
+ innerjson =ggg.innerparam;
+ if( extjson.length>0)showextend();
  var columnsinfo= ggg.columns; 
  
  var fname= ggg.namefield ;
@@ -88,7 +84,7 @@ datagrid= $('#tt').datagrid({
 	ddv.panel({ 
 border:false, 
 cache:false, 
-href:'/html/fzdiv/accessctrl.html', 
+href:'/Phtml/accessctrl.html', 
 				             onLoad:function(){ 
   $('#tt').datagrid('fixDetailRowHeight',index); } 
 				  }); 
@@ -108,21 +104,19 @@ href:'/html/fzdiv/accessctrl.html',
  } 
 
 
-showextend=function (extstr ) {
+showextend=function ( ) {
 
-extjson=eval("("+ extstr+")" );
 for( var i =0; i < extjson.length; i ++ )
 
 
 {
 $('#layout').layout('add',{
 
-
 region: extjson[i].id ,
 id: extjson[i].id ,
-width: 180,
-height:100,
-title: '过滤',
+width: 580,
+height: extjson[i].height ,
+title: extjson[i].title ,
 
 
 href: extjson[i].href,
@@ -137,6 +131,8 @@ collapsed:true
 }
  
 }
+
+
 
  function updatecheck(ddd) {
   var queryString="" ;

@@ -7,14 +7,10 @@
 
 
 <title>表格模板管理</title>
-<script type="text/javascript">
-var request ={QueryString:function(val) 
-　　{var uri = window.location.search; 
-　　var re = new RegExp("" +val+ "=([^&?]*)", "ig"); 
-　　return ((uri.match(re))?(uri.match(re)[0].substr(val.length+1)):null);
-     }}
-    var hrefstr= request.QueryString("hrefstr");
+<script type="text/javascript">  
+var hrefstr = sy.getUrlParam ("hrefstr");
 
+	var edittype;
 var editRow;
 	var datagrid;
  <% String role;
@@ -71,33 +67,28 @@ datagrid= $('#tt').datagrid({
 				columns: columnsinfo ,
 			onAfterEdit : function(rowIndex, rowData, changes)
 		 {
-				 var inserted = datagrid.datagrid('getChanges', 'inserted');
+				/* var inserted = datagrid.datagrid('getChanges', 'inserted');
 				var updated = datagrid.datagrid('getChanges', 'updated');
-				if (inserted.length < 1 && updated.length < 1) {
+				if (inserted.length < 1 && updated.length < 1) 
+				*/
+				 	if (edittype == undefined) {
+				 	
 					editRow = undefined;
 					datagrid.datagrid('unselectAll');
 					return;
 				}
-				var urlf = '';
-			 	 	if (inserted.length > 0) {
-			 urlf = 'Add';
-			}
-			 		if (updated.length > 0) {
-				 		urlf = 'Edit';
-				 		 	}
-				 		 	
- var gh= object2Str( rowData ) ;
+			var gh= object2Str( rowData ) ;
  // +"_"+ urlf +"_otheractions.Form"+ urlf +"_editgrid" 
 				  $.ajax({ 
        url:"/MainEdit", //提交给哪个执行 
-        data:"hre="+ hrefstr +"_"+ urlf +"_otheractions.Form"+ urlf +"_Meditgrid&"+ gh ,
-   
-     type:"POST", 
+        data: "hre="+ hrefstr+"_" +edittype+"&"+gh ,
+    type:"POST", 
      success: ( function(result) {    
      		$.messager.show({
 								msg : result ,
 								title : '成功'
 							});
+							 edittype= undefined;
 									editRow = undefined;
 					 $('#tt').datagrid('unselectAll');
 				    })
@@ -125,13 +116,18 @@ function getpagerecord(condstr ) {
 		 	var rows = datagrid.datagrid('getSelections');
 		if (rows.length == 1) {
 			if (editRow != undefined) {
-				datagrid.datagrid('endEdit', editRow);
+		//		datagrid.datagrid('endEdit', editRow);
+				
+				edittype= undefined;
+				return;
 			}
 
 			if (editRow == undefined) {
 				editRow = datagrid.datagrid('getRowIndex', rows[0]);
 				datagrid.datagrid('beginEdit', editRow);
 				datagrid.datagrid('unselectAll');
+				
+				edittype= fff;
 			}
 		} else {
 			$.messager.show({
@@ -141,8 +137,8 @@ function getpagerecord(condstr ) {
 		}
 	}
 
-	 	 	function add(fff) {
-	 	 	alert(fff);
+	 	 	function add(fffd) {
+	 	 	alert(fffd);
 	 	 	if (editRow != undefined) {
 			datagrid.datagrid('endEdit', editRow);
 		}
@@ -162,6 +158,8 @@ function getpagerecord(condstr ) {
 			editRow = 0;
 			datagrid.datagrid('selectRow', editRow);
 			datagrid.datagrid('beginEdit', editRow);
+			
+				edittype= fffd;
 		 }
 	}
 	
@@ -174,20 +172,17 @@ function getpagerecord(condstr ) {
 	 function cancel(){
 			 	if (editRow) {
 						datagrid.datagrid('cancelEdit', editRow.id);
-						var p = datagrid.datagrid('getParent', editRow.id);
-						if (p) {
-							datagrid.datagrid('reload', p.id);
-						} else {
+					
 							datagrid.datagrid('reload');
-						}
+						
 						editRow = undefined;
 					}
 			 }
 			 
-	 function del(){
+	 function delet(delstr){
 	 editRow = $('#tt').datagrid('getSelected');
     $.ajax({ 
-     url:"/MainEdit",  data:"hre="+ hrefstr+"_Del_otheractions.FormEdit_editgrid&id="+ editRow.id ,
+     url:"/MainEdit",  data:"hre="+ hrefstr+"_"+delstr+"&id="+ editRow.id ,
      type:"POST", 
     success: ( function(result) {    
    if( result.charAt(0)=="1" )

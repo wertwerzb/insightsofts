@@ -15,8 +15,9 @@ var editRow;
 	
  var usefielded;
  var useflaged;
-var nodeid;
+var nodei
 var idstrs;
+var extjson;
 $(function(){
  $.get('/MainInit',
   {
@@ -26,10 +27,11 @@ $(function(){
 try{
  var tdata= eval("("+ datastr +")"); 
  
+ extjson = tdata.firstcom;
+ if( extjson.length>0)showextend();
  var ggg= tdata.columns ; 
  var fname= tdata.namefield ;
  		
-// var toolba= $.parseJSON( tdata[3] );
  var toolba= tdata.button ; 
  
  var extxml= tdata.exterstr ; 
@@ -277,6 +279,33 @@ alert("请选择");
     });
  }
 
+showextend=function ( ) {
+
+for( var i =0; i < extjson.length; i ++ )
+
+
+{
+$('#layout').layout('add',{
+
+region: extjson[i].id ,
+id: extjson[i].id ,
+width: 580,
+height: extjson[i].height ,
+title: extjson[i].title ,
+
+
+href: extjson[i].href,
+split: true,
+collapsed:true
+
+});
+
+
+
+
+}
+ 
+}
 
 
 </script>

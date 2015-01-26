@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	 	 	<link rel="stylesheet" type="text/css" href="../../jslib/jquery-easyui-1.4/themes/default/easyui.css">	
+	 	 	 
+	<link rel="stylesheet" type="text/css" href="../../jslib/jquery-easyui-1.4/themes/icons.css">
+	<link rel="stylesheet" type="text/css" href="../../jslib/jquery-easyui-1.4/demo/demo.css">
+<script type="text/javascript" src="../../jslib/jquery-easyui-1.4/jquery-1.7.2.min.js" charset="utf-8" ></script>
+<script type="text/javascript" src="../../jslib/jquery-easyui-1.4/jquery.easyui.min.js" charset="utf-8" ></script>
+<script type="text/javascript" src="../../jslib/jquery-easyui-1.4/locale/easyui-lang-zh_CN.js"></script> 
+
+<script type="text/javascript" src="../../jslib/formformat.js"></script>
+
+
+<script type="text/javascript" src="../../jslib/weiUtil.js"></script> 
+<script type="text/javascript">
+     
+  //var hrefstr= sy.getUrlParam ("hrefstr"); 
+var idf;
+var selected=undefined;
+var condistr="1=1";
+var titlestr;
+ var flclass ;
+ var mtitle;
+ var usefielded;
+ var useflaged;
+ var statemoded;
+ var idstrs;
+ 
+$(function(){
+  $.get("init",function(datastr) { 
+try{
+
+ var ggg=eval("("+ datastr +")");  
+ var mtoolba= ggg.firstbutton ; 
+  idf= ggg.idfield;
+  alert( idf );
+  var mpagesize= ggg.rowcount ;
+  var mpagelis="["+ mpagesize+","+( mpagesize*2 ) +","+( mpagesize*3 ) +","+( mpagesize*4)+"]";
+var mgriddata= ggg.columns ; 
+ var mpagelist= eval( mpagelis ); 
+ var Xtoolba = ggg.mxlistbutton;
+ 
+var exterstr= ggg.exterstr ;
+  var mform = ggg.mformatstr ;
+  var Mawidth = exterstr.Mawidth ;
+ var Mbwidth = exterstr.Mbwidth ;
+var Xpagesize= ggg.Xrowcount ;
+  var xpagelis="["+ Xpagesize+","+( Xpagesize*2 ) +","+( Xpagesize*3 ) +","+( Xpagesize*4)+"]";
+  
+   var Xpagelist= eval( xpagelis ); 
+ 
+  var Xgriddata = ggg.xcolumns ;
+  }
+  catch(err) { 
+  alert( datastr+ err );
+  }
+  $('#ttumx').datagrid({
+	 toolbar: Xtoolba,
+ });
+  $('#tt').datagrid({  
+   url:'firstpage',
+    
+ 		pagination:true, 
+ 		 pageList: mpagelist ,
+ 		 	pageSize:mpagesize,
+				fitColumns: true,
+				singleSelect: true,
+		columns: mgriddata,
+				width:"100%",
+				border:0,
+				 rownumbers : true,
+				//fit:true,
+	   	toolbar: mtoolba,
+			 striped: true,
+				 idField:idf,
+		onSelect:getSelected
+				 });  
+		  var formstr=$("#myuForm");
+  divformformat( mform ,formstr, Mawidth ,Mbwidth );
+  
+   $.parser.parse();
+   udatagrid= $('#ttu').datagrid({  
+   rownumbers : true,
+   pagination:true, 
+ 		 pageList: Xpagelist ,
+ 		 	pageSize:Xpagesize,
+				fitColumns: true,
+		singleSelect: true,
+	    columns: Xgriddata,
+				width:'100%',
+				border:0,
+		  method: 'get',
+				idField: 'id',
+			 striped: true
+	  })
+            
+
+		 });
+	 })
+	
+function getpagerecord(condstr ) {
+   var nnnn = $('#tt').datagrid('options').queryParams;
+  nnnn.condstr= condstr ;
+  $('#tt').datagrid('load', nnnn) ;
+ 
+ 
+}
+function getSelected( index,row )
+{
+
+   	idstrs= row[idf];
+
+	 if( idstrs!=undefined ) 
+ $('#myuForm').form('load', 'formrecord'); 
+   $('#ttu').datagrid('load',
+   'mxrecord');
+	 $('#layout').layout('expand','east') ;
+	 statemod="Look";
+}
+
+
+
+
+
+</script>
+
+</head>
+<body>
+<div id="layout" class="easyui-layout"data-options="fit:true">   
+‪ 
+‪<div region="center"   style="margin:0px;padding:0px;background:#eee;border:0;">
+<table id="tt"></table> 
+</div>
+<div id="east" region="east"   collapsed="true"  style="width:60%;overflow: hidden;">
+	<div id="headtool">
+<table id="ttuhead"></table>
+</div>
+<form id="myuForm">
+<input id="hrefstr" type="hidden" name="hre"/>
+<input id="idstr" type="hidden" name="id"/>
+
+
+
+</form>
+<div id="mxtool">
+
+<table id="ttumx"></table>
+</div>
+<div id="mxgrid">
+<table id="ttu"></table> 
+</div>
+
+</div>
+
+‪</div> 
+</body>
+ </html>

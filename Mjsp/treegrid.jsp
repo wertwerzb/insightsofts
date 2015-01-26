@@ -15,8 +15,9 @@ var editRow;
 	
  var usefielded;
  var useflaged;
-var nodeid;
+var nodei
 var idstrs;
+var extjson;
 $(function(){
  $.get('/MainInit',
   {
@@ -26,10 +27,11 @@ $(function(){
 try{
  var tdata= eval("("+ datastr +")"); 
  
+ extjson = tdata.firstcom;
+ if( extjson.length>0)showextend();
  var ggg= tdata.columns ; 
  var fname= tdata.namefield ;
  		
-// var toolba= $.parseJSON( tdata[3] );
  var toolba= tdata.button ; 
  
  var extxml= tdata.exterstr ; 
@@ -73,17 +75,11 @@ try{
 					   return;
 				   }
 
-				var urlf = '';
-				if (editType == 'add') {
-					urlf = 'Add';
-				}
-				if (editType == 'edit') {
-					urlf = 'Edit';
-				}
+	
      var gh= object2Str( row) ;
 				  $.ajax({ 
        url:"/MainEdit", //提交给哪个执行 
-     data:"hre="+ hrefstr+ "_"+urlf+"_otheractions.Form"+urlf+"_Mtreegrid&"+ gh ,
+     data:"hre="+ hrefstr+ "_"+ editType +"&"+ gh ,
      type:"POST", 
      success: ( function(result) {  
      alert(result)  ;
@@ -107,19 +103,17 @@ try{
 				 });  
 	});
 });
-function look(){
 
-}
-		function edit(){
+		function edit(fffg){
 		 var node = treegrid.treegrid('getSelected');
 		if (node && node.id) {
 			if (editRow != undefined) {
-				treegrid.treegrid('endEdit', editRow.id);
+			return;	
 			}
 	  if (editRow == undefined) {
 				treegrid.treegrid('beginEdit', node.id);
 				editRow = node;
-				editType = 'edit';
+				editType = fffg;
 			}
 		} else {
 			$.messager.show({
@@ -130,9 +124,10 @@ function look(){
 
  
 	 	}
-	 	 	function add() {
+	 	 	function add(addstr) {
 	 	 	if (editRow != undefined) {
-			treegrid.treegrid('endEdit', editRow.id);
+		return;
+
 		} 		
 		if (editRow == undefined) 
 		{
@@ -155,7 +150,7 @@ function look(){
 			});
 
 			editRow = row[0];
-			editType = 'add'
+			editType = addstr;
 			treegrid.treegrid('select', editRow.id);
 			treegrid.treegrid('beginEdit', editRow.id);
 
@@ -197,10 +192,11 @@ function look(){
 		var node = treegrid.treegrid('getSelected');
 		if (node) {
 			$.messager.confirm('询问', '您确定要删除【'+node.id+'】？', function(b) {
+			alert( '/MainEdit?hre='+ hrefstr+"_Del_otheractions.FormDel_Mtreegrid&id="+ node.id );
 				if (b) {
 
 			$.ajax({
-						url : '/MainEdit?hre='+ hrefstr+"_Del_FormEdit.Mtreegrid_ModiTree&id="+ node.id ,
+						url : '/MainEdit?hre='+ hrefstr+"_Del_otheractions.FormDel_Mtreegrid&id="+ node.id ,
 						
 						cache : false,
 						success : function(r) {
@@ -283,6 +279,33 @@ alert("请选择");
     });
  }
 
+showextend=function ( ) {
+
+for( var i =0; i < extjson.length; i ++ )
+
+
+{
+$('#layout').layout('add',{
+
+region: extjson[i].id ,
+id: extjson[i].id ,
+width: 580,
+height: extjson[i].height ,
+title: extjson[i].title ,
+
+
+href: extjson[i].href,
+split: true,
+collapsed:true
+
+});
+
+
+
+
+}
+ 
+}
 
 
 </script>

@@ -18,6 +18,7 @@ var condistr="1=1";
  var usefield;
  var useflaged;
  var extjson;
+ var innerjson;
  <% String ggg=(String)session.getAttribute("usernamec");
  String ipadress= request.getRemoteAddr();
  %>;
@@ -32,17 +33,12 @@ $(function(){
   {
   hre: hrefstr+"_get2init_mainview.OuterList"
  },function(datastr) {
- var jsonstr1;
- if( datastr.indexOf("⊙")>0 )
- {
- jsonstr1= datastr.split("⊙")[0];
 
-showextend( datastr.split("⊙")[1] );
- }
- else jsonstr1= datastr;
- 
 try{
- var ggg=eval("("+ jsonstr1 +")");
+ var ggg=eval("("+ datastr +")");
+ extjson =ggg.firstcom;
+ innerjson =ggg.innerparam;
+ if( extjson.length>0)showextend();
   idf= ggg.idfield;
   var desc= ggg.formatstr ;
   var exterstr = ggg.exterstr ;
@@ -126,6 +122,7 @@ function getSelected( index,row )
  $('#myForm').form('load', '/MainDisp?hre='+ hrefstr+'_getidjsoin_mainview.OuterList&idstr='+idstrs); 
    
 	 $('#layout').layout('expand','east') ;
+	 if($("#south").length>0) $('#south').panel('refresh');
 	 statemod="Look";
 }
 
@@ -298,21 +295,19 @@ getSelected();
         })
     });
  }
-showextend=function (extstr ) {
+showextend=function ( ) {
 
-extjson=eval("("+ extstr+")" );
 for( var i =0; i < extjson.length; i ++ )
 
 
 {
 $('#layout').layout('add',{
 
-
 region: extjson[i].id ,
 id: extjson[i].id ,
-width: 180,
-height:100,
-title: '过滤',
+width: 580,
+height: extjson[i].height ,
+title: extjson[i].title ,
 
 
 href: extjson[i].href,
