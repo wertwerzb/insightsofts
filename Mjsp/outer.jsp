@@ -99,6 +99,8 @@ try{
 
 groupformdisp ( desc, formstr, awidth,bwidth );
 
+ if( innerjson.length>0) showinnerext();
+ 
    $.parser.parse();
 
 		 });
@@ -138,7 +140,7 @@ idstrs=undefined;
 }
 else
 {
-// Edit_otheractions.FormEdit_MtreegridAdd_otheractions.FormAdd_Mtreegrid
+
 $("#hrefstr").val( hrefstr+"_"+cfg );
 $("#myForm").form("submit",{
 			url :"/MainEdit",
@@ -282,7 +284,6 @@ getSelected();
 								});
 								 $('#tt').datagrid('reload');
 		    
-		      //显示操作结果
             }
            else
            {
@@ -323,7 +324,20 @@ collapsed:true
  
 }
 
+showinnerext=function ( ) {
 
+for( var i =0; i <innerjson.length; i ++ )
+{
+$('#'+ innerjson[i].id ).panel({
+href: innerjson[i].href,
+});
+
+$('#'+ innerjson[i].id ).panel( 'refresh');
+
+ 
+
+}
+}
 
 </script>
 
@@ -342,9 +356,6 @@ collapsed:true
 
 </form>
 
-<div id="save" style=" display:none">
-<input type="button"  onclick="updateList()"  value="保存"></input>
-</div>
 </div>
 
 </div>

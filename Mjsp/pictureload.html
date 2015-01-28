@@ -1,0 +1,79 @@
+<script type="text/javascript">
+
+var picisload;
+var imagedesc;
+var picfiletype;
+
+
+$(function(){
+for( var i =0; i < extjson.length; i ++ )
+{
+if(extjson[i].id=="imagedis")
+{ 
+picisload = extjson[i].option.isload ;
+imagedesc=extjson[i].option.imagedesc ;
+picfiletype =extjson[i].option.filetype ;
+
+
+break;
+}
+}
+
+
+ var	 flcla= $("input[name='bcpClass']").val();
+alert( flcla );
+ $("#fileinfo").html(" <input type='hidden' name='filepath' value='"+hrefstr+"_"+idstrs+"." + picfiletype +"'/> <input type='hidden' name='isload' value='"+ picisload+"' /> ");
+ 
+
+ $("#imagedesc").html( imagedesc );
+
+ imagsrc=( usercode+"/"+hrefstr+"/"+idstrs).replace(/_/g,"/") +"." +picfiletype;
+ $("#imgdisplay").html(" <img src='/"+ imagsrc+"'/>") ;
+
+ });
+	
+
+function uploadfile() {
+
+
+if(idstrs==undefined)
+{alert(" 请先保存主体 ");
+return;
+}
+$('#ff').form('submit', {
+url:"/UplFile",
+
+success:function(data){
+alert("操作成功");
+}
+});
+ }
+ 
+</script>
+
+<div id="imgdiv" class="easyui-panel" data-options="title:'图片'" >
+<div id="imgdisplay" align="center">
+
+</div>
+
+
+ <form id="ff" class="x-form" method="post" action="/UplFile" ENCTYPE="multipart/form-data">
+
+ <table>
+<tr  >
+<td  > <input type="file" name="file1"/> </td>
+<td >
+
+<input type="button"  onclick="uploadfile()"  value="上传"></input> 
+</td>
+</tr>
+<tr>
+<td id="imagedesc"> </td>
+<td id="fileinfo">
+
+</td>
+</tr>
+</table>
+</form>
+</div>
+

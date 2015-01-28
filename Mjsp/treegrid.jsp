@@ -313,10 +313,14 @@ collapsed:true
 </head>
 <body>
 ‪	
+<div id="layout" class="easyui-layout"data-options="fit:true">  
+<div region="center"   style="margin:0px;padding:0px;background:#eee;border:0;">
+<table id="tt"></table> 
 
-<table id="tt">
 
-		 </table>
+</div>
+</div>
+
 ‪ 
 
 </body>

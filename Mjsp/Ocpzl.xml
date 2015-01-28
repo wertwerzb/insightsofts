@@ -1,0 +1,198 @@
+<con>
+<Ocpzl lang="zh_CN">
+<title>
+产品资料
+</title>
+
+<innerparam>""</innerparam>
+   <joinform>b_cpzl where 1=1
+   </joinform>
+  	<indextitle>编码,名称,生效</indextitle>
+	  <indexfield>bcp_id,bcp_name,Bcp_Uflag</indexfield>
+	  <indexwidth>120,200,180</indexwidth>
+	    <fieldstyle>0:3</fieldstyle>
+<rowcount>11
+   </rowcount>
+   <conditionable>
+    0
+   </conditionable>
+<selectcolumn>Bcp_Id,Bcp_Name,Bcp_Type,Bcp_Class,bcp_RxPrice,Bcp_RjPrice,Bcp_Log,Bcp_BUnit,bcp_Desc,Bcp_Define1,Bcp_Define2,Bcp_Define3</selectcolumn>
+		<fieldtitle>id,bcpName,bcpType,bcpClass,RxPrice,bcpRjPrice,bcpLog,bcpBUnit,bcpDesc,bcpDefine1,bcpDefine2,bcpDefine3</fieldtitle>
+		<typestr>s,s,s,s,f,f,s,i,s,s,s,s</typestr>
+		
+		<columntitle>编码:001:validatebox-1,名称:000:validatebox#Pkhzl-1:请输入名称,规格:001:validatebox-1,类型:000:combotree-0,参考售价:001:validatebox-1,参考进价:000:validatebox-1,品牌:001:validatebox-1,单位:001:combobox-2,备注:131:textbox-3,自定义一:131:textbox-3,自定义二:131:textbox-3,自定义三:131:textbox-4</columntitle> 
+		<comparam>"width":"210px","valueField":"id","textField":"text","url":"/MainDisp?hre=Scpfl_getsteprecord_partview.SyncList"⊙"required":true ,"validType" :"length[1,15]" ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cunit_getcomresult_partview.ComboList"⊙"width":"480px"⊙"height":"300px","multiline" :true
+		</comparam>
+		<group>编码信息⊙其他信息
+		</group>
+		<sigleform>b_cpzl
+		</sigleform>
+		<idfield>bcp_id</idfield>
+	
+	
+		<extendfield></extendfield>
+		
+		 <firstcom>[{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{"flclass":"Tcpfl","flfield":"bcp_class","searchlabel":"产品名称","searchfield":"bcp_Name"} }, {"id": "south","name":"pictureload","href":"/Phtml/pictureload.html", "height":"300px","title" :"图片","option":{"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"}}]</firstcom>
+		 
+<useflag>"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"⊙ "flclass":"Tcpfl","flfield":"bcp_class","searchlabel":"产品名称","searchfield":"bcp_Name" </useflag>
+
+		
+<extendxml>
+<formattable>tabformdisp</formattable>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<flagfields>bcpName,bcpClass,RxPrice,bcpRjPrice,bcpBUnit</flagfields>
+<treecondition>Tcpfl-bcp_class</treecondition>
+<mtitle>产品资料</mtitle>
+<useflag>Bcp_Uflag</useflag>
+</extendxml>
+<modextfield></modextfield>
+	</Ocpzl>
+<Ocpzl lang="en">
+<title> Product information</title>
+   <joinform>b_cpzl where 1=1
+   </joinform>
+  	<indextitle>code,name,specification,typecode,useable
+  	</indextitle>
+	  <indexfield>bcp_id,bcp_name,bcp_type,bcp_class,Bcp_Uflag</indexfield>
+	  <indexwidth>120,200,180,200,180</indexwidth>
+	    <fieldstyle>0:5</fieldstyle>
+<rowcount>11
+   </rowcount>
+   <conditionable>
+    0
+   </conditionable>
+<selectcolumn>Bcp_Id,Bcp_Name,Bcp_Type,Bcp_Class,bcp_RxPrice,Bcp_RjPrice,Bcp_Log,Bcp_BUnit,bcp_Desc,Bcp_Define1,Bcp_Define2,Bcp_Define3</selectcolumn>
+		<fieldtitle>id,bcpName,bcpType,bcpClass,RxPrice,bcpRjPrice,bcpLog,bcpBUnit,bcpDesc,bcpDefine1,bcpDefine2,bcpDefine3</fieldtitle>
+		<typestr>s,s,s,s,f,f,s,i,s,s,s,s</typestr>
+		
+		<columntitle>Code:001:validatebox-1, name : 000:validatebox#Pkhzl-1: please enter a name, specifications: 001:validatebox-1,type: 000:combotree-0,reference BayPrice: 001:validatebox-1, referenceSaleprice: 000:validatebox-1,brand: 001:validatebox-1,unit:001: combobox-2,note:131:textbox-3,custom1:131:textbox-3,Custom2:131:textbox-3,custom3:131:textbox-4</columntitle> 
+		
+
+		
+		 <comparam>"width":"210px","valueField":"id","textField":"text","url":"/MainDisp?hre=Scpfl_getcondattr_partview.SyncList"⊙"required":true ,"validType" :"length[3,10]" ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cunit_getcomresult_partview.ComboList"⊙"width":"480px" ⊙"height":"300px","multiline" :true
+		</comparam>
+		<group>main information⊙ other information
+		</group>
+		<sigleform>b_cpzl
+		</sigleform>
+		<idfield>bcp_id</idfield>
+	
+		<extendfield></extendfield>
+		
+		 <firstcom> [{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{"flclass":"Tcpfl","flfield":"bcp_class","searchlabel":"产品名称","searchfield":"bcp_Name"} }, {"id": "south","name":"pictureload","href":"/Phtml/pictureload.html", "height":"300px","title" :"图片","option":{"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"}}] </firstcom>
+<innerparam>""</innerparam>
+<exterparam>"isload":"1","imagedesc":"Please select less than 40KB JPG format support ","filetype":"jpg"⊙ "flclass":"Tcpfl","flfield":"bcp_class"⊙"searchlabel": "Product name ","searchfield":"bcp_Name" </exterparam>
+
+		
+<extendxml>
+<formattable>tabformdisp</formattable>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<flagfields>bcpName,bcpClass,RxPrice,bcpRjPrice,bcpBUnit</flagfields>
+<treecondition>Tcpfl-bcp_class</treecondition>
+<mtitle> Product information </mtitle>
+<useflag>Bcp_Uflag</useflag>
+</extendxml>
+<modextfield></modextfield>
+	</Ocpzl>
+	 <Ocpzl lang="zh_TW">
+<title>
+产品资料
+</title>
+   <joinform>b_cpzl where 1=1
+   </joinform>
+  	<indextitle>编码,名称,规格,类型编码,生效</indextitle>
+	  <indexfield>bcp_id,bcp_name,bcp_type,bcp_class,Bcp_Uflag</indexfield>
+	  <indexwidth>120,200,180,200,180</indexwidth>
+	    <fieldstyle>0:5</fieldstyle>
+<rowcount>11
+   </rowcount>
+   <conditionable>
+    0
+   </conditionable>
+<selectcolumn>Bcp_Id,Bcp_Name,Bcp_Type,Bcp_Class,bcp_RxPrice,Bcp_RjPrice,Bcp_Log,Bcp_BUnit,bcp_Desc,Bcp_Define1,Bcp_Define2,Bcp_Define3</selectcolumn>
+		<fieldtitle>id,bcpName,bcpType,bcpClass,RxPrice,bcpRjPrice,bcpLog,bcpBUnit,bcpDesc,bcpDefine1,bcpDefine2,bcpDefine3</fieldtitle>
+		<typestr>s,s,s,s,f,f,s,i,s,s,s,s</typestr>
+		
+		<columntitle>编码:001:validatebox-1,名称:000:validatebox#Pkhzl-1:请输入名称,规格:001:validatebox-1,类型:000:combotree-0,参考售价:001:validatebox-1,参考进价:000:validatebox-1,品牌:001:validatebox-1,单位:001:combobox-2,备注:131:textbox-3,自定义一:131:textbox-3,自定义二:131:textbox-3,自定义三:131:textbox-4</columntitle> 
+		 <comparam>"width":"210px","valueField":"id","textField":"text","url":"/MainDisp?hre=Scpfl_getcondattr_partview.SyncList"⊙"required":true ,"validType" :"length[3,10]" ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cunit_getcomresult_partview.ComboList"⊙"width":"480px" ⊙"height":"300px","multiline" :true
+		</comparam>
+		<group>编码信息⊙其他信息
+		</group>
+		<sigleform>b_cpzl
+		</sigleform>
+		<idfield>bcp_id</idfield>
+		
+	
+		<extendfield></extendfield>
+		
+		 <firstcom> [{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{"flclass":"Tcpfl","flfield":"bcp_class","searchlabel":"产品名称","searchfield":"bcp_Name"} }, {"id": "south","name":"pictureload","href":"/Phtml/pictureload.html", "height":"300px","title" :"图片","option":{"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"}}] </firstcom>
+<innerparam>""</innerparam>
+<exterparam>"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"⊙ "flclass":"Tcpfl","flfield":"bcp_class"⊙"searchlabel":"产品名称","searchfield":"bcp_Name" </exterparam>
+
+		
+<extendxml>
+<formattable>tabformdisp</formattable>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<flagfields>bcpName,bcpClass,RxPrice,bcpRjPrice,bcpBUnit</flagfields>
+<treecondition>Tcpfl-bcp_class</treecondition>
+<mtitle>产品资料</mtitle>
+<useflag>Bcp_Uflag</useflag>
+</extendxml>
+<modextfield></modextfield>
+	</Ocpzl>
+<Ocpzl lang="jp">
+<title>
+製品の資料
+</title>
+   <joinform>b_cpzl where 1=1
+   </joinform>
+  	<indextitle>コーディング,名称,規格,タイプ コーディング,発効する</indextitle>
+	  <indexfield>bcp_id,bcp_name,bcp_type,bcp_class,Bcp_Uflag</indexfield>
+	  <indexwidth>120,200,180,200,180</indexwidth>
+	    <fieldstyle>0:5</fieldstyle>
+<rowcount>11
+   </rowcount>
+   <conditionable>
+    0
+   </conditionable>
+<selectcolumn>Bcp_Id,Bcp_Name,Bcp_Type,Bcp_Class,bcp_RxPrice,Bcp_RjPrice,Bcp_Log,Bcp_BUnit,bcp_Desc,Bcp_Define1,Bcp_Define2,Bcp_Define3</selectcolumn>
+		<fieldtitle>id,bcpName,bcpType,bcpClass,RxPrice,bcpRjPrice,bcpLog,bcpBUnit,bcpDesc,bcpDefine1,bcpDefine2,bcpDefine3</fieldtitle>
+		<typestr>s,s,s,s,f,f,s,i,s,s,s,s</typestr>
+		
+		<columntitle>コード:001:validatebox-1,名称:000:validatebox#Pkhzl-1:名称を入力してください,規格:001:validatebox-1,タイプ:000:combotree-0,参考価格:001:validatebox-1,参考进价:000:validatebox-1, ブランド:001:validatebox-1,単位:001:combobox-2,备注:131:textbox-3,自定义一:131:textbox-3,自定义二:131:textbox-3,自定义三:131:textbox-4</columntitle> 
+		 <comparam>"width":"210px","valueField":"id","textField":"text","url":"/MainDisp?hre=Scpfl_getcondattr_partview.SyncList"⊙"required":true ,"validType" :"length[3,10]" ⊙"valueField":"id" ,"textField" :"text","url":"/MainInit?hre=Cunit_getcomresult_partview.ComboList"⊙"width":"480px" ⊙"height":"300px","multiline" :true
+		</comparam>
+		<group>编码信息⊙其他信息
+		</group>
+		<sigleform>b_cpzl
+		</sigleform>
+		<idfield>bcp_id</idfield>
+		
+	
+		<extendfield></extendfield>
+		
+		 <firstcom> [{"id": "north","name":"comfilter","href":"/Phtml/comfilter.html",
+"height":"150px","title" :"过滤","option":{"flclass":"Tcpfl","flfield":"bcp_class","searchlabel":"产品名称","searchfield":"bcp_Name"} }, {"id": "south","name":"pictureload","href":"/Phtml/pictureload.html", "height":"300px","title" :"图片","option":{"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"}}] </firstcom>
+<innerparam>""</innerparam>
+<exterparam>"isload":"1","imagedesc":"请选择小于40kb的jpg格式支件","filetype":"jpg"⊙ "flclass":"Tcpfl","flfield":"bcp_class"⊙"searchlabel":"产品名称","searchfield":"bcp_Name" </exterparam>
+
+		
+<extendxml>
+<formattable>tabformdisp</formattable>
+<awidth>100</awidth>
+<bwidth>220</bwidth>
+<flagfields>bcpName,bcpClass,RxPrice,bcpRjPrice,bcpBUnit</flagfields>
+<treecondition>Tcpfl-bcp_class</treecondition>
+<mtitle>产品资料</mtitle>
+<useflag>Bcp_Uflag</useflag>
+</extendxml>
+<modextfield></modextfield>
+	</Ocpzl>
+
+	</con>

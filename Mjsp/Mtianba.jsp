@@ -13,7 +13,8 @@
   var editRow;
 	var xdatagrid;
 	var otherinfo;
-	var secondextjson;
+	var extjson;
+	var innerjson;
 	  var hrefstr= sy.getUrlParam("hrefstr");
 	 
  var detailvi;
@@ -27,21 +28,17 @@
   {
  hre: hrefstr +"_getinithtml_mainview.TianbaList" 
  },function( datastr ) { 
- alert( datastr );
+ 
  var jsonstr1;
- if( datastr.indexOf("⊙")>0 )
- {
- jsonstr1= datastr.split("⊙")[0];
- secondextjson=eval("("+ datastr.split("⊙")[1] +")" );
 
-
- showsecondextend();
-  }
- else jsonstr1= datastr;
- 
 try{
- var initstr =eval("("+ jsonstr1 +")");
+
+ var initstr =eval("("+ datastr +")");
  
+ var ggg=eval("("+ datastr +")");
+ extjson = initstr.firstcom;
+ innerjson =initstr.innerparam;
+ if( extjson.length>0)showextend();
    $("#idstrs").val(idstrs);
    
  var Xtoolba = initstr.button;
@@ -70,6 +67,8 @@ otherinfo= initstr.otherinfo ;
  
   var formstr=$("#myForm");
  divformformat( ggg, formstr,awidth,bwidth );
+
+
 
  }
   catch(err) { 
@@ -107,6 +106,7 @@ otherinfo= initstr.otherinfo ;
 				detailFormatter:hjj
 		
  });  
+ if( innerjson.length>0) showinnerext();
      $.parser.parse();
 
   }); 
@@ -178,10 +178,10 @@ $("#myForm").form("submit",{
 			},
 			success : function(result) { 
 			
-     	/*	$.messager.show({
+     	$.messager.show({
 								msg : result ,
 								title : '成功'
-							}); 	 */
+							}); 	 
 		 $('#tty').datagrid('reload');
 		 	}
 			});
@@ -191,19 +191,27 @@ $("#myForm").form("submit",{
  
  }
  
-showsecondextend=function ( ) {
+showextend=function ( ) {
 
-for( var i =0; i <secondextjson.length; i ++ )
+for( var i =0; i < extjson.length; i ++ )
+
+
 {
-$('#'+ secondextjson[i].id ).panel({
-href: secondextjson[i].href,
-height:'300px'
+$('#layout').layout('add',{
+
+region: extjson[i].id ,
+id: extjson[i].id ,
+width: 580,
+height: extjson[i].height ,
+title: extjson[i].title ,
+
+
+href: extjson[i].href,
+split: true,
+collapsed:true
 
 });
 
-
-
-//$('#'+ secondextjson[i].id ).panel( 'refresh');
 
 
 
@@ -211,8 +219,28 @@ height:'300px'
  
 }
 
+showinnerext=function ( ) {
+
+for( var i =0; i <innerjson.length; i ++ )
+{
+$('#'+ innerjson[i].id ).panel({
+href: innerjson[i].href,
+});
+
+$('#'+ innerjson[i].id ).panel( 'refresh');
+
+ 
+
+}
+}
+
+
 </script>
-<body>
+
+<div id="layout" class="easyui-layout"data-options="fit:true ">  
+
+
+‪<div id="center" region="center"   style="margin:0px;padding:0px;">
 <table id="tty"></table> 
 <table id="tthead"></table>
 <form id="myForm" method="POST">
@@ -221,12 +249,8 @@ height:'300px'
 <input id="idstrs" type="hidden" name="idstrs"/>
 
 </form>
-<div id="helpdis" >
 	</div>
 	
-<div id="loadxmldiv">
 	</div>
 
-</body>
-</html>
 		
