@@ -9,13 +9,13 @@ var helpcom ;
 $(function(){
 
 
-for( var i =0; i < secondextjson.length; i ++ )
+for( var i =0; i < extjson.length; i ++ )
 {
-if(secondextjson[i].id=="helpdis")
+if(extjson[i].name=="helpdis")
 { 
-paramstr = secondextjson[i].option.paramstr ;
-helptype =secondextjson[i].option.helptype ;
-helpcom=secondextjson[i].option.helpcom ;
+paramstr = extjson[i].option.paramstr ;
+helptype =extjson[i].option.helptype ;
+helpcom=extjson[i].option.helpcom ;
 break;
 }
 }

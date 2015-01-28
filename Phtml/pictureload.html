@@ -7,23 +7,19 @@ var picfiletype;
 
 $(function(){
 
-for( var i =0; i < secondextjson.length; i ++ )
+for( var i =0; i < extjson.length; i ++ )
 {
-if(secondextjson[i].id=="imagedis")
+if(extjson[i].name=="pictureload")
 { 
-picisload = secondextjson[i].option.isload ;
-imagedesc=secondextjson[i].option.imagedesc ;
-picfiletype =secondextjson[i].option.filetype ;
+picisload = extjson[i].option.isload ;
+imagedesc=extjson[i].option.imagedesc ;
+picfiletype =extjson[i].option.filetype ;
 
 
 break;
 }
 }
-
-
-
-
- $("#fileinfo").html(" <input type='hidden' name='filepath' value='"+hrefstr+"_"+idstrs+"." + picfiletype +"'/> <input type='hidden' name='isload' value='"+ picisload+"' /> ");
+$("#fileinfo").html(" <input type='hidden' name='filepath' value='"+hrefstr+"_"+idstrs+"." + picfiletype +"'/> <input type='hidden' name='isload' value='"+ picisload+"' /> ");
  
 
  $("#imagedesc").html( imagedesc );

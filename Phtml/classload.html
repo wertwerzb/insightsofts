@@ -3,15 +3,15 @@ var modcom ;
  var xmldesc;
  var isload;
 $(function(){
-for( var i =0; i < secondextjson.length; i ++ )
+for( var i =0; i < extjson.length; i ++ )
 {
 
 
-if(secondextjson[i].id=="loadxmldiv")
+if(extjson[i].name=="loadxmldiv")
 { 
-isload = secondextjson[i].option.isload ;
-xmldesc=secondextjson[i].option.xmldesc ;
-modcom =secondextjson[i].option.modcom ;
+isload = extjson[i].option.isload ;
+xmldesc=extjson[i].option.xmldesc ;
+modcom =extjson[i].option.modcom ;
 
 break;
 }

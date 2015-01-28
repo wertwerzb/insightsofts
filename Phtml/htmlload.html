@@ -3,15 +3,15 @@ var modcom ;
  var htmldesc;
  var htmlload;
 $(function(){
-for( var i =0; i < secondextjson.length; i ++ )
+for( var i =0; i < extjson.length; i ++ )
 {
 
 
-if(secondextjson[i].id=="loadhtmldiv")
+if(extjson[i].name=="loadhtmldiv")
 { 
-htmlload = secondextjson[i].option.isload ;
-htmldesc=secondextjson[i].option.htmldesc ;
-modcom =secondextjson[i].option.modcom ;
+htmlload = extjson[i].option.isload ;
+htmldesc=extjson[i].option.htmldesc ;
+modcom =extjson[i].option.modcom ;
 
 break;
 }

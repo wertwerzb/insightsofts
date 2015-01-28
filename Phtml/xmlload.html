@@ -4,17 +4,17 @@ var modcom ;
  var isload;
  var idmod;
 $(function(){
-alert()
-for( var i =0; i < secondextjson.length; i ++ )
+
+for( var i =0; i < extjson.length; i ++ )
 {
 
 
-if(secondextjson[i].id=="loadxmldiv")
+if(extjson[i].name=="xmlload")
 { 
-isload = secondextjson[i].option.isload ;
-xmldesc=secondextjson[i].option.xmldesc ;
-modcom =secondextjson[i].option.modcom ;
-idmod =secondextjson[i].option.idmod;
+isload = extjson[i].option.isload ;
+xmldesc=extjson[i].option.xmldesc ;
+modcom =extjson[i].option.modcom ;
+idmod =extjson[i].option.idmod;
 break;
 }
 
