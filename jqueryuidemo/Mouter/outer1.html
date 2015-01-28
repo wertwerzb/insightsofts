@@ -35,21 +35,12 @@ var usercode='guest';
 $(function(){
   $.get("2init"
   ,function(datastr) {
-var jsonstr1;
- if( datastr.indexOf("⊙")>0 )
- {
- jsonstr1= datastr.split("⊙")[0];
 
-showextend( datastr.split("⊙")[1] );
- }
- else jsonstr1= datastr;
 try{
- var ggg=eval("("+ jsonstr1 +")");
+ var ggg=eval("("+ datastr +")");
   idf= ggg.idfield;
   var desc= ggg.formatstr ;
   
-  var ffff= ggg.ffff ;
- if( ffff=="" ) alert("fggg");
   var exterstr = ggg.exterstr ;
   var awidth= exterstr.awidth; 
   var bwidth= exterstr.bwidth;
@@ -303,8 +294,7 @@ collapsed:true
 
 
 
-}
- 
+} 
 }
 
 
@@ -314,7 +304,6 @@ collapsed:true
 </head>
 <body>
 <div id="layout" class="easyui-layout"data-options="fit:true">  
-
 
 ‪<div id="center" region="center"   style="margin:0px;padding:0px;">
 <table id="tt"></table> 
