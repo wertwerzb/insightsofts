@@ -1,4 +1,4 @@
-//增加roleCondstr,pagesizestr
+//增加langCondstr,pagesizestr
 package otheractions;
 import android.os.Environment; 
 import java.io.File;
@@ -19,13 +19,13 @@ public class Staticcom
 	private  String paramstr ;
 
 	private  String usercode;
-	 	private  String rolestr ;
+	 	private  String langstr ;
 	 	private  String filepath ;
 	 	
 	private String[] param_array = null;
-	public Staticcom(String role, String userstr, String hreft,String flpath)
+	public Staticcom(String lang, String userstr, String hreft,String flpath)
 	{
-		rolestr = role;
+		langstr = lang;
 		usercode=userstr;
 		 filepath= flpath;
 		setvar(hreft);
@@ -139,7 +139,7 @@ public void actionrequsts(HttpServletRequest request) throws Exception
 	private void setvar(String hreft)
 	{
 
-		String 	  realPath= innpath.getxmlpath(rolestr, usercode, "/"+ filepath+ "/" + hreft + ".xml");
+String 	  realPath= innpath.getPath("xml")+ filepath+ "/" + hreft + ".xml";
 		try
 		{
 			SAXReader reader = new SAXReader();
@@ -149,7 +149,7 @@ public void actionrequsts(HttpServletRequest request) throws Exception
 			if (file.isFile())
 			{
 				Document document = reader.read(file);
-				Element database = (Element)document.selectSingleNode("//" + hreft);
+				Element database = (Element)document.selectSingleNode("//" + hreft + "[@lang='" + langstr + "']");
 
 				 Element extendxml = database.element("paramstr ");
 				 for(Iterator ipe = extendxml.elementIterator(); ipe.hasNext();){

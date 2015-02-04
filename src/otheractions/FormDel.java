@@ -25,7 +25,7 @@ public class FormDel
 { 
 	private 	String  sigleform;
 	private 	String  idfield ;
-	private 	String  rolestr ;
+	private 	String  langstr ;
 	private 	String  typestr ;
 
 	private 	String path;
@@ -33,21 +33,26 @@ private 	String delextfield;
 
 	private 	String usercode;
 private 	String filepath;
-	public FormDel(String role, String czy, String hreft,String fileph )
+	public FormDel(String lang, String czy, String hreft,String fileph )
 	{
-		rolestr = role;
+		langstr = lang;
 
 		usercode = czy;
 		 filepath= fileph;
 		setvar(hreft);
 
 	} 
-
-	public void Del (HttpServletRequest request) throws Exception 
+public String getdelsql (HttpServletRequest request) throws Exception 
 	{
 		 String id = request.getParameter("id");
 		String Str="Delete From " + sigleform + " where " + idfield + "='" + id + "'" ;
-		//and bcp_Uflag=0";
+		return Str;
+		 
+	}	
+	public void Del (HttpServletRequest request) throws Exception 
+	{
+
+	String Str=	 getdelsql( request );
 		  Connection conn = DruidConnect.openConnection(); 
   Statement dbc = conn.createStatement(); 
 		dbc.executeUpdate(Str);
@@ -56,15 +61,15 @@ conn.close();
 	}	
 	 private String replcerol(String sql )
 	{
-	String prole;
+	String plang;
 	String resultstr= sql ;
-	if( rolestr.length()>1 )
-	 	prole= rolestr.substring( 0,rolestr.length()-2 ) ; 
+	if( langstr.length()>1 )
+	 	plang= langstr.substring( 0,langstr.length()-2 ) ; 
 	else
-	 prole="";
+	 plang="";
 
 if( sql.indexOf("{R}")>0)
-resultstr= sql.replace("{R}", rolestr );
+resultstr= sql.replace("{R}", langstr );
 
  if( sql.indexOf("{U}")>0)
 resultstr= resultstr.replace("{U}", usercode);
@@ -75,8 +80,7 @@ resultstr= resultstr.replace("{U}", usercode);
 	private void setvar(String hreft)
 	{
 
-
-		String 	  realPath= innpath.getxmlpath(rolestr, usercode, "/"+ filepath+ "/" + hreft + ".xml");
+String 	  realPath= innpath.getPath("xml")+ filepath+ "/" + hreft + ".xml";
 		try
 		{
 			SAXReader reader = new SAXReader();
@@ -86,7 +90,7 @@ resultstr= resultstr.replace("{U}", usercode);
 			if (file.isFile())
 			{
 				Document document = reader.read(file);
-				Element database = (Element)document.selectSingleNode("//" + hreft);
+				Element database = (Element)document.selectSingleNode("//" + hreft + "[@lang='" + langstr + "']");
 
 				sigleform = database.element("sigleform").getText().trim() ;
 				idfield = database.element("idfield").getText().trim() ;

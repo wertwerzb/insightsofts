@@ -20,19 +20,19 @@ public class DbOperate
 {
 	private String updatefield;
 	private String updatesql;
-	private String rolestr;
+	private String langstr;
 	 private String usercode;
 	private String path;
 
 	private String replacefield;
 	private String sqltext;
 	private String faultmessage; 
-private String langstr; 
+private String filepath; 
 	public DbOperate(String czy, String userstr, String hreft,String langName)
 	{
-		rolestr = czy ;
+		langstr = czy ;
 		usercode=userstr;
-		langstr= langName;
+		filepath= langName;
 		setvar(hreft);
 	} 
 	public String getvar()
@@ -87,8 +87,8 @@ private String langstr;
 
 
 	private void setvar(String hreft)
-	{	
- String 	  realPath= innpath.getxmlpath( rolestr,usercode,"/Ouse/"+ hreft+".xml" );
+	{	 
+	String 	  realPath= innpath.getPath("xml")+ filepath+ "/" + hreft + ".xml";
 		try
 		{
 			SAXReader reader = new SAXReader();
@@ -98,7 +98,7 @@ private String langstr;
 			if (file.isFile())
 			{
 				Document document = reader.read(file);
-				Element database = (Element)document.selectSingleNode("//" + hreft);
+				Element database = (Element)document.selectSingleNode("//" + hreft + "[@lang='" + filepath + "']");
 
 				updatesql = database.element("updatesql").getText().trim() ; 
 

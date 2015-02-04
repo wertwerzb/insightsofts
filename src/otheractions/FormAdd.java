@@ -27,7 +27,7 @@ public class FormAdd
 	private 	String  fieldtitle; 
 	private 	String  sigleform;
 	private 	String  idfield ;
-	private 	String  rolestr ;
+	private 	String  langstr ;
 	private 	String  typestr ;
 
 	private 	String path;
@@ -36,9 +36,9 @@ private 	String modextfield;
 
 	private 	String usercode;
 private 	String filepath;
-	public FormAdd(String role, String czy, String hreft,String fileph )
+	public FormAdd(String lang, String czy, String hreft,String fileph )
 	{
-		rolestr = role;
+		langstr = lang;
 
 		usercode = czy;
 		 filepath= fileph;
@@ -123,8 +123,8 @@ private 	String filepath;
 				{
 					if (("user").equals(extstr[i].split(":")[1]))
 					 hm.put(extstr[i].split(":")[0], "'"+ usercode+ "'" );
-	 			else if (("role").equals(extstr[i].split(":")[1]))
-				 hm.put( extstr[i].split(":")[0], "'"+ rolestr+ "'" );
+	 			else if (("lang").equals(extstr[i].split(":")[1]))
+				 hm.put( extstr[i].split(":")[0], "'"+ langstr+ "'" );
 	 		 		else if (("getid").equals(extstr[i].split(":")[1])) 
 	 		 	 hm.put( extstr[i].split(":")[0], "'"+ Idcode.getidcode(idfield, extstr[i].split(":")[2], sigleform, extstr[i].split(":")[3])+ "'" );
 	 		 	else if (("ip").equals(extstr[i].split(":")[1])) 
@@ -185,9 +185,7 @@ conn.close();
 
 	private void setvar(String hreft)
 	{
-
-
-		String 	  realPath= innpath.getxmlpath(rolestr, usercode, "/"+filepath+"/" + hreft + ".xml");
+String 	  realPath= innpath.getPath("xml")+ filepath+ "/" + hreft + ".xml";
 		try
 		{
 			SAXReader reader = new SAXReader();
@@ -197,7 +195,7 @@ conn.close();
 			if (file.isFile())
 			{
 				Document document = reader.read(file);
-				Element database = (Element)document.selectSingleNode("//" + hreft);
+				Element database = (Element)document.selectSingleNode("//" + hreft + "[@lang='" + langstr + "']");
 				selectcolumn = database.element("selectcolumn").getText().replaceAll("\\s*", "") ;
 				fieldtitle = database.element("fieldtitle").getText().replaceAll("\\s*", "") ;
 				sigleform = database.element("sigleform").getText().trim() ;

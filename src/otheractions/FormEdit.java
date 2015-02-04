@@ -27,18 +27,17 @@ public class FormEdit
 	private 	String  fieldtitle; 
 	private 	String  sigleform;
 	private 	String  idfield ;
-	private 	String  rolestr ;
+	private 	String  langstr ;
 	private 	String  typestr ;
 
 	private 	String path;
-	private 	String extendfield;
 private 	String modextfield;
 
 	private 	String usercode;
 private 	String filepath;
-	public FormEdit(String role, String czy, String hreft,String fileph )
+	public FormEdit(String lang, String czy, String hreft,String fileph )
 	{
-		rolestr = role;
+		langstr = lang;
 
 		usercode = czy;
 		 filepath= fileph;
@@ -72,8 +71,7 @@ private 	String filepath;
 				{
 					if (("user").equals(modextstr[i].split(":")[1]))
 					 hm.put( modextstr[i].split(":")[0], "'"+ usercode+ "'" );
-	 			else if (("role").equals(modextstr[i].split(":")[1]))
-				 hm.put( modextstr[i].split(":")[0], "'"+ rolestr+ "'" );
+
 	 		 		else if (("getid").equals(modextstr[i].split(":")[1])) 
 	 		 	 hm.put( modextstr[i].split(":")[0], "'"+ Idcode.getidcode(idfield, modextstr[i].split(":")[2], sigleform, modextstr[i].split(":")[3]) + "'" );
 	 	 		else if (("ip").equals(modextstr[i].split(":")[1])) 
@@ -147,13 +145,6 @@ conn.close();
 	{
 	String prole;
 	String resultstr= sql ;
-	if( rolestr.length()>1 )
-	 	prole= rolestr.substring( 0,rolestr.length()-2 ) ; 
-	else
-	 prole="";
-
-if( sql.indexOf("{R}")>0)
-resultstr= sql.replace("{R}", rolestr );
 
  if( sql.indexOf("{U}")>0)
 resultstr= resultstr.replace("{U}", usercode);
@@ -165,7 +156,7 @@ resultstr= resultstr.replace("{U}", usercode);
 	{
 
 
-		String 	  realPath= innpath.getxmlpath(rolestr, usercode, "/"+ filepath+ "/" + hreft + ".xml");
+		String 	  realPath= innpath.getPath("xml")+ filepath+ "/" + hreft + ".xml";
 		try
 		{
 			SAXReader reader = new SAXReader();
@@ -175,13 +166,12 @@ resultstr= resultstr.replace("{U}", usercode);
 			if (file.isFile())
 			{
 				Document document = reader.read(file);
-				Element database = (Element)document.selectSingleNode("//" + hreft);
+				Element database = (Element)document.selectSingleNode("//" + hreft + "[@lang='" + langstr + "']");
 				selectcolumn = database.element("selectcolumn").getText().replaceAll("\\s*", "") ;
 				fieldtitle = database.element("fieldtitle").getText().replaceAll("\\s*", "") ;
 				sigleform = database.element("sigleform").getText().trim() ;
 				idfield = database.element("idfield").getText().trim() ;
 				typestr = database.element("typestr").getText().trim() ;
-				extendfield = database.element("extendfield").getText().trim() ;
       modextfield = database.element("modextfield").getText().trim() ;
 
 
