@@ -137,7 +137,7 @@ result += inresult+"⊙";
 		{
 			//关闭连接
 		}
-		 ExcelOpt.writeExcel( result , title, indextitle , "d:\\site\\5802_SSS_144313\\ROOT\\"+hrefstr +"index.xls" );
+		 ExcelOpt.gridwriteExcel ( result , title, indextitle , innpath.getPath("xls") +hrefstr +"index.xls" );
 		return "写记录成功";
 
 
@@ -223,8 +223,8 @@ public String getidsql(String Id)
 					m=1;
 					
 				}
-				 					resultstr +="\""+ title+"\":"+m+":"+j+"\","+ rs.getString(i) + "\":"+(m+1)+":"+j+",";
-
+				 					resultstr +="\""+ title+"\":"+m+":"+j+",\""+ rs.getString(i) + "\":"+(m+1)+":"+j+",";
+m=m+2;
 				}
 			}
 			dbc.close()	;
@@ -244,8 +244,9 @@ public String getidsql(String Id)
 		{
 			//关闭连接
 		}
-		return resultstr.substring(0, resultstr.length() - 1) ;
-		
+		resultstr.substring(0, resultstr.length() - 1) ;
+		 ExcelOpt.formwriteExcel( resultstr, title, innpath.getPath("xls") +hrefstr +"form.xls" );
+		return "写记录成功";
 
 	}
 
