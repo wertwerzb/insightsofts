@@ -68,8 +68,7 @@ private String  title;
  private String usercode;
 
  	private String firstcom;
-	private String secondcom;
- 	private String exterparam;
+ 	private String useflag;
  	
  
  	private String hrefstr;
@@ -102,7 +101,7 @@ String result=initbutton.getbuttonstr("head",rolestr,hrefstr,langstr);
 	 public String getfirstinit()
 {   
 String result= "{\"firstbutton\":"+getfirstbutton(rolestr)+",\"columns\":"+ getfirsttitle() +",\"idfield\":\""+ idfield +"\",\"rowcount\":"+ rowcount+",\"exterstr\":" +
-"{"+ exterstr.substring(0, exterstr.length() - 1) + "}}" + extendjson.getextendjson( firstcom, exterparam ) ;
+"{"+ exterstr.substring(0, exterstr.length() - 1) + "}}" + firstcom ;
 return result ;
 
 
@@ -291,7 +290,7 @@ return getMmlook( contentstr )
 	 	public String getsecondinit()
 	{
 		String result="{\"mxlistbutton\":"+getbutton("mxlist", rolestr) + ",\"xcolumns\":" + getXtitlehtml() + ",\"mformatstr\":" + getMfirstindex() + ",\"mxheadbutton\":"+ getbutton("mxhead", rolestr) +",\"otherinfo\":"+ getother() +",\"exterstr\":" +
-"{"+ exterstr.substring(0, exterstr.length() - 1) + "}}" + extendjson.getextendjson( secondcom, exterparam ) ; 
+"{"+ exterstr.substring(0, exterstr.length() - 1) + "}}" ; 
 
 		return result;
 
@@ -366,8 +365,7 @@ String Mpath=Environment.getExternalStorageDirectory().getPath() ;
 		
 				Xrowcount = database.element("Xrowcount").getText().trim() ;
 				 firstcom = database.element("firstcom").getText().trim() ;
-		 secondcom = database.element("secondcom").getText().trim() ; 
-		 exterparam = database.element("exterparam").getText().trim() ;
+		 useflag = database.element("useflag").getText().trim() ;
 	}
 	 else
 		  {
