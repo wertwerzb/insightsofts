@@ -43,17 +43,31 @@ public class Useflag
 		return sqlstr ;
 	}
 
-	public void UseFlag
+	public String UseFlag
 	(HttpServletRequest request) throws Exception
 	{
-
+	
 		String str = xmltosql(  request ) ;
+try{
   Connection conn = DruidConnect.openConnection(); 
   Statement dbc = conn.createStatement(); 
 		dbc.executeUpdate(str);
 		
 		dbc.close();
 		 conn.close();
+		 }
+		 catch (SQLException e)
+		{
+			System.out.print(str);
+		}
+		 catch (Exception e)
+		{
+			 	e.printStackTrace();
+		}
+		
+
+		return "操作成功";
+
 	}
 
 

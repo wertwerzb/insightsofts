@@ -44,18 +44,31 @@ public class Modientry
 	} 
 	
 	
-		 	public void mxEdit (HttpServletRequest request) throws Exception
+		 	public String mxEdit (HttpServletRequest request) 
 	{
-	
+	try{
 		 String str= getXaddsql( request ) ;
 	 	  Connection conn = DruidConnect.openConnection(); 
   Statement dbc = conn.createStatement(); 
 		 dbc.executeUpdate( str);
 		 dbc.close();
 		 conn.close();
+		 }
+		 catch (SQLException e)
+		{
+			
+		}
+		 catch (Exception e)
+		{
+			
+		}
+		
+
+		return "操作成功";
+
 	}
 
-	public  String getXaddsql( HttpServletRequest request ) throws Exception 
+	public  String getXaddsql( HttpServletRequest request ) 
 	 	{
 	 	String selstr ="";
  		String valuestring ="";
@@ -166,18 +179,33 @@ return sql+ idstr ;
 	
 	}
 	
-	 public  void mxAdd(HttpServletRequest request) throws Exception//无主键,主键随机数,主键自增
+	 public  String mxAdd(HttpServletRequest request) throws Exception//无主键,主键随机数,主键自增
 	{
+	try{
 		 String str= getXaddsql( request ) ;
 	  Connection conn = DruidConnect.openConnection(); 
   Statement dbc = conn.createStatement(); 
 		dbc.executeUpdate(str );
 		dbc.close();
 		 conn.close();
+		 
+		 }
+		 catch (SQLException e)
+		{
+			
+		}
+		 catch (Exception e)
+		{
+			
+		}
+		
+
+		return "操作成功";
+
 	}
 
-	 public void mxDel( String id,String jionstr) throws Exception {
-		
+	 public String mxDel( String id,String jionstr) throws Exception {
+		try{
 		String Str="Delete From "+ Xsigleform+" where "+ Xidfield +"='"+id+"' and "+Xjionfield +"='"+ jionstr +"'";
 		//and bcp_Uflag=0";
 		// 	System.out.print( Str );
@@ -186,13 +214,24 @@ return sql+ idstr ;
 		dbc.executeUpdate(Str);
 		dbc.close();
 conn.close();
+}
+catch (SQLException e)
+		{
+			
+		}
+		 catch (Exception e)
+		{
+			
+		}
+		
+
+		return "操作成功";
+
 	}	
 	private void setvar(String hreft)
 	{ 
 	String 	  realPath= innpath.getPath("xml")+ filepath+ "/" + hreft + ".xml";
-// 		path = this.getClass().getClassLoader().getResource("").getPath();
-		 	
-		try
+	try
 		{
 			SAXReader reader = new SAXReader();
 			OutputFormat format = OutputFormat.createPrettyPrint();

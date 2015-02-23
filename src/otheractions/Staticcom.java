@@ -38,25 +38,7 @@ public String actionrequststr(HttpServletRequest request) throws Exception
 	String result="";
 	 	 param_array= paramstr.split(":");
 int paramnum=param_array.length;
-/*	 for(int i=0;i< param_array.length;i++ )
-	 {
-	 if( param_array[i].substring(0,1).equals("@") )
-	 {
 
-	 param_array[i]= java.net.URLDecoder.decode(request.getParameter(  param_array[i].substring(1, param_array[i].length() )));
-	 
-	 
-	 }
-	 if( param_array[i].substring(0,1).equals("#") )
-	 {
-
-	 param_array[i]= (String) session.getAttribute (  param_array[i].substring(1, param_array[i].length() ));
-	 
-	 
-	 }
-
-	 }
-	 */
 	try
 		{
 	Class clazz = Class.forName(classname); Method method;

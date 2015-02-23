@@ -20,27 +20,20 @@ public class DbOperate
 {
 	private String updatefield;
 	private String updatesql;
-	private String langstr;
-	 private String usercode;
-	private String path;
-
 	private String replacefield;
 	private String sqltext;
 	private String faultmessage; 
+
+	private String langstr;
+	 private String usercode; 	
 private String filepath; 
-	public DbOperate(String czy, String userstr, String hreft,String langName)
+	public DbOperate(String lang, String userstr, String hreft,String fileph)
 	{
-		langstr = czy ;
+		langstr = lang ;
 		usercode=userstr;
-		filepath= langName;
+		filepath= fileph ;
 		setvar(hreft);
 	} 
-	public String getvar()
-	{
-		String sqlstr= "- updatefield " + updatefield;
-
-		return sqlstr ;
-	}
 
 	public void UseFlag
 	(HttpServletRequest request) throws Exception
@@ -85,7 +78,16 @@ private String filepath;
 		return(str);
 	}
 
-
+ private  String getvar () 
+	{
+	
+	return 
+" updatefield "+ updatefield +
+	 " updatesql "+ updatesql +
+	 " replacefield " + replacefield +
+	" sqltext "+ sqltext +
+	" faultmessage "	 + faultmessage ;
+	}
 	private void setvar(String hreft)
 	{	 
 	String 	  realPath= innpath.getPath("xml")+ filepath+ "/" + hreft + ".xml";
@@ -98,7 +100,7 @@ private String filepath;
 			if (file.isFile())
 			{
 				Document document = reader.read(file);
-				Element database = (Element)document.selectSingleNode("//" + hreft + "[@lang='" + filepath + "']");
+				Element database = (Element)document.selectSingleNode("//" + hreft + "[@lang='" + langstr+ "']");
 
 				updatesql = database.element("updatesql").getText().trim() ; 
 

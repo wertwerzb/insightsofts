@@ -34,16 +34,17 @@ private String  title;
 	private 	String  columntitle; 
 	private 	String  sigleform;
 	private 	String  idfield ;
-	private 	String  langstr ;
 	private 	String  typestr ;
-	private 	String path;
+	
 	private String conditionable;
-	
+private 	String excelextend;
 	private String incondition;
-	private 	String usercode;
 	
+	private 	String usercode;
+private 	String  langstr ;
 private 	String hrefstr;
 private 	String filepath;
+
 	public excelexport(String role, String czy, String hreft,String fileph )
 	{
 		langstr = role;
@@ -212,7 +213,7 @@ public String getidsql(String Id)
 			{
    int j=1;
 				int m=1;
-				for (int i=1;i < field.length;i++)
+				for (int i=1;i < field.length+1;i++)
 				{
 				String title=field[i].split(":")[0];
 				
@@ -223,7 +224,7 @@ public String getidsql(String Id)
 					m=1;
 					
 				}
-				 					resultstr +="\""+ title+"\":"+m+":"+j+",\""+ rs.getString(i) + "\":"+(m+1)+":"+j+",";
+				 					resultstr +=""+ title+":"+m+":"+j+","+ rs.getString(i) + ":"+(m+1)+":"+j+",";
 m=m+2;
 				}
 			}
@@ -249,7 +250,60 @@ m=m+2;
 		return "写记录成功";
 
 	}
+	public String getreport(HttpServletRequest request) throws Exception 
+	{
+	 	String resultstr = "";
+		String Id= request.getParameter("idstr");
+		String fieldstr=excelextend.split("⊙")[0];
+		 String positionstr=excelextend.split("⊙")[1];
+	String sql = "select " + fieldstr + " from " + sigleform + " where " + idfield + "='" + Id + "'" ;
+		 try
+		{
+  Connection conn = DruidConnect.openConnection(); 
+  Statement dbc = conn.createStatement(); 
+			ResultSet rs = dbc.executeQuery(sql);
+			String[] field= fieldstr.split(",");
+			String[] position= positionstr.split(",");
+			if (rs.next())
+			{
+			 int j=0;
+  			for (int i=1;i < field.length+1;i++,j++)
+				{
 
+				 					resultstr += rs.getString(i) +":" +position[j]+",";
+				}
+			}
+			dbc.close()	;
+		}
+		 
+		 catch (SQLException sqle)
+		{
+			System.out.println( sqle.toString() );
+			
+		}
+		catch (Exception e)
+		{ 
+			System.out.println(e.toString());
+			
+		}
+		finally
+		{
+			//关闭连接
+		}
+		resultstr.substring(0, resultstr.length() - 1) ;
+		ExcelOpt.formwriteExcel( resultstr,title+"_"+Id, innpath.getPath("xls") +hrefstr+"_report.xls" );
+		return "修改记录成功" ;
+
+	}
+	public String getimagereport(HttpServletRequest request) throws Exception 
+	{
+		String Id= request.getParameter("idstr");
+
+		 String positionstr=excelextend.split("⊙")[2];
+		ExcelOpt.imagewriteExcel(positionstr, title+"_"+Id, innpath.getPath("xls") +hrefstr+"_report.xls" );
+		return "修改记录成功" ;
+
+	}
 
 	private void setvar(String hreft)
 	{
@@ -277,6 +331,8 @@ String 	  realPath= innpath.getPath("xml")+ filepath+ "/" + hreft + ".xml";
 				title = database.element("title").getText().replaceAll("\\s*", "") ;
 
 				indextitle = database.element("indextitle").getText().replaceAll("\\s*", "") ;
+				 				excelextend = database.element("excelextend").getText().replaceAll("\\s*", "") ;
+				
 				indexfield = database.element("indexfield").getText().replaceAll("\\s*", "") ;
 
 				selectcolumn = database.element("selectcolumn").getText().replaceAll("\\s*", "") ;

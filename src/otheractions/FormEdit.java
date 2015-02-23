@@ -27,12 +27,10 @@ public class FormEdit
 	private 	String  fieldtitle; 
 	private 	String  sigleform;
 	private 	String  idfield ;
-	private 	String  langstr ;
 	private 	String  typestr ;
+ private 	String modextfield;
 
-	private 	String path;
-private 	String modextfield;
-
+	private 	String  langstr ;
 	private 	String usercode;
 private 	String filepath;
 	public FormEdit(String lang, String czy, String hreft,String fileph )
@@ -45,7 +43,7 @@ private 	String filepath;
 
 	} 
 	
-	public String getmodsql(HttpServletRequest request) throws Exception
+	public String getmodsql(HttpServletRequest request) 
 	{
 		String sql = "Update " + sigleform + " set " ; 
 		HashMap<String,String> hm=new HashMap<String,String>(); 
@@ -100,28 +98,44 @@ return replcerol( sql+ idstr );
 	}
 	
 	
+	 private  String getvar () 
+	{
 	
-	public void Edit(HttpServletRequest request) throws Exception
+	return 
+" selectcolumn "+selectcolumn+
+	 " fieldtitle "+fieldtitle+
+	 " sigleform "+sigleform+
+	 " idfield " +idfield +
+	" typestr "+typestr +
+	" modextfield "	 +modextfield ;
+	}
+	
+	public String Edit(HttpServletRequest request) 
 {
-//String str= getmodsql(request) ;
+
 String str= getmodsql( request );
+	try
+		{	
 		  Connection conn = DruidConnect.openConnection(); 
   Statement dbc = conn.createStatement(); 
 		dbc.executeUpdate(str);
 		dbc.close();
 		 conn.close();
+		 } 
+		 catch (SQLException e)
+		{
+			 System.out.print(getvar());
+			 	return str;
+		}
+		 catch (Exception e)
+		{
+			
+		}
+		
+
+		return "操作成功";
+
 }
-	public void Del (HttpServletRequest request) throws Exception 
-	{
-		 String id = request.getParameter("id");
-		String Str="Delete From " + sigleform + " where " + idfield + "='" + id + "'" ;
-		//and bcp_Uflag=0";
-		  Connection conn = DruidConnect.openConnection(); 
-  Statement dbc = conn.createStatement(); 
-		dbc.executeUpdate(Str);
-		dbc.close();
-conn.close();
-	}	
 	public static String getIpAddr(HttpServletRequest request) {
 		String ip = request.getHeader("x-forwarded-for");
 		if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {

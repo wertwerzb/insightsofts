@@ -27,13 +27,10 @@ public class FormAdd
 	private 	String  fieldtitle; 
 	private 	String  sigleform;
 	private 	String  idfield ;
-	private 	String  langstr ;
 	private 	String  typestr ;
-
-	private 	String path;
 	private 	String extendfield;
-private 	String modextfield;
 
+	private 	String  langstr ;
 	private 	String usercode;
 private 	String filepath;
 	public FormAdd(String lang, String czy, String hreft,String fileph )
@@ -89,14 +86,20 @@ private 	String filepath;
 
 	}
 	
-	 public  String getvar (HttpServletRequest request) throws Exception 
+	 private  String getvar () 
 	{
 	
-	return "selectcolumn"+ selectcolumn+ ";fieldtitle "+ fieldtitle+ ";sigleform "+ sigleform +";idfield "+ idfield+" ; typestr "+ typestr+";path "+filepath +";extendfield "+ extendfield +";modextfield"+ modextfield ;
+	return 
+" selectcolumn "+selectcolumn+
+	 " fieldtitle "+fieldtitle+
+	 " sigleform "+sigleform+
+	 " idfield " +idfield +
+	" typestr "+typestr +
+	" extendfield "	 +extendfield ;
 	}
 	
 	
-	public  String getaddsql(HttpServletRequest request) throws Exception 
+	public  String getaddsql(HttpServletRequest request) 
 	{
 	 	String selstr ="";
  		String valuestring ="";
@@ -143,7 +146,6 @@ private 	String filepath;
    java.util.Map.Entry entry = (java .util.Map.Entry) it.next();
     
 
-//entry.getValue() 返回与此项对 应的值
 selstr= selstr+ entry.getKey()+",";
 valuestring = valuestring  + entry.getValue () + ",";
 }
@@ -153,16 +155,34 @@ valuestring= valuestring.substring(0, valuestring.length() - 1) ;
 String str =" insert into " + sigleform + " (" + selstr +  ") values(" + valuestring + ")" ;
 		return str;
 	}
-	public  void Add(HttpServletRequest request) throws Exception
+	public  String Add(HttpServletRequest request) 
 	{
+	
 		String str= getaddsql(request) ;
+	try
+		{	
 		  Connection conn = DruidConnect.openConnection(); 
   Statement dbc = conn.createStatement(); 
 		dbc.executeUpdate(str);
-		dbc.close();
-conn.close();
+		
+			dbc.close();
 
-	}
+			conn.close();
+		}
+		catch (SQLException e)
+		{
+		System.out.print(getvar());
+			 	return str;
+		}
+		 catch (Exception e)
+		{
+			
+		}
+		
+
+		return "操作成功";
+
+}
 	public static String getIpAddr(HttpServletRequest request) {
 		String ip = request.getHeader("x-forwarded-for");
 		if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
@@ -202,7 +222,6 @@ String 	  realPath= innpath.getPath("xml")+ filepath+ "/" + hreft + ".xml";
 				idfield = database.element("idfield").getText().trim() ;
 				typestr = database.element("typestr").getText().trim() ;
 				extendfield = database.element("extendfield").getText().trim() ;
-      modextfield = database.element("modextfield").getText().trim() ;
 
 
 			}

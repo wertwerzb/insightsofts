@@ -25,12 +25,9 @@ public class FormDel
 { 
 	private 	String  sigleform;
 	private 	String  idfield ;
-	private 	String  langstr ;
-	private 	String  typestr ;
-
-	private 	String path;
 private 	String delextfield;
 
+	private 	String  langstr ;
 	private 	String usercode;
 private 	String filepath;
 	public FormDel(String lang, String czy, String hreft,String fileph )
@@ -42,22 +39,38 @@ private 	String filepath;
 		setvar(hreft);
 
 	} 
-public String getdelsql (HttpServletRequest request) throws Exception 
+public String getdelsql (HttpServletRequest request) 
 	{
 		 String id = request.getParameter("id");
 		String Str="Delete From " + sigleform + " where " + idfield + "='" + id + "'" ;
 		return Str;
 		 
 	}	
-	public void Del (HttpServletRequest request) throws Exception 
+	public String Del (HttpServletRequest request) 
 	{
-
+	
 	String Str=	 getdelsql( request );
+try{
 		  Connection conn = DruidConnect.openConnection(); 
   Statement dbc = conn.createStatement(); 
 		dbc.executeUpdate(Str);
 		dbc.close();
 conn.close();
+}
+catch (SQLException e)
+		{
+	return Str;
+		}
+		 catch (Exception e)
+		{
+			
+			 	e.printStackTrace();
+	return getvar();
+		}
+		
+
+		return "操作成功";
+
 	}	
 	 private String replcerol(String sql )
 	{
@@ -76,7 +89,14 @@ resultstr= resultstr.replace("{U}", usercode);
 
   return resultstr;
 	}
-
+ private  String getvar () 
+	{
+	
+	return 
+" sigleform "+ sigleform +
+	 " idfield "+ idfield +
+	 " delextfield "+ delextfield;
+	}
 	private void setvar(String hreft)
 	{
 
