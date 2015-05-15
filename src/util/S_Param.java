@@ -4,7 +4,6 @@ import Com.db.DruidConnect;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
-import java.util.Date;
 
 
 public class S_Param
@@ -40,7 +39,6 @@ conn.close();
 		 	//关闭连接
 		}
 		return resultstr ;
-	 	// TODO Auto-generated method stub
 	}
 	 public static String Getparams(String sqlstr, int deint)
 	{
@@ -65,7 +63,6 @@ conn.close();
 			return sqle.toString();
    }
 		return resultstr ;
-	 	// TODO Auto-generated method stub
 	}
 
 	public static String Getparams(String sqlstr, String destr)
@@ -100,7 +97,6 @@ conn.close();
 			//关闭连接
 		}
 		return resultstr ;
-	 	// TODO Auto-generated method stub
 	}
 
 }

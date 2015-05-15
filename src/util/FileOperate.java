@@ -11,6 +11,11 @@ public class FileOperate
 	
 public static String copyfile(String olefile,String newfile)
 	{ 
+	File destFile= new File( newfile );
+	 if (!destFile.getParentFile().exists()) 
+   {
+    destFile.getParentFile().mkdir();
+     }
 	 try{ 
 	 FileInputStream input=new FileInputStream( olefile );//可替换为任何路径何和文件名 
 	 

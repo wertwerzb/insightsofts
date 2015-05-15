@@ -4,7 +4,6 @@ import Com.db.DruidConnect;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
-import java.util.Date;
 
 
 public class Dbcondi
